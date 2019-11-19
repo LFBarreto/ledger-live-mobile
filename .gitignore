@@ -79,5 +79,4 @@ third-party/
 
 xliffs/
 
-# CocoaPods
-/ios/Pods/
+src/generated/
