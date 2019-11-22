@@ -287,6 +287,7 @@ class AddAccountsAccounts extends PureComponent<Props, State> {
         <ScrollView
           style={styles.inner}
           contentContainerStyle={styles.innerContent}
+          // $FlowFixMe
           ref={this.scrollView}
           onContentSizeChange={this.handleContentSizeChange}
         >
