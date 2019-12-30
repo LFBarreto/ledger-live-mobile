@@ -146,8 +146,8 @@ android {
         multiDexEnabled true
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 64
-        versionName "1.8.1"
+        versionCode 68
+        versionName "1.8.3"
         resValue "string", "build_config_package", "com.ledger.live"
         missingDimensionStrategy 'react-native-camera', 'general'
     }
@@ -230,6 +230,15 @@ dependencies {
         releaseImplementation files(hermesPath + "hermes-release.aar")
     } else {
         implementation jscFlavor
+    }
+
+    implementation 'com.facebook.soloader:soloader:0.6.0+'
+
+    debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
+        exclude group:'com.facebook.yoga'
+        exclude group:'com.facebook.flipper', module: 'fbjni'
+        exclude group:'com.facebook.litho', module: 'litho-annotations'
+        exclude group:'com.squareup.okhttp3'
     }
 }
 
