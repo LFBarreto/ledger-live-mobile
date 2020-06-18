@@ -1,7 +1,8 @@
 /* @flow */
 import React, { memo, useState, useCallback } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SettingsRow from "../../../components/SettingsRow";
 import { TermModals } from "../../../components/RequireTerms";
 import colors from "../../../colors";
@@ -23,7 +24,7 @@ const TermsConditionsRow = () => {
         alignedTop
       >
         <View style={styles.externalLinkContainer}>
-          <ExternalLink size={16} color={colors.grey} />
+          <ExternalLink size={16} color={EStyleSheet.value(colors.grey)} />
         </View>
       </SettingsRow>
       <TermModals isOpened={isOpened} close={onClose} />
@@ -31,7 +32,7 @@ const TermsConditionsRow = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   externalLinkContainer: { marginHorizontal: 10 },
 });
 

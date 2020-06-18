@@ -1,12 +1,8 @@
 // @flow
 
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  View,
-  TouchableWithoutFeedback,
-  Platform,
-} from "react-native";
+import { View, TouchableWithoutFeedback, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Animated from "react-native-reanimated";
 import type AnimatedValue from "react-native/Libraries/Animated/src/nodes/AnimatedValue";
 import { useSafeArea } from "react-native-safe-area-context";
@@ -16,6 +12,7 @@ import BalanceHeader from "./BalanceHeader";
 import HeaderErrorTitle from "../../components/HeaderErrorTitle";
 import HeaderSynchronizing from "../../components/HeaderSynchronizing";
 import { scrollToTop } from "../../navigation/utils";
+import colors from "../../colors";
 
 type Props = {
   scrollY: AnimatedValue,
@@ -92,9 +89,9 @@ export default function AnimatedTopBar({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     zIndex: 2,
     position: "absolute",
     top: 0,

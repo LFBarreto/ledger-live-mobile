@@ -4,7 +4,8 @@ import { getAccountCurrency } from "@ledgerhq/live-common/lib/account";
 import React, { PureComponent } from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { View, StyleSheet, Platform } from "react-native";
+import { View, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import type {
   Portfolio,
@@ -171,7 +172,7 @@ class GraphCardHeader extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     backgroundColor: colors.white,
     paddingVertical: 16,

@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import colors from "../../colors";
 import ExternalLink from "../../icons/ExternalLink";
@@ -40,7 +41,7 @@ class Footer extends PureComponent<Props, *> {
 
 export default Footer;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   footer: {
     borderTopWidth: 1,
     borderColor: "#eee",

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useIsFocused } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/dist/Feather";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Touchable from "../../components/Touchable";
 import colors from "../../colors";
 import AccountOrderModal from "./AccountOrderModal";
@@ -40,7 +41,7 @@ export default function AccountOrder() {
       style={{ marginHorizontal: 16 }}
       onPress={onPress}
     >
-      <Icon name="sliders" color={colors.grey} size={20} />
+      <Icon name="sliders" color={EStyleSheet.value(colors.grey)} size={20} />
       <RefreshAccounts isOpened={isOpened} />
       <AccountOrderModal isOpened={isOpened} onClose={onClose} />
     </Touchable>

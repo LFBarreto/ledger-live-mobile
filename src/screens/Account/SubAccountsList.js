@@ -3,7 +3,8 @@
 import React, { useCallback, useState, useMemo } from "react";
 import { Trans } from "react-i18next";
 import take from "lodash/take";
-import { Platform, StyleSheet, View, FlatList } from "react-native";
+import { Platform, View, FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/FontAwesome";
 import MaterialIcon from "react-native-vector-icons/dist/MaterialIcons";
 import { useNavigation } from "@react-navigation/native";
@@ -25,7 +26,7 @@ import TokenContextualModal from "../Settings/Accounts/TokenContextualModal";
 
 const keyExtractor = o => o.id;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   footer: {
     borderRadius: 4,
     paddingHorizontal: 18,
@@ -132,7 +133,7 @@ export default function SubAccountsList({
             event="AccountReceiveToken"
             title={<Trans i18nKey="account.tokens.addTokens" />}
             IconLeft={() => (
-              <MaterialIcon color={colors.live} name="add" size={20} />
+              <MaterialIcon color={EStyleSheet.value(colors.live)} name="add" size={20} />
             )}
             onPress={navigateToReceiveConnectDevice}
             size={14}
@@ -152,7 +153,7 @@ export default function SubAccountsList({
           onPress={navigateToReceiveConnectDevice}
         >
           <View style={styles.footer}>
-            <Icon color={colors.live} size={26} name="plus" />
+            <Icon color={EStyleSheet.value(colors.live)} size={26} name="plus" />
             <View style={styles.footerText}>
               <LText style={{ fontSize: 16 }}>
                 <Trans
@@ -191,7 +192,7 @@ export default function SubAccountsList({
           }
           IconRight={() => (
             <Icon
-              color={colors.live}
+              color={EStyleSheet.value(colors.live)}
               name={isCollapsed ? "angle-down" : "angle-up"}
               size={16}
             />

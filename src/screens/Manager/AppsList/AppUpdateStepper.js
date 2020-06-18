@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 
 import type { State } from "@ledgerhq/live-common/lib/apps";
@@ -67,7 +68,7 @@ const AppUpdateStepper = ({ state }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     height: 64,
     width,

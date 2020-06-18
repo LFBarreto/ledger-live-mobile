@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { Subject, Observable, throwError } from "rxjs";
 import Config from "react-native-config";
@@ -69,7 +70,7 @@ export default class DebugRejectSwitch extends PureComponent<{}> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     position: "absolute",
     left: 0,

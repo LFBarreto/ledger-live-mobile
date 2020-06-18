@@ -2,13 +2,8 @@
 
 import React, { useCallback, useState } from "react";
 import { Trans } from "react-i18next";
-import {
-  StyleSheet,
-  View,
-  ScrollView,
-  Linking,
-  ActivityIndicator,
-} from "react-native";
+import { View, ScrollView, Linking, ActivityIndicator } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import colors from "../colors";
 import { useTerms, useTermsAccept, url } from "../logic/terms";
@@ -25,7 +20,7 @@ import RetryButton from "./RetryButton";
 
 const forceInset = { bottom: "always" };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   modal: {},
   root: {
     paddingTop: 0,

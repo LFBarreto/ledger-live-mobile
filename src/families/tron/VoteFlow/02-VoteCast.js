@@ -3,6 +3,7 @@ import invariant from "invariant";
 import useBridgeTransaction from "@ledgerhq/live-common/lib/bridge/useBridgeTransaction";
 import React, { useCallback, useState, useMemo } from "react";
 import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -190,7 +191,7 @@ export default function VoteCast({ route, navigation }: Props) {
                 <LText semiBold style={styles.addMoreVotesLabel}>
                   <Trans i18nKey="vote.castVotes.addMoreVotes" />
                 </LText>
-                <ArrowRight size={16} color={colors.live} />
+                <ArrowRight size={16} color={EStyleSheet.value(colors.live)} />
               </TouchableOpacity>
             </View>
           ) : null}
@@ -265,7 +266,7 @@ export default function VoteCast({ route, navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.lightGrey,

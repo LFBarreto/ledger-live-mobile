@@ -2,7 +2,8 @@
 import React, { useCallback, useState } from "react";
 import { connect } from "react-redux";
 import type { TokenAccount, Account } from "@ledgerhq/live-common/lib/types";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import Icon from "react-native-vector-icons/dist/Feather";
 import { getMainAccount } from "@ledgerhq/live-common/lib/account";
@@ -174,7 +175,7 @@ export default connect(
   mapDispatchToProps,
 )(TokenContextualModal);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   header: {
     fontSize: 16,
     textAlign: "center",

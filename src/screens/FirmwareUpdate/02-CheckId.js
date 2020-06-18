@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans } from "react-i18next";
 import firmwareUpdatePrepare from "@ledgerhq/live-common/lib/hw/firmwareUpdate-prepare";
@@ -123,7 +124,7 @@ export default class FirmwareUpdateCheckId extends Component<Props, State> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

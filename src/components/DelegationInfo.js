@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import colors from "../colors";
 import LText from "./LText";
@@ -41,7 +42,7 @@ export default function DelegationInfo({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     borderLeftWidth: 3,
     borderLeftColor: colors.fog,

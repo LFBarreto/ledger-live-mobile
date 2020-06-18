@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback } from "react";
-import { View, Text, StyleSheet, Alert } from "react-native";
+import { View, Text, Alert } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useTranslation } from "react-i18next";
 import { useReboot } from "../../context/Reboot";
 import SettingsRow from "../../components/SettingsRow";
@@ -29,7 +30,7 @@ export default function SignOut() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     marginVertical: 40,
   },

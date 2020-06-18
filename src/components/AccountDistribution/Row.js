@@ -10,7 +10,8 @@ import type {
 } from "@ledgerhq/live-common/lib/types";
 import { BigNumber } from "bignumber.js";
 import React, { useCallback } from "react";
-import { Platform, StyleSheet, View } from "react-native";
+import { Platform, View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
@@ -102,7 +103,7 @@ export default function Row({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   row: {
     display: "flex",
     flexDirection: "row",

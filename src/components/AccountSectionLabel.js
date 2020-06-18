@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import colors from "../colors";
 import LText from "./LText";
 
@@ -36,7 +37,7 @@ export default function AccountSectionLabel({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",

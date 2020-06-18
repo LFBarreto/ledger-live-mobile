@@ -1,7 +1,8 @@
 // @flow
 import React, { Component } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { BigNumber } from "bignumber.js";
 
 import LText from "../../../components/LText/index";
@@ -44,7 +45,7 @@ class FeesRow extends Component<Props, State> {
               isSelected ? styles.iconContainerSelected : null,
             ]}
           >
-            {isSelected ? <Check size={14} color={colors.white} /> : null}
+            {isSelected ? <Check size={14} color={EStyleSheet.value(colors.white)} /> : null}
           </View>
           <View style={styles.titleContainer}>
             <LText
@@ -66,7 +67,7 @@ class FeesRow extends Component<Props, State> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",

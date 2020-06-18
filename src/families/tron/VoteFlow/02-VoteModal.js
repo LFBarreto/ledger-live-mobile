@@ -9,6 +9,7 @@ import {
   SafeAreaView,
   Platform,
 } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import type { Vote } from "@ledgerhq/live-common/lib/families/tron/types";
 
@@ -106,7 +107,7 @@ const VoteModal = ({
         >
           <View style={styles.topContainer}>
             <TouchableOpacity style={styles.topButton} onPress={remove}>
-              <Trash size={16} color={colors.grey} />
+              <Trash size={16} color={EStyleSheet.value(colors.grey)} />
             </TouchableOpacity>
 
             <View style={styles.topLabel}>
@@ -119,7 +120,7 @@ const VoteModal = ({
             </View>
 
             <TouchableOpacity style={styles.topButton} onPress={onClose}>
-              <Close size={16} color={colors.grey} />
+              <Close size={16} color={EStyleSheet.value(colors.grey)} />
             </TouchableOpacity>
           </View>
           <View style={styles.wrapper}>
@@ -219,7 +220,7 @@ const VoteModal = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   rootKeyboard: {
     flexDirection: "column",
     alignItems: "center",

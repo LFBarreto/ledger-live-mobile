@@ -1,7 +1,8 @@
 // @flow
 
 import React, { useState, memo } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import {
   isAccountEmpty,
   getMainAccount,
@@ -169,7 +170,7 @@ function ListHeaderComponent({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   header: {
     flexDirection: "column",
   },

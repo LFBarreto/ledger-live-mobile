@@ -3,7 +3,8 @@
 import React, { PureComponent } from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { View, StyleSheet, Platform } from "react-native";
+import { View, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import type {
   Unit,
@@ -102,7 +103,7 @@ class AssetGraphCard extends PureComponent<Props, State> {
           isLoading={!isAvailable}
           height={100}
           width={getWindowDimensions().width - 32}
-          color={isAvailable ? graphColor : colors.grey}
+          color={isAvailable ? graphColor : EStyleSheet.value(colors.grey)}
           // $FlowFixMe
           data={history}
           onItemHover={this.onItemHover}
@@ -194,7 +195,7 @@ class GraphCardHeader extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     backgroundColor: colors.white,
     paddingVertical: 16,

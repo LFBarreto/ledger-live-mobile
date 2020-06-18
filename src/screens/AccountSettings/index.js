@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { Account } from "@ledgerhq/live-common/lib/types";
 import { connect } from "react-redux";
 import { ScreenName } from "../../const";
@@ -97,7 +98,7 @@ class AccountSettings extends PureComponent<Props, State> {
 // $FlowFixMe
 export default connect(mapStateToProps, mapDispatchToProps)(AccountSettings);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   sectionRow: {
     marginTop: 16,
   },

@@ -1,7 +1,8 @@
 // @flow
 import useBridgeTransaction from "@ledgerhq/live-common/lib/bridge/useBridgeTransaction";
 import React, { useMemo, useState, useCallback } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useTranslation } from "react-i18next";
 import Slider from "react-native-slider";
 import { useNavigation } from "@react-navigation/native";
@@ -103,7 +104,7 @@ export default function EditFeeUnitEthereum({
             tertiary
             style={[
               styles.currencyUnitText,
-              { color: colors.live, marginLeft: 8 },
+              { color: EStyleSheet.value(colors.live), marginLeft: 8 },
             ]}
           >
             <CurrencyUnitValue
@@ -148,7 +149,7 @@ export default function EditFeeUnitEthereum({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     paddingTop: 16,

@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -56,7 +57,7 @@ export default function DeviceNameRow({
           event="ManagerDeviceNameEdit"
           disabled={disabled}
         >
-          <Edit size={13} color={colors.grey} />
+          <Edit size={13} color={EStyleSheet.value(colors.grey)} />
           <LText style={styles.editButtonText}>
             <Trans i18nKey="common.edit" />
           </LText>
@@ -66,7 +67,7 @@ export default function DeviceNameRow({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",

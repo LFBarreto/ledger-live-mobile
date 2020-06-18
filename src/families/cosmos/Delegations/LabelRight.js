@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useTranslation } from "react-i18next";
 import LText from "../../../components/LText";
 import colors from "../../../colors";
@@ -21,7 +22,7 @@ export default function DelegationLabelRight({ onPress }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
   },

@@ -8,7 +8,7 @@ import * as d3shape from "d3-shape";
 import * as d3scale from "d3-scale";
 import maxBy from "lodash/maxBy";
 import Svg, { Path, Defs } from "react-native-svg";
-
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../../colors";
 import DefGraph from "./DefGrad";
 import BarInteraction from "./BarInteraction";
@@ -81,10 +81,15 @@ export default class Graph extends PureComponent<Props> {
     const content = (
       <Svg height={height} width={width}>
         <Defs>
-          <DefGraph height={height} color={color} />
+          <DefGraph height={height} color={EStyleSheet.value(color)} />
         </Defs>
         <Path d={area} fill="url(#grad)" />
-        <Path d={line} stroke={color} strokeWidth={STROKE_WIDTH} fill="none" />
+        <Path
+          d={line}
+          stroke={EStyleSheet.value(color)}
+          strokeWidth={STROKE_WIDTH}
+          fill="none"
+        />
       </Svg>
     );
 

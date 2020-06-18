@@ -1,5 +1,6 @@
 import React, { memo, useCallback, useEffect, useReducer } from "react";
-import { StyleSheet, SectionList, View } from "react-native";
+import { SectionList, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import Check from "../../../icons/Check";
 import colors from "../../../colors";
@@ -175,7 +176,7 @@ const FilterModalComponent = ({
           </LText>
           {Boolean(isChecked) && (
             <View style={styles.checkIcon}>
-              <Check color={colors.live} size={14} />
+              <Check color={EStyleSheet.value(colors.live)} size={14} />
             </View>
           )}
         </Touchable>
@@ -213,7 +214,7 @@ const FilterModalComponent = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   list: {
     width: "100%",
   },

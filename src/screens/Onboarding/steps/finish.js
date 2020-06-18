@@ -3,7 +3,8 @@
 import React from "react";
 import { Trans } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { Image, View, StyleSheet } from "react-native";
+import { Image, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 import { TrackScreen } from "../../../analytics";
 import { completeOnboarding } from "../../../actions/settings";
@@ -78,7 +79,7 @@ export default function OnboardingStepFinish({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   hero: {
     alignItems: "center",
   },

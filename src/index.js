@@ -6,7 +6,7 @@ import "./implement-react-native-libcore";
 import "react-native-gesture-handler";
 import React, { Component, useCallback } from "react";
 import { connect } from "react-redux";
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import SplashScreen from "react-native-splash-screen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { I18nextProvider } from "react-i18next";
@@ -39,6 +39,8 @@ import HookSentry from "./components/HookSentry";
 import RootNavigator from "./components/RootNavigator";
 import SetEnvsFromSettings from "./components/SetEnvsFromSettings";
 import type { State } from "./reducers";
+
+import { ThemeBuilder } from "./colors";
 
 checkLibs({
   NotEnoughBalance,
@@ -95,9 +97,8 @@ function App({ importDataString }: AppProps) {
   }, []);
 
   const getBleChanged = (a, b) => a.ble !== b.ble;
-
   return (
-    <View style={styles.root}>
+    <View style={[styles.root]}>
       <DBSave
         save={saveCountervalues}
         throttle={2000}
@@ -165,29 +166,32 @@ export default class Root extends Component<
           {(ready, store) =>
             ready ? (
               <>
-                <StyledStatusBar />
-                <SetEnvsFromSettings />
-                <HookSentry />
-                <HookAnalytics store={store} />
-                <SafeAreaProvider>
-                  <AuthPass>
-                    <NavigationContainer>
-                      <I18nextProvider i18n={i18n}>
-                        <LocaleProvider>
-                          <BridgeSyncProvider>
-                            <CounterValues.PollingProvider>
-                              <ButtonUseTouchable.Provider value={true}>
-                                <OnboardingContextProvider>
-                                  <App importDataString={importDataString} />
-                                </OnboardingContextProvider>
-                              </ButtonUseTouchable.Provider>
-                            </CounterValues.PollingProvider>
-                          </BridgeSyncProvider>
-                        </LocaleProvider>
-                      </I18nextProvider>
-                    </NavigationContainer>
-                  </AuthPass>
-                </SafeAreaProvider>
+                <ThemeBuilder>
+                  <StyledStatusBar />
+                  <SetEnvsFromSettings />
+                  <HookSentry />
+                  <HookAnalytics store={store} />
+
+                  <SafeAreaProvider>
+                    <AuthPass>
+                      <NavigationContainer>
+                        <I18nextProvider i18n={i18n}>
+                          <LocaleProvider>
+                            <BridgeSyncProvider>
+                              <CounterValues.PollingProvider>
+                                <ButtonUseTouchable.Provider value={true}>
+                                  <OnboardingContextProvider>
+                                    <App importDataString={importDataString} />
+                                  </OnboardingContextProvider>
+                                </ButtonUseTouchable.Provider>
+                              </CounterValues.PollingProvider>
+                            </BridgeSyncProvider>
+                          </LocaleProvider>
+                        </I18nextProvider>
+                      </NavigationContainer>
+                    </AuthPass>
+                  </SafeAreaProvider>
+                </ThemeBuilder>
               </>
             ) : (
               <LoadingApp />

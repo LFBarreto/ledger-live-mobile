@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback, memo, useRef, useEffect } from "react";
 import { View, StyleSheet, TouchableOpacity, Animated } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 
 import type {
@@ -45,7 +46,7 @@ const RightAction = ({
       ]}
     >
       <TouchableOpacity onPress={onRemove} style={styles.removeButton}>
-        <Trash size={16} color={colors.white} />
+        <Trash size={16} color={EStyleSheet.value(colors.white)} />
       </TouchableOpacity>
     </Animated.View>
   );
@@ -139,9 +140,9 @@ const VoteRow = ({
               style={[styles.rowIcon, !isSR ? styles.rowIconCandidate : {}]}
             >
               {isSR ? (
-                <Trophy size={16} color={colors.live} />
+                <Trophy size={16} color={EStyleSheet.value(colors.live)} />
               ) : (
-                <Medal size={16} color={colors.grey} />
+                <Medal size={16} color={EStyleSheet.value(colors.grey)} />
               )}
             </View>
             <View style={styles.rowLabelContainer}>
@@ -157,7 +158,7 @@ const VoteRow = ({
               </LText>
             </View>
             <View style={styles.editButton}>
-              <Edit size={14} color={colors.live} />
+              <Edit size={14} color={EStyleSheet.value(colors.live)} />
               <LText semiBold style={styles.editVoteCount}>
                 {voteCount}
               </LText>
@@ -169,7 +170,7 @@ const VoteRow = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     height: 80,
     width: "100%",

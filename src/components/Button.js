@@ -3,12 +3,12 @@
 import React, { PureComponent } from "react";
 import { RectButton } from "react-native-gesture-handler";
 import {
-  StyleSheet,
   ActivityIndicator,
   View,
   Animated,
   TouchableOpacity,
 } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { ViewStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
 import LText from "./LText";
 import ButtonUseTouchable from "../context/ButtonUseTouchable";
@@ -264,7 +264,7 @@ class Button extends PureComponent<
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     height: BUTTON_HEIGHT,
     alignItems: "center",

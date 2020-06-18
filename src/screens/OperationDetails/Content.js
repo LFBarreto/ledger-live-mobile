@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback, useState } from "react";
-import { View, StyleSheet, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import uniq from "lodash/uniq";
 import { useSelector } from "react-redux";
 import { Trans, useTranslation } from "react-i18next";
@@ -215,7 +216,7 @@ export default function Content({ account, parentAccount, operation }: Props) {
                 onPress={onPressInfo}
                 event="TokenOperationsInfo"
               >
-                <Info size={12} color={colors.grey} />
+                <Info size={12} color={EStyleSheet.value(colors.grey)} />
               </Touchable>
             ) : null}
           </View>
@@ -390,7 +391,7 @@ export default function Content({ account, parentAccount, operation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     borderBottomWidth: 1,
     borderColor: "#eee",

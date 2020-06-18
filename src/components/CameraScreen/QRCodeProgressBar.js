@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import ProgressCircle from "react-native-progress/Circle";
 
 import { getFontStyle } from "../LText";
@@ -20,7 +21,7 @@ class QrCodeProgressBar extends PureComponent<Props> {
         <ProgressCircle
           showsText={!!progress}
           progress={progress}
-          color={colors.white}
+          color={EStyleSheet.value(colors.white)}
           borderWidth={0}
           thickness={progress ? 4 : 0}
           size={viewFinderSize / 4}
@@ -32,7 +33,7 @@ class QrCodeProgressBar extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   centered: {
     flex: 1,
     alignItems: "center",

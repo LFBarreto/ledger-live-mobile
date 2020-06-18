@@ -1,5 +1,6 @@
 import React, { memo, useState, useCallback } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import Trash from "../../../icons/Trash";
 import colors from "../../../colors";
@@ -30,7 +31,7 @@ const UninstallAllButton = ({ onUninstallAll }: Props) => {
         event="ManagerAppUninstallAllModal"
       >
         <View style={styles.uninstallIcon}>
-          <Trash size={16} color={colors.live} />
+          <Trash size={16} color={EStyleSheet.value(colors.live)} />
         </View>
         <LText style={styles.uninstallText}>
           <Trans i18nKey="manager.uninstall.title" />
@@ -45,7 +46,7 @@ const UninstallAllButton = ({ onUninstallAll }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   uninstallButton: {
     flexDirection: "row",
     alignItems: "center",

@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import Button from "../../../../components/Button";
 import colors from "../../../../colors";
@@ -34,7 +35,7 @@ export default function SelectValidatorFooter({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     alignSelf: "stretch",
     alignItems: "center",

@@ -2,7 +2,8 @@
 import React, { Component } from "react";
 import type { BigNumber } from "bignumber.js";
 import invariant from "invariant";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import QRCode from "react-native-qrcode-svg";
 import { encodeURIScheme } from "@ledgerhq/live-common/lib/currencies";
 import type { CryptoCurrency } from "@ledgerhq/live-common/lib/types";
@@ -40,7 +41,7 @@ export default class QRCodePreview extends Component<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     backgroundColor: "white",
     padding: 15,

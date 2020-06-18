@@ -1,6 +1,7 @@
 // @flow
 
-import { StyleSheet, Platform } from "react-native";
+import { Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../colors";
 
 let headerStyle;
@@ -27,7 +28,7 @@ if (Platform.OS === "ios") {
   };
 }
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
   card: {
     backgroundColor: colors.lightGrey,
   },

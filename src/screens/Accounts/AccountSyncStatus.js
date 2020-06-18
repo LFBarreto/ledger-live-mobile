@@ -1,7 +1,8 @@
 // @flow
 import React, { Component, PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Icon from "react-native-vector-icons/dist/Feather";
 import LiveLogo from "../../icons/LiveLogoIcon";
 import colors from "../../colors";
@@ -12,7 +13,7 @@ class StatusQueued extends PureComponent<{}> {
   render() {
     return (
       <View style={styles.root}>
-        <Icon name="clock" size={14} color={colors.grey} />
+        <Icon name="clock" size={14} color={EStyleSheet.value(colors.grey)} />
         <LText numberOfLines={1} secondary semiBold style={styles.pendingText}>
           <Trans i18nKey="accounts.row.queued" />
         </LText>
@@ -26,7 +27,7 @@ class StatusSynchronizing extends PureComponent<{}> {
     return (
       <View style={styles.root}>
         <Spinning>
-          <LiveLogo size={14} color={colors.grey} />
+          <LiveLogo size={14} color={EStyleSheet.value(colors.grey)} />
         </Spinning>
         <LText numberOfLines={1} secondary semiBold style={styles.pendingText}>
           <Trans i18nKey="accounts.row.syncPending" />
@@ -53,7 +54,7 @@ class StatusError extends PureComponent<{}> {
   render() {
     return (
       <View style={styles.root}>
-        <Icon size={14} color={colors.alert} name="x-circle" />
+        <Icon size={14} color={EStyleSheet.value(colors.alert)} name="x-circle" />
         <LText numberOfLines={1} secondary semiBold style={styles.errorText}>
           <Trans i18nKey="accounts.row.error" />
         </LText>
@@ -76,7 +77,7 @@ class AccountSyncStatus extends Component<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",

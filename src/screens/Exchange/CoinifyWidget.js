@@ -3,7 +3,8 @@
 import React, { useRef, useCallback, useState, useEffect } from "react";
 import { WebView } from "react-native-webview";
 import querystring from "querystring";
-import { ActivityIndicator, StyleSheet, View, Linking } from "react-native";
+import { ActivityIndicator, View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 // $FlowFixMe
 import type { Account } from "@ledgerhq/live-common/lib/types";
 import { getAccountCurrency } from "@ledgerhq/live-common/lib/account/helpers";
@@ -81,7 +82,7 @@ export default function CoinifyWidget({ mode, account, meta }: Props) {
   const coinifyConfig = getConfig();
   const widgetConfig: CoinifyWidgetConfig = {
     fontColor: colors.darkBlue,
-    primaryColor: colors.live,
+    primaryColor: EStyleSheet.value(colors.live),
     partnerId: coinifyConfig.partnerId,
     targetPage: mode,
     addressConfirmation: true,
@@ -223,7 +224,7 @@ export default function CoinifyWidget({ mode, account, meta }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.lightGrey,

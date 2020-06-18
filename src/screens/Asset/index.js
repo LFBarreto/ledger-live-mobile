@@ -14,7 +14,9 @@ import type {
   Unit,
 } from "@ledgerhq/live-common/lib/types";
 import React, { PureComponent, useMemo } from "react";
-import { StyleSheet, View, SectionList } from "react-native";
+import { View, SectionList } from "react-native";
+
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useRoute } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 import type { SectionBase } from "react-native/Libraries/Lists/SectionList";
@@ -279,7 +281,7 @@ export default function Screen(props: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
   },

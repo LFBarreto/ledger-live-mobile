@@ -2,6 +2,7 @@
 
 import React, { Component, PureComponent } from "react";
 import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Slider from "react-native-slider";
 import { from } from "rxjs";
 import { concatMap } from "rxjs/operators";
@@ -45,7 +46,12 @@ class Graph extends PureComponent<GraphProps> {
 
     return (
       <Svg height={height} width={width}>
-        <Path d={line} stroke={colors.live} strokeWidth={4} fill="none" />
+        <Path
+          d={line}
+          stroke={EStyleSheet.value(colors.live)}
+          strokeWidth={4}
+          fill="none"
+        />
       </Svg>
     );
   }

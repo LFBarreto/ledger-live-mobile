@@ -1,8 +1,8 @@
 /* @flow */
 import React from "react";
 import liveCommonPkg from "@ledgerhq/live-common/package.json";
-import { StyleSheet, View } from "react-native";
-
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors, { rgba } from "../../colors";
 import QRCodeTopLayer from "./QRCodeTopLayer";
 import QRCodeBottomLayer from "./QRCodeBottomLayer";
@@ -43,7 +43,7 @@ export default function CameraScreen({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   camera: {
     alignItems: "center",
     justifyContent: "center",
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   darken: {
-    backgroundColor: rgba(colors.darkBlue, 0.4),
+    backgroundColor: rgba(EStyleSheet.value(colors.darkBlue), 0.4),
     flexGrow: 1,
   },
   text: {

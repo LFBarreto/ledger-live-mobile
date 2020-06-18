@@ -1,7 +1,8 @@
 // @flow
 import invariant from "invariant";
 import React, { useCallback, useState, useMemo } from "react";
-import { View, StyleSheet, Keyboard, TouchableOpacity } from "react-native";
+import { View, Keyboard, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -163,7 +164,7 @@ function DelegationAmount({ navigation, route }: Props) {
         <View style={styles.footer}>
           {error && !value.eq(0) && (
             <View style={styles.labelContainer}>
-              <Warning size={16} color={colors.alert} />
+              <Warning size={16} color={EStyleSheet.value(colors.alert)} />
               <LText style={[styles.assetsRemaining, styles.error]}>
                 <Trans
                   i18nKey={
@@ -247,7 +248,7 @@ function DelegationAmount({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

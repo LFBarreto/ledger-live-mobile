@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 import { Trans } from "react-i18next";
 
@@ -33,7 +34,10 @@ export const InstallProgress = ({
         <LText
           semiBold
           numberOfLines={1}
-          style={[styles.appStateText, { color: colors.live }]}
+          style={[
+            styles.appStateText,
+            { color: EStyleSheet.value(colors.live) },
+          ]}
         >
           <Trans
             i18nKey={
@@ -45,7 +49,7 @@ export const InstallProgress = ({
         </LText>
       </View>
       <ProgressBar
-        progressColor={colors.live}
+        progressColor={EStyleSheet.value(colors.live)}
         style={styles.progressBar}
         height={6}
         progress={installing ? progress * 1e2 : 0}
@@ -65,20 +69,23 @@ export const UninstallProgress = ({ uninstalling }: UninstallProgressProps) => {
         <LText
           semiBold
           numberOfLines={1}
-          style={[styles.appStateText, { color: colors.live }]}
+          style={[
+            styles.appStateText,
+            { color: EStyleSheet.value(colors.live) },
+          ]}
         >
           <Trans i18nKey="AppAction.uninstall.loading.button" />
         </LText>
       </View>
       {uninstalling ? (
         <InfiniteProgressBar
-          progressColor={colors.live}
+          progressColor={EStyleSheet.value(colors.live)}
           style={styles.progressBar}
           height={6}
         />
       ) : (
         <ProgressBar
-          progressColor={colors.live}
+          progressColor={EStyleSheet.value(colors.live)}
           style={styles.progressBar}
           height={6}
           progress={0}
@@ -88,7 +95,7 @@ export const UninstallProgress = ({ uninstalling }: UninstallProgressProps) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   appStateText: {
     fontSize: 13,
     lineHeight: 16,

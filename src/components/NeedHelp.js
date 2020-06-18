@@ -2,7 +2,8 @@
 
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, Linking } from "react-native";
+import { Linking } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import LText from "./LText";
 import Touchable from "./Touchable";
 import IconHelp from "../icons/Help";
@@ -17,7 +18,7 @@ export default class NeedHelp extends PureComponent<{}> {
         style={styles.footer}
         onPress={() => Linking.openURL(urls.faq)}
       >
-        <IconHelp size={16} color={colors.live} />
+        <IconHelp size={16} color={EStyleSheet.value(colors.live)} />
         <LText style={styles.footerText} semiBold>
           <Trans i18nKey="common.needHelp" />
         </LText>
@@ -26,7 +27,7 @@ export default class NeedHelp extends PureComponent<{}> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   footer: {
     alignItems: "center",
     justifyContent: "center",

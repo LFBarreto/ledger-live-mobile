@@ -1,5 +1,6 @@
 import React, { memo } from "react";
-import { StyleSheet, SafeAreaView, View } from "react-native";
+import { SafeAreaView, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { BaseButtonProps } from "../../../components/Button";
 import Button from "../../../components/Button";
 import BottomModal from "../../../components/BottomModal";
@@ -51,7 +52,7 @@ const ActionModal = ({
   </BottomModal>
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     maxHeight: height - 60,
     flexDirection: "column",

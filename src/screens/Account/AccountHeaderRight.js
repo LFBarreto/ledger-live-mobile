@@ -36,7 +36,7 @@ export default function AccountHeaderRight() {
       <>
         <Touchable event="ShowContractAddress" onPress={toggleModal}>
           <View style={{ marginRight: 16 }}>
-            <Icon name="ellipsis-h" size={20} color={colors.grey} />
+            <Icon name="ellipsis-h" size={20} color={EStyleSheet.value(colors.grey)} />
           </View>
         </Touchable>
         <TokenContextualModal
@@ -62,7 +62,7 @@ export default function AccountHeaderRight() {
         }}
       >
         <View style={{ marginRight: 16 }}>
-          <Wrench size={16} color={colors.grey} />
+          <Wrench size={16} color={EStyleSheet.value(colors.grey)} />
         </View>
       </Touchable>
     );

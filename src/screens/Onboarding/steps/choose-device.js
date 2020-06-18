@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component, PureComponent } from "react";
-import { BackHandler, StyleSheet } from "react-native";
+import { BackHandler } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -36,7 +37,7 @@ function CloseOnboarding() {
       }}
     >
       <Circle size={28} bg={colors.lightFog}>
-        <Close size={14} color={colors.grey} />
+        <Close size={14} color={EStyleSheet.value(colors.grey)} />
       </Circle>
     </Touchable>
   );
@@ -153,7 +154,7 @@ class DeviceItem extends PureComponent<DeviceItemProps> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   title: {
     color: colors.darkBlue,
     fontSize: 24,

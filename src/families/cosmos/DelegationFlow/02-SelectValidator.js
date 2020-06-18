@@ -1,7 +1,8 @@
 // @flow
 import invariant from "invariant";
 import React, { useCallback, useState, useMemo, useEffect } from "react";
-import { View, StyleSheet, SectionList } from "react-native";
+import { View, SectionList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { BigNumber } from "bignumber.js";
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans } from "react-i18next";
@@ -270,7 +271,7 @@ function DelegationSelectValidator({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

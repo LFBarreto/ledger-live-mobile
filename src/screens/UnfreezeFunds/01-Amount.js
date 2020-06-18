@@ -2,7 +2,8 @@
 import { BigNumber } from "bignumber.js";
 import invariant from "invariant";
 import React, { useCallback, useMemo } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -188,7 +189,9 @@ function UnfreezeAmountInner({ account }: InnerProps) {
             >
               <Bandwidth
                 size={16}
-                color={!canUnfreezeBandwidth ? colors.grey : colors.darkBlue}
+                color={EStyleSheet.value(
+                  !canUnfreezeBandwidth ? colors.grey : colors.darkBlue,
+                )}
               />
               <View style={styles.selectCardLabelContainer}>
                 <LText
@@ -199,7 +202,10 @@ function UnfreezeAmountInner({ account }: InnerProps) {
                 </LText>
                 {unfreezeBandwidth.gt(0) && !canUnfreezeBandwidth ? (
                   <View style={styles.timeWarn}>
-                    <ClockIcon color={colors.grey} size={12} />
+                    <ClockIcon
+                      color={EStyleSheet.value(colors.grey)}
+                      size={12}
+                    />
                     <LText style={styles.timeLabel} semiBold>
                       <DateFromNow date={+bandwidthExpiredAt} />
                     </LText>
@@ -224,7 +230,9 @@ function UnfreezeAmountInner({ account }: InnerProps) {
             >
               <Bolt
                 size={16}
-                color={!canUnfreezeEnergy ? colors.grey : colors.darkBlue}
+                color={EStyleSheet.value(
+                  !canUnfreezeEnergy ? colors.grey : colors.darkBlue,
+                )}
               />
               <View style={styles.selectCardLabelContainer}>
                 <LText
@@ -235,7 +243,10 @@ function UnfreezeAmountInner({ account }: InnerProps) {
                 </LText>
                 {unfreezeEnergy.gt(0) && !canUnfreezeEnergy ? (
                   <View style={styles.timeWarn}>
-                    <ClockIcon color={colors.grey} size={12} />
+                    <ClockIcon
+                      color={EStyleSheet.value(colors.grey)}
+                      size={12}
+                    />
                     <LText style={styles.timeLabel} semiBold>
                       <DateFromNow date={+energyExpiredAt} />
                     </LText>
@@ -255,7 +266,7 @@ function UnfreezeAmountInner({ account }: InnerProps) {
             </TouchableOpacity>
 
             <View style={styles.infoSection}>
-              <Info size={16} color={colors.live} />
+              <Info size={16} color={EStyleSheet.value(colors.live)} />
               <LText style={styles.infoText} numberOfLines={3}>
                 <Trans
                   i18nKey="unfreeze.amount.info"
@@ -307,7 +318,7 @@ function UnfreezeAmountInner({ account }: InnerProps) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.lightGrey,

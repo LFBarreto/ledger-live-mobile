@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import type { Unit, ValueChange } from "@ledgerhq/live-common/lib/types";
 
@@ -20,7 +21,7 @@ type Props = {
 };
 
 const arrowUp = <IconArrowUp size={12} color={colors.success} />;
-const arrowDown = <IconArrowDown size={12} color={colors.alert} />;
+const arrowDown = <IconArrowDown size={12} color={EStyleSheet.value(colors.alert)} />;
 
 export default class Delta extends PureComponent<Props> {
   render() {
@@ -65,7 +66,7 @@ export default class Delta extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",

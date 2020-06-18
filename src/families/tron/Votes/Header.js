@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useTranslation } from "react-i18next";
 import colors from "../../../colors";
 import Button from "../../../components/Button";
@@ -30,7 +31,7 @@ export default function Header({ count, onPress }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",

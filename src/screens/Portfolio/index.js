@@ -1,7 +1,8 @@
 // @flow
 import React, { useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { View, StyleSheet, SectionList } from "react-native";
+import { View, SectionList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import Animated from "react-native-reanimated";
 import { createNativeWrapper } from "react-native-gesture-handler";
@@ -179,7 +180,7 @@ export default function PortfolioScreen({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.lightGrey,

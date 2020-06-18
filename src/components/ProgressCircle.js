@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Svg, Circle, G, Text } from "react-native-svg";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../colors";
 
 type Props = {
@@ -18,7 +19,7 @@ const CENTER = 38;
 export default ({
   size = 53,
   backgroundColor = colors.lightFog,
-  progressColor = colors.live,
+  progressColor = EStyleSheet.value(colors.live),
   progress,
 }: Props) => (
   <Svg width={size} height={size} viewBox="0 0 76 76">

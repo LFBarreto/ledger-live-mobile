@@ -1,7 +1,8 @@
 // @flow
 
 import React, { useState, useRef, useCallback } from "react";
-import { StyleSheet, View, Animated, SectionList } from "react-native";
+import { View, Animated, SectionList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { SectionBase } from "react-native/Libraries/Lists/SectionList";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -187,7 +188,7 @@ export default function AccountScreen({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
   },

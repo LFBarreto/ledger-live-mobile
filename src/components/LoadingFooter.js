@@ -3,6 +3,13 @@ import React from "react";
 import { ActivityIndicator } from "react-native";
 import colors from "../colors";
 
-const el = <ActivityIndicator style={{ margin: 40 }} color={colors.live} />;
+import EStyleSheet from "react-native-extended-stylesheet";
+
+const el = (
+  <ActivityIndicator
+    style={{ margin: 40 }}
+    color={EStyleSheet.value(colors.live)}
+  />
+);
 
 export default () => el;

@@ -21,7 +21,7 @@ class DeleteAccountRow extends PureComponent<Props> {
         desc={<Trans i18nKey="account.settings.delete.desc" />}
         iconLeft={
           <Circle bg="rgba(234,46,73,0.1)" size={32}>
-            <Trash size={16} color={colors.alert} />
+            <Trash size={16} color={EStyleSheet.value(colors.alert)} />
           </Circle>
         }
         onPress={onPress}

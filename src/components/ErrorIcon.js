@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/Feather";
 import {
   CantOpenDevice,
@@ -33,7 +33,11 @@ class ErrorIcon extends PureComponent<Props> {
     if (error instanceof UserRefusedAllowManager) {
       return (
         <Rounded bg={colors.pillActiveBackground}>
-          <IconNanoX color={colors.live} height={36} width={8} />
+          <IconNanoX
+            color={EStyleSheet.value(colors.live)}
+            height={36}
+            width={8}
+          />
           <ErrorCrossBadge style={styles.badge} />
         </Rounded>
       );
@@ -49,7 +53,11 @@ class ErrorIcon extends PureComponent<Props> {
     ) {
       return (
         <Rounded bg={lighten(colors.alert, 0.75)}>
-          <IconNanoX color={colors.alert} height={36} width={8} />
+          <IconNanoX
+            color={EStyleSheet.value(colors.alert)}
+            height={36}
+            width={8}
+          />
           <ErrorBadge style={styles.badge} />
         </Rounded>
       );
@@ -57,13 +65,17 @@ class ErrorIcon extends PureComponent<Props> {
 
     return (
       <Circle size={80} bg={lighten(colors.alert, 0.75)}>
-        <Icon size={40} name="alert-triangle" color={colors.alert} />
+        <Icon
+          size={40}
+          name="alert-triangle"
+          color={EStyleSheet.value(colors.alert)}
+        />
       </Circle>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   badge: {
     position: "absolute",
     width: 32,

@@ -1,6 +1,7 @@
 import React, { memo, useMemo, useCallback } from "react";
 
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import type { App } from "@ledgerhq/live-common/lib/types/manager";
 
@@ -118,7 +119,7 @@ const AppRow = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     height: 64,
   },

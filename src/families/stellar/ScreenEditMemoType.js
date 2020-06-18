@@ -1,6 +1,7 @@
 /* @flow */
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { connect } from "react-redux";
 import { Trans } from "react-i18next";
 import i18next from "i18next";
@@ -67,7 +68,7 @@ const options = {
   headerLeft: null,
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   memo: {
     marginBottom: 16,
     padding: 16,

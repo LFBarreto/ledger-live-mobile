@@ -1,6 +1,6 @@
 /* @flow */
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { TrackScreen } from "../../../analytics";
 import CountervalueSettingsRow from "./CountervalueSettingsRow";
 import AuthSecurityToggle from "./AuthSecurityToggle";
@@ -20,6 +20,6 @@ export default function GeneralSettings() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: { paddingTop: 16, paddingBottom: 64 },
 });

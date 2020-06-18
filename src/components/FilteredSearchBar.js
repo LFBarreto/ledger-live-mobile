@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
-import { StyleSheet, View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { withTranslation } from "react-i18next";
 
 import SearchIcon from "../icons/Search";
@@ -71,7 +72,7 @@ class FilteredSearchBar extends PureComponent<Props, State> {
           <View style={styles.iconContainer}>
             <SearchIcon
               size={20}
-              color={focused ? colors.darkBlue : colors.grey}
+              color={EStyleSheet.value(focused ? colors.darkBlue : colors.grey)}
             />
           </View>
           <TextInput
@@ -103,7 +104,7 @@ class FilteredSearchBar extends PureComponent<Props, State> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flexDirection: "row",
     alignItems: "center",

@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import { getDeviceModel } from "@ledgerhq/devices";
 import LText from "../../components/LText";
@@ -38,7 +39,7 @@ class ScanningHeader extends PureComponent<Props> {
 
 export default ScanningHeader;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingVertical: 32,
     alignItems: "center",

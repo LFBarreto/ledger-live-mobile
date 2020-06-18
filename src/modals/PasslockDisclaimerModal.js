@@ -2,7 +2,8 @@
 
 import React, { useCallback } from "react";
 import { Trans } from "react-i18next";
-import { Image, View, StyleSheet } from "react-native";
+import { Image, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import BottomModal from "../components/BottomModal";
 import Button from "../components/Button";
 import colors from "../colors";
@@ -64,7 +65,7 @@ export default function PasslockDisclaimerModal({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
     justifyContent: "flex-start",

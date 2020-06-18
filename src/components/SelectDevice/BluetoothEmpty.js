@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import ConnectNanoXIllustration from "../../icons/ConnectNanoXIllustration";
 import Button from "../Button";
@@ -26,7 +27,7 @@ class BluetoothEmpty extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   illustration: {
     alignSelf: "center",
     marginBottom: 24,

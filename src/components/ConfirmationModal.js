@@ -2,7 +2,8 @@
 
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import colors, { rgba } from "../colors";
 import BottomModal from "./BottomModal";
@@ -85,7 +86,7 @@ class ConfirmationModal extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   confirmationModal: {
     paddingVertical: 24,
     paddingTop: 24,

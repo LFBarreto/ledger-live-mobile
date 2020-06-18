@@ -1,7 +1,8 @@
 // @flow
 import invariant from "invariant";
 import React, { useCallback } from "react";
-import { View, StyleSheet, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 
@@ -110,7 +111,7 @@ function ClaimRewardsSelectValidator({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

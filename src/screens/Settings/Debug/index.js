@@ -1,7 +1,7 @@
 /* @flow */
 import React from "react";
 import { useSelector } from "react-redux";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useNavigation } from "@react-navigation/native";
 import config from "react-native-config";
 import { accountsSelector } from "../../../reducers/accounts";
@@ -85,7 +85,7 @@ export default function DebugSettings({ navigation: { navigate } }: any) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingTop: 16,
     paddingBottom: 64,

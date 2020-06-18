@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { Action, State } from "@ledgerhq/live-common/lib/apps";
 import { Trans } from "react-i18next";
 
@@ -46,7 +47,7 @@ const AppUpdateAll = ({ state, appsToUpdate, dispatch }: Props) => {
                 values={{ number: appsToUpdate.length }}
               />
             </LText>
-            <Info size={17} color={colors.live} />
+            <Info size={17} color={EStyleSheet.value(colors.live)} />
           </Touchable>
           <Touchable
             style={styles.button}
@@ -72,7 +73,7 @@ const AppUpdateAll = ({ state, appsToUpdate, dispatch }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     height: 60,
     width: "100%",

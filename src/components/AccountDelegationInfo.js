@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Linking } from "react-native";
+import { View, TouchableOpacity, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../colors";
 import ExternalLink from "../icons/ExternalLink";
 import Button from "./Button";
@@ -45,7 +46,7 @@ export default function AccountDelegationInfo({
             <LText bold style={styles.infoLink}>
               {infoTitle}
             </LText>
-            <ExternalLink size={11} color={colors.live} />
+            <ExternalLink size={11} color={EStyleSheet.value(colors.live)} />
           </TouchableOpacity>
         </View>
         <Button
@@ -60,7 +61,7 @@ export default function AccountDelegationInfo({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     backgroundColor: colors.white,
     padding: 16,

@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 type Props = {
   bg?: string,
@@ -34,7 +35,7 @@ class Circle extends Component<Props> {
 
 export default Circle;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   iconContainer: {
     borderRadius: 50,
     alignItems: "center",

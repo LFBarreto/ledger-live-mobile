@@ -1,6 +1,7 @@
 // @flow
 
 import React from "react";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Svg, { Path, Circle } from "react-native-svg";
 import colors from "../colors";
 
@@ -13,7 +14,7 @@ type Props = {
 export default function Genuine({
   size = 15,
   strokeColor = colors.white,
-  color = colors.live,
+  color = EStyleSheet.value(colors.live),
 }: Props) {
   return (
     <Svg width={size} height={size} viewBox="0 0 15 15" fill="none">

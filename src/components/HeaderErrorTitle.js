@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Icon from "react-native-vector-icons/dist/Feather";
 import colors from "../colors";
 import TranslatedError from "./TranslatedError";
@@ -17,7 +18,7 @@ class HeaderErrorTitle extends PureComponent<{
       <View style={styles.root}>
         <View style={styles.titleContainer}>
           <LText style={styles.icon}>
-            <Icon name="x-circle" size={16} color={colors.alert} />
+            <Icon name="x-circle" size={16} color={EStyleSheet.value(colors.alert)} />
           </LText>
           <LText numberOfLines={2} secondary style={styles.title} semiBold>
             <TranslatedError error={error} />
@@ -33,7 +34,7 @@ class HeaderErrorTitle extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     marginHorizontal: 16,
     paddingRight: 16,

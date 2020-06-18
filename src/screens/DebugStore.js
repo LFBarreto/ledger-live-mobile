@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useSelector } from "react-redux";
 import NavigationScrollView from "../components/NavigationScrollView";
 
@@ -69,7 +70,7 @@ export default function DebugStore() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
     backgroundColor: colors.white,

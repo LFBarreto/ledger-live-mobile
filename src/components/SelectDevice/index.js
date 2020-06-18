@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from "react";
-import { StyleSheet, View, Platform, Image } from "react-native";
+import { View, Platform, Image } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Config from "react-native-config";
 import { useDispatch, useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -281,7 +282,7 @@ export default function Screen(props: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   section: {
     fontSize: 14,
     lineHeight: 21,

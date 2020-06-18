@@ -1,6 +1,6 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Markdown from "react-native-easy-markdown";
 import LText, { getFontStyle } from "./LText";
 import colors from "../colors";
@@ -27,7 +27,7 @@ export default class SafeMarkdown extends PureComponent<
   }
 }
 
-const markdownStyles = StyleSheet.create({
+const markdownStyles = EStyleSheet.create({
   text: {
     ...getFontStyle(),
     color: colors.darkBlue,

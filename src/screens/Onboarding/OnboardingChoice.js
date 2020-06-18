@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 import Touchable from "../../components/Touchable";
 import LText from "../../components/LText";
@@ -36,7 +37,7 @@ class OnboardingChoice extends PureComponent<Props> {
         </View>
         {isChecked && (
           <View style={styles.checkContainer}>
-            <IconCheck size={16} color={colors.live} />
+            <IconCheck size={16} color={EStyleSheet.value(colors.live)} />
           </View>
         )}
       </Touchable>
@@ -44,7 +45,7 @@ class OnboardingChoice extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     borderWidth: 1,
     borderColor: colors.fog,
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
   },
   rootChecked: {
     borderColor: colors.live,
-    backgroundColor: rgba(colors.live, 0.1),
+    backgroundColor: colors.liveTrans,
   },
   inner: {
     flexGrow: 1,

@@ -1,7 +1,8 @@
 // @flow
 
 import React, { memo } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { ViewStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
 import Animated, { Easing } from "react-native-reanimated";
 import colors from "../colors";
@@ -101,7 +102,7 @@ InfiniteProgressBar.defaultProps = {
   backgroundColor: colors.lightFog,
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flexGrow: 1,
     borderRadius: 6,

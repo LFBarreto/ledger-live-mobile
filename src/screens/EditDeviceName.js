@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { Keyboard, View, StyleSheet } from "react-native";
+import { Keyboard, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans } from "react-i18next";
 import Icon from "react-native-vector-icons/dist/Feather";
@@ -28,7 +29,7 @@ class FooterError extends PureComponent<{ error: Error }> {
     const { error } = this.props;
     return (
       <LText style={styles.error} numberOfLines={2}>
-        <Icon color={colors.alert} size={16} name="alert-triangle" />{" "}
+        <Icon color={EStyleSheet.value(colors.alert)} size={16} name="alert-triangle" />{" "}
         <TranslatedError error={error} />
       </LText>
     );
@@ -172,7 +173,7 @@ class EditDeviceName extends PureComponent<
 // $FlowFixMe
 export default connect(null, mapDispatchToProps)(EditDeviceName);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   safearea: {
     backgroundColor: colors.white,
     flex: 1,

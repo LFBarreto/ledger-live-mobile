@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import FeatherIcon from "react-native-vector-icons/dist/Feather";
 import { connect } from "react-redux";
 import { BigNumber } from "bignumber.js";
@@ -108,7 +109,7 @@ const Price = ({ counterValue, value, unit, to, style }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     alignItems: "center",
     flexDirection: "row",

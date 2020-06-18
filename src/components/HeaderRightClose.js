@@ -1,6 +1,6 @@
 /* @flow */
 import React, { useState } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useNavigation } from "@react-navigation/native";
 import Touchable from "./Touchable";
 import CloseIcon from "../icons/Close";
@@ -82,7 +82,7 @@ export default function HeaderRightClose({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     marginHorizontal: 16,
   },

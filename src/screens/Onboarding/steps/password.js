@@ -3,7 +3,8 @@
 import React, { Component } from "react";
 import { Trans } from "react-i18next";
 import { connect } from "react-redux";
-import { View, StyleSheet, Image } from "react-native";
+import { View, Image } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { createStructuredSelector } from "reselect";
 import { TrackScreen } from "../../../analytics";
 import { NavigatorName } from "../../../const";
@@ -107,7 +108,7 @@ class OnboardingStepPassword extends Component<
                 <BiometricsIcon
                   biometricsType={privacy.biometricsType}
                   size={40}
-                  color={colors.live}
+                  color={EStyleSheet.value(colors.live)}
                 />
               }
             />
@@ -118,7 +119,7 @@ class OnboardingStepPassword extends Component<
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   hero: {
     paddingTop: 16,
     paddingBottom: 16, // less padding because shadow of the logo

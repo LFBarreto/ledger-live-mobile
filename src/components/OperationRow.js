@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import { useNavigation } from "@react-navigation/native";
 import { getOperationAmountNumber } from "@ledgerhq/live-common/lib/operation";
@@ -91,7 +92,9 @@ export default function OperationRow({
   }, [account, parentAccount, operation]);
 
   const amount = getOperationAmountNumber(operation);
-  const valueColor = amount.isNegative() ? colors.darkBlue : colors.green;
+  const valueColor = EStyleSheet.value(
+    amount.isNegative() ? colors.darkBlue : colors.green,
+  );
   const currency = getAccountCurrency(account);
   const unit = getAccountUnit(account);
 
@@ -100,7 +103,7 @@ export default function OperationRow({
   const spinner = (
     <View style={styles.spinner}>
       <Spinning>
-        <LiveLogo color={colors.grey} size={10} />
+        <LiveLogo color={EStyleSheet.value(colors.grey)} size={10} />
       </Spinning>
     </View>
   );
@@ -190,7 +193,7 @@ const OpCounterValue = ({ children }: { children: React$Node }) => (
   </LText>
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     backgroundColor: colors.white,
     alignItems: "center",

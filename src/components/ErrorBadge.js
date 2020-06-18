@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import colors from "../colors";
 import Alert from "../icons/Alert";
@@ -16,14 +17,14 @@ class ErrorBadge extends PureComponent<Props> {
     return (
       <View style={[styles.outer, style]}>
         <View style={styles.inner}>
-          <Alert size={16} color={colors.white} />
+          <Alert size={16} color={EStyleSheet.value(colors.white)} />
         </View>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   outer: {
     padding: 0,
     borderRadius: 16,

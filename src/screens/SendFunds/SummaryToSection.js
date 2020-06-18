@@ -1,7 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SummaryRowCustom from "./SummaryRowCustom";
 import Circle from "../../components/Circle";
 import LText from "../../components/LText";
@@ -32,7 +32,7 @@ export default class SummaryToSection extends PureComponent<Props> {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   summaryRowText: {
     fontSize: 16,
     color: colors.darkBlue,

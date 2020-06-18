@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import LText from "./LText";
 import colors from "../colors";
@@ -34,7 +35,7 @@ export default class ModalBottomAction extends Component<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     alignItems: "center",
   },

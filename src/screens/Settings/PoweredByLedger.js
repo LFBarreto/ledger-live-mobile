@@ -1,7 +1,8 @@
 /* @flow */
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import LText from "../../components/LText";
 import colors from "../../colors";
 import LedgerLogoRec from "../../icons/LedgerLogoRec";
@@ -15,13 +16,13 @@ export default function PoweredByLedger() {
         {t("common.poweredBy")}
       </LText>
       <View style={styles.iconStyle}>
-        <LedgerLogoRec height={17} width={68} color={colors.grey} />
+        <LedgerLogoRec height={17} width={68} color={EStyleSheet.value(colors.grey)} />
       </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     paddingVertical: 20,
     flexDirection: "row",

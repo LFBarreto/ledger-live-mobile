@@ -1,7 +1,8 @@
 // @flow
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import LiveLogo from "../icons/LiveLogoIcon";
 import colors from "../colors";
 import LText from "./LText";
@@ -12,7 +13,7 @@ class HeaderSynchronizing extends PureComponent<{}> {
     return (
       <View style={styles.root}>
         <Spinning>
-          <LiveLogo size={16} color={colors.grey} />
+          <LiveLogo size={16} color={EStyleSheet.value(colors.grey)} />
         </Spinning>
         <LText secondary style={styles.title} semiBold numberOfLines={1}>
           <Trans i18nKey="portfolio.syncPending" />
@@ -22,7 +23,7 @@ class HeaderSynchronizing extends PureComponent<{}> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     marginHorizontal: 16,
     flexDirection: "row",

@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
 import type { Operation } from "@ledgerhq/live-common/lib/types";
@@ -54,7 +55,7 @@ export default function ValidationSuccess({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

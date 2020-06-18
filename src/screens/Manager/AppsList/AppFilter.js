@@ -1,5 +1,6 @@
 import React, { memo, useState, useCallback } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import Filters from "../../../icons/Filters";
 import Button from "../../../components/Button";
@@ -62,7 +63,7 @@ AppFilter.defaultProps = {
   filters: [],
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   searchBarFilters: {
     width: 44,
     height: 44,

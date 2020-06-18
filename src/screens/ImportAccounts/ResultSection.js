@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import LText from "../../components/LText";
 import colors from "../../colors";
@@ -39,7 +39,7 @@ class ResultSection extends PureComponent<{ mode: string }> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   sectionHeaderText: {
     backgroundColor: colors.white,
     color: colors.grey,

@@ -1,5 +1,5 @@
 /* @flow */
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { Opts, Res } from ".";
 
 const getFontStyle = ({
@@ -27,7 +27,7 @@ const getFontStyle = ({
   return { fontFamily, fontWeight };
 };
 
-const cache = StyleSheet.create({});
+const cache = EStyleSheet.create({});
 
 const cachedGetFontStyle = (opts: Opts = {}) => {
   const r = getFontStyle(opts);
@@ -35,7 +35,7 @@ const cachedGetFontStyle = (opts: Opts = {}) => {
   if (cache[key]) {
     return cache[key];
   }
-  const { style } = StyleSheet.create({ style: r });
+  const { style } = EStyleSheet.create({ style: r });
   cache[key] = style;
   return style;
 };

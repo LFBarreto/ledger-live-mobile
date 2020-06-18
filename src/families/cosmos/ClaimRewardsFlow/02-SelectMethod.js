@@ -1,7 +1,8 @@
 // @flow
 import invariant from "invariant";
 import React, { useCallback, useState } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -163,7 +164,7 @@ function ClaimRewardsAmount({ navigation, route }: Props) {
           <LText semiBold style={styles.infoLabel}>
             <Trans i18nKey="cosmos.claimRewards.flow.steps.method.compoundOrCashIn" />
           </LText>
-          <Info size={16} color={colors.grey} />
+          <Info size={16} color={EStyleSheet.value(colors.grey)} />
         </TouchableOpacity>
         <View style={styles.spacer} />
         <View style={styles.sectionLabel}>
@@ -220,7 +221,7 @@ function ClaimRewardsAmount({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

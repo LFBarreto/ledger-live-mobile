@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
-import { TextInput, StyleSheet, View, Dimensions } from "react-native";
+import { TextInput, View, Dimensions } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { BigNumber } from "bignumber.js";
 
 import {
@@ -196,7 +197,7 @@ class CurrencyInput extends PureComponent<Props, State> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flexDirection: "row",
     alignItems: "center",

@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import BottomModal from "../components/BottomModal";
 import LText from "../components/LText";
 import colors from "../colors";
@@ -45,7 +46,7 @@ export default function InfoModal({ data, isOpened, onClose }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
   },

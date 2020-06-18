@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useTranslation } from "react-i18next";
 import { useNavigation } from "@react-navigation/native";
 import type { Account, AccountLike } from "@ledgerhq/live-common/lib/types";
@@ -50,7 +51,7 @@ export default function EthereumGasLimit({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   link: {
     color: colors.live,
     textDecorationStyle: "solid",

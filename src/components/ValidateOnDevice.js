@@ -1,7 +1,8 @@
 // @flow
 import React from "react";
 import invariant from "invariant";
-import { View, StyleSheet, ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans, useTranslation } from "react-i18next";
 import type {
   Account,
@@ -203,7 +204,7 @@ export default function ValidateOnDevice({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
   },

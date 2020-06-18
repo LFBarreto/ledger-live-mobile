@@ -2,7 +2,8 @@
 import { BigNumber } from "bignumber.js";
 import React from "react";
 import type { ComponentType } from "react";
-import { View, StyleSheet, ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { ViewStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
 import SafeAreaView from "react-native-safe-area-view";
 import {
@@ -192,7 +193,7 @@ function ActionButton({ label, Icon, event, onPress, disabled }: Action) {
   );
 }
 
-export const styles = StyleSheet.create({
+export const styles = EStyleSheet.create({
   modal: {
     position: "relative",
   },

@@ -1,7 +1,8 @@
 // @flow
 
 import React, { useCallback } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import { getDeviceModel } from "@ledgerhq/devices";
 import { useSelector } from "react-redux";
@@ -51,10 +52,10 @@ export default function Paired({
       <View style={styles.container}>
         <InfoIcon
           bg={colors.pillActiveBackground}
-          floatingIcon={<Check color={colors.white} size={16} />}
+          floatingIcon={<Check color={EStyleSheet.value(colors.white)} size={16} />}
           floatingBg={colors.green}
         >
-          <NanoX size={48} color={colors.live} />
+          <NanoX size={48} color={EStyleSheet.value(colors.live)} />
         </InfoIcon>
         <LText secondary semiBold style={styles.title}>
           <Trans
@@ -88,7 +89,7 @@ export default function Paired({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     padding: 16,

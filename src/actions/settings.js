@@ -2,6 +2,8 @@
 
 import type { Currency } from "@ledgerhq/live-common/lib/types";
 
+export type ThemeSetting = "light" | "dusk" | "dark";
+
 export type CurrencySettings = {
   confirmationsNb: number,
   exchange: ?*,
@@ -123,4 +125,9 @@ export const showToken = (tokenId: string) => ({
 export const dismissBanner = (bannerId: string) => ({
   type: "SETTINGS_DISMISS_BANNER",
   payload: bannerId,
+});
+
+export const switchTheme = (theme: ThemeSetting) => ({
+  type: "SETTINGS_SWITCH_THEME",
+  payload: theme,
 });

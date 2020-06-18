@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Icon from "react-native-vector-icons/dist/Feather";
 import { BigNumber } from "bignumber.js";
 import type {
@@ -44,7 +45,7 @@ class CurrencyRate extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flexDirection: "row",
     alignItems: "center",

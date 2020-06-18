@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import LText from "./LText";
 import Touchable from "./Touchable";
 import ExternalLink from "../icons/ExternalLink";
@@ -25,11 +25,11 @@ const Link = ({ text, onPress, event, eventProperties, ltextProps }: Props) => (
     <LText bold style={styles.text} {...ltextProps}>
       {text}
     </LText>
-    <ExternalLink size={14} color={colors.live} />
+    <ExternalLink size={14} color={EStyleSheet.value(colors.live)} />
   </Touchable>
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     justifyContent: "center",

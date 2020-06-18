@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useDispatch, useSelector } from "react-redux";
 import { Trans } from "react-i18next";
 
@@ -73,7 +73,7 @@ export default function AppInstallButton({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   appStateText: {
     fontSize: 12,
   },

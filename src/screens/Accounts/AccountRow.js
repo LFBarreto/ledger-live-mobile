@@ -1,6 +1,7 @@
 // @flow
 import React, { useState, useCallback } from "react";
-import { View, StyleSheet, Platform } from "react-native";
+import { View, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import { RectButton } from "react-native-gesture-handler";
 import useEnv from "@ledgerhq/live-common/lib/hooks/useEnv";
@@ -181,7 +182,7 @@ const AccountRow = ({
                 IconRight={() => (
                   <View style={{ paddingLeft: 6 }}>
                     <Icon
-                      color={colors.live}
+                      color={EStyleSheet.value(colors.live)}
                       name={collapsed ? "angle-down" : "angle-up"}
                       size={16}
                     />
@@ -209,7 +210,7 @@ const AccountCv = ({ children }: { children: * }) => (
 
 export default React.memo<Props>(AccountRow);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   button: {
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,

@@ -4,7 +4,8 @@ import { getAccountCurrency } from "@ledgerhq/live-common/lib/account";
 import type { Currency } from "@ledgerhq/live-common/lib/types";
 import React from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { BigNumber } from "bignumber.js";
 import { connect } from "react-redux";
 import LText from "../LText";
@@ -57,7 +58,7 @@ const AccountDistribution = ({
   </View>
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingHorizontal: 16,
   },

@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback } from "react";
-import { StyleSheet, Linking } from "react-native";
+import { Linking } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { TrackScreen } from "../../analytics";
 import colors from "../../colors";
@@ -48,7 +49,7 @@ export default function ValidationError({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

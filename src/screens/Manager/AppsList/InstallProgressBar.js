@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useMemo } from "react";
-import { StyleSheet, Linking, Platform } from "react-native";
+import { Linking, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 
 import type { State } from "@ledgerhq/live-common/lib/apps";
@@ -105,7 +106,7 @@ const InstallSuccessBar = ({ state, navigation, disable }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     ...Styles.headerNoShadow,
     width: "100%",

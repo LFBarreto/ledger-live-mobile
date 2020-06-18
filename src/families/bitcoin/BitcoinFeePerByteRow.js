@@ -1,7 +1,8 @@
 /* @flow */
 import React, { Component } from "react";
 import invariant from "invariant";
-import { View, StyleSheet, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { AccountLike, Transaction } from "@ledgerhq/live-common/lib/types";
 import { Trans } from "react-i18next";
 import SummaryRow from "../../screens/SendFunds/SummaryRow";
@@ -41,7 +42,7 @@ export default class BitcoinFeePerByteRow extends Component<Props> {
         title={<Trans i18nKey="send.fees.title" />}
         additionalInfo={
           <View>
-            <ExternalLink size={12} color={colors.grey} />
+            <ExternalLink size={12} color={EStyleSheet.value(colors.grey)} />
           </View>
         }
       >
@@ -62,7 +63,7 @@ export default class BitcoinFeePerByteRow extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   accountContainer: {
     flex: 1,
     flexDirection: "row",

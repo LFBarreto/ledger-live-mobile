@@ -2,7 +2,8 @@
 
 import React, { useCallback } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 import colors from "../../colors";
@@ -28,19 +29,19 @@ export default function Banner() {
   return (
     <TouchableOpacity style={styles.root} onPress={navigateToAccountMigration}>
       <View style={styles.logo}>
-        <LiveLogo size={16} color={colors.white} />
+        <LiveLogo size={16} color={EStyleSheet.value(colors.white)} />
       </View>
       <LText semiBold style={styles.text}>
         <Trans i18nKey="migrateAccounts.banner" />
       </LText>
       <View style={styles.arrow}>
-        <IconArrowRight size={16} color={colors.white} />
+        <IconArrowRight size={16} color={EStyleSheet.value(colors.white)} />
       </View>
     </TouchableOpacity>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     position: "absolute",
     left: 0,

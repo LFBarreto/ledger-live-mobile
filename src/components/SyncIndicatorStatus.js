@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import LText from "./LText";
 import Touchable from "./Touchable";
@@ -18,7 +18,7 @@ export default class SyncIndicatorStatus extends Component<*> {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   text: {
     color: "#000",
   },

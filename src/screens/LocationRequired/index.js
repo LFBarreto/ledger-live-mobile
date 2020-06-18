@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import NoLocationImage from "../../icons/NoLocationImage";
 import LocationServicesButton from "./LocationServicesButton";
@@ -42,7 +43,7 @@ export default function LocationRequired({ errorType, onRetry }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",

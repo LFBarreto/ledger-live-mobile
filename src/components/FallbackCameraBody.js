@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Icon from "react-native-vector-icons/dist/Feather";
 import colors from "../colors";
 import LText from "./LText";
@@ -41,10 +42,10 @@ class FallbackCameraBody extends Component<Props> {
 export default FallbackCameraBody;
 
 const IconSettings = () => (
-  <Icon name="settings" size={16} color={colors.white} />
+  <Icon name="settings" size={16} color={EStyleSheet.value(colors.white)} />
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     alignItems: "center",

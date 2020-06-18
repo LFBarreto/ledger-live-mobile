@@ -1,6 +1,7 @@
 // @flow
 import React, { useCallback, useState, useMemo } from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useNavigation } from "@react-navigation/native";
 import { Trans, useTranslation } from "react-i18next";
 import { BigNumber } from "bignumber.js";
@@ -38,7 +39,7 @@ import AccountSectionLabel from "../../../components/AccountSectionLabel";
 
 const infoRewardsModalData = [
   {
-    Icon: () => <ClaimRewards size={18} color={colors.darkBlue} />,
+    Icon: () => <ClaimRewards size={18} color={EStyleSheet.value(colors.darkBlue)} />,
     title: <Trans i18nKey="tron.info.claimRewards.title" />,
     description: <Trans i18nKey="tron.info.claimRewards.description" />,
   },
@@ -147,7 +148,7 @@ const Delegation = ({ account, parentAccount }: Props) => {
         <>
           <AccountSectionLabel
             name={t("tron.voting.rewards.title")}
-            icon={<Info size={16} color={colors.darkBlue} />}
+            icon={<Info size={16} color={EStyleSheet.value(colors.darkBlue)} />}
             onPress={openRewardsInfoModal}
           />
           <View style={styles.rewardSection}>
@@ -216,7 +217,7 @@ const Delegation = ({ account, parentAccount }: Props) => {
                       </LText>
                     </View>
 
-                    <ArrowRight size={16} color={colors.live} />
+                    <ArrowRight size={16} color={EStyleSheet.value(colors.live)} />
                   </TouchableOpacity>
                 </View>
               )}
@@ -261,7 +262,7 @@ const Delegation = ({ account, parentAccount }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
   },

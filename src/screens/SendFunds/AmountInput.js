@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { connect } from "react-redux";
 import { BigNumber } from "bignumber.js";
 import debounce from "lodash/debounce";
@@ -161,7 +162,7 @@ class AmountInput extends Component<Props, OwnState> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
   },

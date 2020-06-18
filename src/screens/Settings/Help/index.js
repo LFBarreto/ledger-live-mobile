@@ -1,6 +1,7 @@
 /* @flow */
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { TrackScreen } from "../../../analytics";
 import LedgerSupportRow from "./LedgerSupportRow";
 import ClearCacheRow from "./ClearCacheRow";
@@ -22,7 +23,7 @@ export default function HelpSettings() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: { paddingTop: 16, paddingBottom: 64 },
   container: {
     marginTop: 16,

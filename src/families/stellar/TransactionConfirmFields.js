@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { Transaction } from "@ledgerhq/live-common/lib/types";
 import { DataRow } from "../../components/ValidateOnDeviceDataRow";
 import LText from "../../components/LText";
@@ -47,7 +47,7 @@ const deviceMemoLabels = {
   MEMO_RETURN: "Memo Return",
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   text: {
     color: colors.darkBlue,
     fontSize: 14,

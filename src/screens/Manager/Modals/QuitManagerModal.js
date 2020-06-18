@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import colors from "../../../colors";
 import LText from "../../../components/LText";
@@ -38,7 +39,7 @@ const QuitManagerModal = ({
     <ActionModal isOpened={!!isOpened} onClose={onClose} actions={[]}>
       <View style={styles.storageImage}>
         <InfoIcon bg={colors.lightLive}>
-          <Quit size={30} color={colors.live} />
+          <Quit size={30} color={EStyleSheet.value(colors.live)} />
         </InfoIcon>
       </View>
       <View style={styles.storageRow}>
@@ -76,7 +77,7 @@ const QuitManagerModal = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   storageImage: {
     width: 80,
     marginVertical: 24,

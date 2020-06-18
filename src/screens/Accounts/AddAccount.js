@@ -26,7 +26,7 @@ export default function AddAccount() {
       style={{ marginHorizontal: 16 }}
       onPress={openAddModal}
     >
-      <Icon name="plus" color={colors.grey} size={20} />
+      <Icon name="plus" color={EStyleSheet.value(colors.grey)} size={20} />
       <AddAccountsModal
         navigation={navigation}
         isOpened={isAddModalOpened}

@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import Icon from "react-native-vector-icons/dist/Feather";
 import { getDeviceModel } from "@ledgerhq/devices";
@@ -19,7 +20,7 @@ class ScanningFooter extends PureComponent<Props> {
     return (
       <View style={styles.root}>
         <Rounded bg={colors.pillActiveBackground}>
-          <Icon name="bluetooth" color={colors.live} size={28} />
+          <Icon name="bluetooth" color={EStyleSheet.value(colors.live)} size={28} />
         </Rounded>
         <LText style={styles.text}>
           <Trans
@@ -32,7 +33,7 @@ class ScanningFooter extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingTop: 24,
     paddingBottom: 32,

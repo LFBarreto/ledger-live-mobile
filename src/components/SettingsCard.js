@@ -1,7 +1,8 @@
 /* @flow */
 
 import React, { Component } from "react";
-import { View, StyleSheet, Platform } from "react-native";
+import { View, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Card from "./Card";
 import LText from "./LText";
 import colors from "../colors";
@@ -32,7 +33,7 @@ export default class SettingsCard extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   cardStyle: {
     backgroundColor: colors.white,
     overflow: "visible",

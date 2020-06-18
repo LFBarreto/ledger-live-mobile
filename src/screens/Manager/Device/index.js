@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 
-import { StyleSheet, View, Image } from "react-native";
+import { View, Image } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import type { State, AppsDistribution } from "@ledgerhq/live-common/lib/apps";
 import LText from "../../../components/LText";
@@ -86,7 +87,7 @@ const DeviceCard = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   card: {
     height: 265,
     flexDirection: "column",

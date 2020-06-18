@@ -1,7 +1,8 @@
 // @flow
 import React, { useCallback } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useNavigation } from "@react-navigation/native";
 import type { AccountLike, Account } from "@ledgerhq/live-common/lib/types";
 import { getMainAccount } from "@ledgerhq/live-common/lib/account";
@@ -13,7 +14,7 @@ import IlluStaking from "./IlluStaking";
 import Button from "../../components/Button";
 import LText from "../../components/LText";
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   banner: {
     margin: 16,
     marginBottom: 0,

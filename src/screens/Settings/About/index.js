@@ -1,6 +1,7 @@
 /* @flow */
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { TrackScreen } from "../../../analytics";
 import NavigationScrollView from "../../../components/NavigationScrollView";
 import AppVersionRow from "./AppVersionRow";
@@ -24,7 +25,7 @@ export default function About() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingTop: 16,
     paddingBottom: 64,

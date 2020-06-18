@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useTranslation } from "react-i18next";
 import colors from "../../colors";
 import Touchable from "../../components/Touchable";
@@ -58,7 +59,7 @@ export default function OnboardingHeader({
           onPress={prev}
           hitSlop={hitSlop}
         >
-          <IconArrowLeft size={16} color={colors.grey} />
+          <IconArrowLeft size={16} color={EStyleSheet.value(colors.grey)} />
         </Touchable>
         {withSkip && (
           <Touchable event="OnboardingSkip" onPress={next} hitSlop={hitSlop}>
@@ -80,7 +81,7 @@ export default function OnboardingHeader({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
   },

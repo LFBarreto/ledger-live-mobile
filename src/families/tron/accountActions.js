@@ -1,6 +1,7 @@
 // @flow
 import React, { useCallback, useState, useMemo } from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import type { Account } from "@ledgerhq/live-common/lib/types";
 
@@ -47,7 +48,10 @@ const ChoiceButton = ({
         disabled ? { backgroundColor: colors.lightFog } : {},
       ]}
     >
-      <Icon color={disabled ? colors.grey : colors.live} size={18} />
+      <Icon
+        color={EStyleSheet.value(disabled ? colors.grey : colors.live)}
+        size={18}
+      />
     </View>
 
     <View style={styles.buttonLabelContainer}>
@@ -163,7 +167,7 @@ const Manage = ({
             !canUnfreeze &&
             effectiveTimeToUnfreeze < Infinity && (
               <View style={styles.timeWarn}>
-                <ClockIcon color={colors.grey} size={16} />
+                <ClockIcon color={EStyleSheet.value(colors.grey)} size={16} />
                 <LText style={styles.timeLabel} semiBold>
                   <DateFromNow date={effectiveTimeToUnfreeze} />
                 </LText>
@@ -209,7 +213,7 @@ type NavOptions = {
   params?: { [key: string]: any },
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   modal: {
     paddingTop: 16,
     paddingHorizontal: 8,

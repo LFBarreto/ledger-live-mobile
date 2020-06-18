@@ -1,12 +1,8 @@
 // @flow
 import { BigNumber } from "bignumber.js";
 import React, { useState } from "react";
-import {
-  View,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  Keyboard,
-} from "react-native";
+import { View, TouchableWithoutFeedback, Keyboard } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -124,7 +120,7 @@ function BitcoinEditFeePerByte({ navigation, route }: Props) {
 
 export { options, BitcoinEditFeePerByte as component };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

@@ -2,7 +2,8 @@
 
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import LText from "../../components/LText";
 import colors from "../../colors";
 
@@ -46,7 +47,7 @@ class Greetings extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     marginHorizontal: 16,
   },

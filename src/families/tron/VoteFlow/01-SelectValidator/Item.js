@@ -1,6 +1,7 @@
 // @flow
 import React, { memo, useCallback } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 
 import type { SuperRepresentative } from "@ledgerhq/live-common/lib/families/tron/types";
@@ -51,9 +52,9 @@ function Item({
         style={[styles.iconWrapper, !isSR ? styles.iconWrapperCandidate : {}]}
       >
         {isSR ? (
-          <Trophy size={16} color={colors.live} />
+          <Trophy size={16} color={EStyleSheet.value(colors.live)} />
         ) : (
-          <Medal size={16} color={colors.grey} />
+          <Medal size={16} color={EStyleSheet.value(colors.grey)} />
         )}
       </View>
 
@@ -89,7 +90,7 @@ function Item({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flexDirection: "row",
     alignItems: "center",

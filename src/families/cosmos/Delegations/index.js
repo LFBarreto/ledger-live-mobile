@@ -2,7 +2,8 @@
 import { BigNumber } from "bignumber.js";
 import React, { useCallback, useState, useMemo } from "react";
 import type { ElementProps } from "react";
-import { View, StyleSheet, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useNavigation } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import {
@@ -359,7 +360,7 @@ export default function Delegations({ account }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     margin: 16,
   },

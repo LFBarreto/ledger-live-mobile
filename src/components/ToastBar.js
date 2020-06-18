@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import ReactNativeModal from "react-native-modal";
 
 import type { BaseButtonProps } from "./Button";
@@ -47,16 +48,16 @@ class ToastBar extends Component<Props> {
     } = this.props;
 
     let backgroundColor = colors.white;
-    let color = colors.live;
+    let color = EStyleSheet.value(colors.live);
 
     switch (type) {
       case "primary":
-        backgroundColor = colors.live;
-        color = colors.white;
+        backgroundColor = EStyleSheet.value(colors.live);
+        color = EStyleSheet.value(colors.white);
         break;
       case "error":
         backgroundColor = colors.alert;
-        color = colors.white;
+        color = EStyleSheet.value(colors.white);
         break;
       default:
         break;
@@ -117,7 +118,7 @@ class ToastBar extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     width,
     left: 0,

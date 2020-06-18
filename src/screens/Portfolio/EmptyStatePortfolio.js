@@ -2,7 +2,8 @@
 import React, { memo, useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
-import { View, StyleSheet, Image } from "react-native";
+import { View, Image } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { hasInstalledAnyAppSelector } from "../../reducers/settings";
 import colors from "../../colors";
 import { ScreenName } from "../../const";
@@ -41,7 +42,7 @@ function EmptyStatePortfolio({ navigation, showHelp = true }: Props) {
         <View style={styles.help}>
           <HelpLink
             url={hasInstalledAnyApp ? urls.addAccount : urls.goToManager}
-            color={colors.grey}
+            color={EStyleSheet.value(colors.grey)}
           />
         </View>
       ) : null}
@@ -106,7 +107,7 @@ function EmptyStatePortfolio({ navigation, showHelp = true }: Props) {
 
 export default memo<Props>(EmptyStatePortfolio);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     margin: 16,

@@ -3,7 +3,8 @@
 import { getCryptoCurrencyById } from "@ledgerhq/live-common/lib/data/cryptocurrencies";
 import React, { useCallback, useMemo } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, View, SectionList } from "react-native";
+import { View, SectionList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import colors from "../../colors";
@@ -70,9 +71,9 @@ export default function Overview({ route, navigation }: Props) {
     >
       <Circle bg={colors.pillActiveBackground} size={56}>
         {showNotice ? (
-          <IconExclamationCircle color={colors.live} size={24} />
+          <IconExclamationCircle color={EStyleSheet.value(colors.live)} size={24} />
         ) : (
-          <LiveLogo color={colors.live} size={24} />
+          <LiveLogo color={EStyleSheet.value(colors.live)} size={24} />
         )}
       </Circle>
       <LText style={styles.title} semiBold>
@@ -116,7 +117,7 @@ export default function Overview({ route, navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

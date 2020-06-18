@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet, Animated } from "react-native";
+import { View, Animated } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import IconClose from "../icons/Close";
 import colors from "../colors";
@@ -101,7 +102,7 @@ export default class BluetoothScanning extends PureComponent<Props> {
           <DeviceNanoMedium />
           {isError && (
             <View style={styles.errorContainer}>
-              <IconClose size={24} color={colors.alert} />
+              <IconClose size={24} color={EStyleSheet.value(colors.alert)} />
             </View>
           )}
         </View>
@@ -110,7 +111,7 @@ export default class BluetoothScanning extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     position: "relative",
   },

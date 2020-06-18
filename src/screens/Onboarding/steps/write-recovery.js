@@ -2,7 +2,8 @@
 
 import React, { Component } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 import { TrackScreen } from "../../../analytics";
 import Button from "../../../components/Button";
@@ -69,14 +70,20 @@ class OnboardingStepWriteRecovery extends Component<
                     <Trans i18nKey="onboarding.stepWriteRecoveryRestore.step2" />,
                     <Trans i18nKey="onboarding.stepWriteRecoveryRestore.step3">
                       {"text"}
-                      <LText semiBold style={{ color: colors.darkBlue }}>
+                      <LText
+                        semiBold
+                        style={{ color: EStyleSheet.value(colors.darkBlue) }}
+                      >
                         bold text
                       </LText>
                       {"text"}
                     </Trans>,
                     <Trans i18nKey="onboarding.stepWriteRecoveryRestore.step4">
                       {"text"}
-                      <LText semiBold style={{ color: colors.darkBlue }}>
+                      <LText
+                        semiBold
+                        style={{ color: EStyleSheet.value(colors.darkBlue) }}
+                      >
                         bold text
                       </LText>
                       {"text"}
@@ -102,7 +109,7 @@ class OnboardingStepWriteRecovery extends Component<
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   hero: {
     paddingVertical: 40,
     backgroundColor: colors.lightGrey,

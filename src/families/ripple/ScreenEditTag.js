@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useState } from "react";
-import { View, StyleSheet, TextInput } from "react-native";
+import { View, TextInput } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
@@ -105,7 +106,7 @@ function RippleEditTag({ route, navigation }: Props) {
 
 export { options, RippleEditTag as component };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
   },

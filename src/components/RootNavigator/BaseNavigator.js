@@ -168,7 +168,7 @@ export default function BaseNavigator() {
           ...TransparentHeaderNavigationOptions,
           title: t("send.scan.title"),
           headerRight: () => (
-            <HeaderRightClose color={colors.white} preferDismiss={false} />
+            <HeaderRightClose color={EStyleSheet.value(colors.white)} preferDismiss={false} />
           ),
           headerLeft: null,
         }}

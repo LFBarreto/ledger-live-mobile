@@ -2,7 +2,8 @@
 import React, { PureComponent } from "react";
 import VersionNumber from "react-native-version-number";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import cleanBuildVersion from "../../../logic/cleanBuildVersion";
 import SettingsRow from "../../../components/SettingsRow";
 import LText from "../../../components/LText";
@@ -28,7 +29,7 @@ class AppVersionRow extends PureComponent<*> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   inner: {
     paddingRight: 10,
   },

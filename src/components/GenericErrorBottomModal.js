@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import colors from "../colors";
 import Touchable from "./Touchable";
@@ -47,7 +48,7 @@ class GenericErrorBottomModal extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "column",
     minHeight: 280,

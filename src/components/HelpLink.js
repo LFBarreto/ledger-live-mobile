@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { StyleSheet, Linking } from "react-native";
+import { Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import Touchable from "./Touchable";
 import LText from "./LText";
@@ -22,7 +23,7 @@ class HelpLink extends PureComponent<{
         style={[styles.linkContainer, style]}
         onPress={() => Linking.openURL(url || urls.faq)}
       >
-        <Help size={16} color={color || colors.live} />
+        <Help size={16} color={color || EStyleSheet.value(colors.live)} />
         <LText style={[styles.linkText, color ? { color } : null]} semiBold>
           <Trans i18nKey="common.needHelp" />
         </LText>
@@ -33,7 +34,7 @@ class HelpLink extends PureComponent<{
 
 export default HelpLink;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   linkContainer: {
     alignItems: "center",
     justifyContent: "center",

@@ -25,7 +25,7 @@ export default function ImportAccountsNavigator() {
           headerShown: true,
           title: t("account.import.scan.title"),
           headerRight: props => (
-            <HeaderRightClose {...props} color={colors.white} />
+            <HeaderRightClose {...props} color={EStyleSheet.value(colors.white)} />
           ),
           headerLeft: null,
         }}

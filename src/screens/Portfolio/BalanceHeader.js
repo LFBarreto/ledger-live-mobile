@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import type { Portfolio, Currency } from "@ledgerhq/live-common/lib/types";
 import colors from "../../colors";
@@ -38,7 +39,7 @@ export default function BalanceHeader({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   content: {
     justifyContent: "center",
     paddingVertical: 8,

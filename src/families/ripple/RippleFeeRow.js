@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback } from "react";
-import { View, StyleSheet, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import { useNavigation } from "@react-navigation/native";
 import type { AccountLike } from "@ledgerhq/live-common/lib/types";
@@ -43,7 +44,7 @@ export default function RippleFeeRow({ account, transaction }: Props) {
       title={<Trans i18nKey="send.fees.title" />}
       additionalInfo={
         <View>
-          <ExternalLink size={12} color={colors.grey} />
+          <ExternalLink size={12} color={EStyleSheet.value(colors.grey)} />
         </View>
       }
     >
@@ -70,7 +71,7 @@ export default function RippleFeeRow({ account, transaction }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   accountContainer: {
     flex: 1,
     flexDirection: "row",

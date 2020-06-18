@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
 import Icon from "react-native-vector-icons/dist/Feather";
@@ -29,7 +30,11 @@ export default function DeviceItemSummary({
 
   return (
     <View style={styles.root}>
-      <IconNanoX color={colors.darkBlue} height={36} width={8} />
+      <IconNanoX
+        color={EStyleSheet.value(colors.darkBlue)}
+        height={36}
+        width={8}
+      />
       <View style={styles.content}>
         <LText bold numberOfLines={1} style={styles.deviceNameText}>
           {name}
@@ -40,8 +45,12 @@ export default function DeviceItemSummary({
               <Trans i18nKey="DeviceItemSummary.genuine" />
               {"  "}
             </LText>
-            <Circle bg={colors.live} size={14}>
-              <Icon name="check" size={10} color={colors.white} />
+            <Circle bg={EStyleSheet.value(colors.live)} size={14}>
+              <Icon
+                name="check"
+                size={10}
+                color={EStyleSheet.value(colors.white)}
+              />
             </Circle>
           </View>
         ) : (
@@ -56,7 +65,7 @@ export default function DeviceItemSummary({
               </Trans>
             </LText>
             <Circle bg={colors.yellow} size={14}>
-              <Alert size={10} color={colors.white} />
+              <Alert size={10} color={EStyleSheet.value(colors.white)} />
             </Circle>
           </View>
         )}
@@ -70,7 +79,7 @@ export default function DeviceItemSummary({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   outer: {
     marginBottom: 16,
   },

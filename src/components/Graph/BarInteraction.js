@@ -11,6 +11,7 @@ import {
 } from "react-native-gesture-handler";
 import type { Item, ItemArray } from "./types";
 import Bar from "./Bar";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 type Props = {
   width: number,
@@ -133,7 +134,7 @@ export default class BarInteraction extends Component<
               }}
             >
               <G x={barOffsetX} y={barOffsetY}>
-                <Bar height={height} color={color} />
+                <Bar height={height} color={EStyleSheet.value(color)} />
               </G>
             </Svg>
           </View>

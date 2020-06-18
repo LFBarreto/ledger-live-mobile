@@ -1,5 +1,6 @@
 import React from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../colors";
 import Info from "../icons/Info";
 import LText from "./LText";
@@ -19,7 +20,7 @@ export default function BalanceSummaryInfoItem({
     <TouchableOpacity onPress={onPress} style={styles.wrapper}>
       <View style={styles.balanceLabelContainer}>
         <LText style={styles.balanceLabel}>{title}</LText>
-        <Info size={12} color={colors.grey} />
+        <Info size={12} color={EStyleSheet.value(colors.grey)} />
       </View>
       <LText semiBold style={styles.balance}>
         {value}
@@ -28,7 +29,7 @@ export default function BalanceSummaryInfoItem({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flexBasis: "auto",
     flexDirection: "column",

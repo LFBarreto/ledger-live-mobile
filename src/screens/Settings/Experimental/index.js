@@ -1,6 +1,7 @@
 /* @flow */
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { isEnvDefault } from "@ledgerhq/live-common/lib/env";
 
 import { TrackScreen } from "../../../analytics";
@@ -29,7 +30,7 @@ export default function ExperimentalSettings() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: { paddingTop: 16, paddingBottom: 64 },
   container: {
     paddingVertical: 16,

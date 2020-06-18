@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent, createRef, useEffect } from "react";
-import { StyleSheet, View, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { concat, from } from "rxjs";
 import { ignoreElements } from "rxjs/operators";
 import { connect } from "react-redux";
@@ -436,7 +437,7 @@ class ScanLoading extends PureComponent<{}> {
     return (
       <View style={styles.scanLoadingRoot}>
         <Spinning>
-          <LiveLogo color={colors.grey} size={16} />
+          <LiveLogo color={EStyleSheet.value(colors.grey)} size={16} />
         </Spinning>
         <LText semiBold style={styles.scanLoadingText}>
           <Trans i18nKey="addAccounts.synchronizing" />
@@ -446,7 +447,7 @@ class ScanLoading extends PureComponent<{}> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

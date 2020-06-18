@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import EmptyStatePortfolio from "../Portfolio/EmptyStatePortfolio";
 import colors from "../../colors";
 
@@ -20,7 +21,7 @@ class NoAccounts extends PureComponent<{ navigation: * }> {
 
 export default NoAccounts;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.lightGrey,

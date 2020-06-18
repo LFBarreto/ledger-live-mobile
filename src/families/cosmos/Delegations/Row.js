@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useTranslation } from "react-i18next";
 import type {
   CosmosMappedDelegation,
@@ -49,7 +50,7 @@ export default function DelegationRow({
 
         <View style={styles.row}>
           <LText style={styles.seeMore}>{t("common.seeMore")}</LText>
-          <ArrowRight color={colors.live} size={14} />
+          <ArrowRight color={EStyleSheet.value(colors.live)} size={14} />
         </View>
       </View>
 
@@ -70,7 +71,7 @@ export default function DelegationRow({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     padding: 16,
   },

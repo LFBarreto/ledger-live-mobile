@@ -9,7 +9,8 @@ import useBridgeTransaction from "@ledgerhq/live-common/lib/bridge/useBridgeTran
 import type { Transaction } from "@ledgerhq/live-common/lib/types";
 import React, { useCallback, useRef, useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { Platform, StyleSheet, View } from "react-native";
+import { Platform, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/FontAwesome";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
@@ -209,7 +210,7 @@ const IconQRCode = ({ size, color }: { size: number, color: string }) => (
   <Icon name="qrcode" size={size} color={color} />
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

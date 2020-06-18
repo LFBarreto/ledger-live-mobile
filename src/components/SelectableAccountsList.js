@@ -2,13 +2,8 @@
 
 import React, { PureComponent, useCallback } from "react";
 import { Trans } from "react-i18next";
-import {
-  Animated,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  PanResponder,
-} from "react-native";
+import { Animated, View, TouchableOpacity, PanResponder } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useNavigation } from "@react-navigation/native";
 import { listTokenTypesForCryptoCurrency } from "@ledgerhq/live-common/lib/currencies";
 import type { Account } from "@ledgerhq/live-common/lib/types";
@@ -300,7 +295,7 @@ class Header extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     marginBottom: 24,
   },

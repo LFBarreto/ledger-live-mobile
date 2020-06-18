@@ -1,11 +1,7 @@
 // @flow
 import React, { useCallback } from "react";
-import {
-  StyleSheet,
-  View,
-  TouchableWithoutFeedback,
-  Platform,
-} from "react-native";
+import { View, TouchableWithoutFeedback, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
 import { useGlobalSyncState } from "@ledgerhq/live-common/lib/bridge/react";
@@ -69,7 +65,7 @@ export default function PortfolioHeader({
             event="DistributionCTA"
             onPress={onDistributionButtonPress}
           >
-            <IconPie size={16} color={colors.live} />
+            <IconPie size={16} color={EStyleSheet.value(colors.live)} />
           </Touchable>
         </View>
       )}
@@ -77,7 +73,7 @@ export default function PortfolioHeader({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flexDirection: "row",
     paddingRight: 16,

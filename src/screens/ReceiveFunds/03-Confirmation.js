@@ -3,7 +3,8 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { from, of } from "rxjs";
 import { delay } from "rxjs/operators";
-import { View, StyleSheet, Linking, Platform } from "react-native";
+import { View, Linking, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import QRCode from "react-native-qrcode-svg";
@@ -370,7 +371,7 @@ export default function ReceiveConfirmation({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

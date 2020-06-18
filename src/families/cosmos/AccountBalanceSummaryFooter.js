@@ -1,7 +1,8 @@
 // @flow
 
 import React, { useCallback, useState } from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useTranslation } from "react-i18next";
 import { getCryptoCurrencyById } from "@ledgerhq/live-common/lib/currencies";
 import { getAccountUnit } from "@ledgerhq/live-common/lib/account/helpers";
@@ -96,7 +97,7 @@ export default function AccountBalanceFooter({ account }: Props) {
   return <AccountBalanceSummaryFooter account={account} />;
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     flexDirection: "row",

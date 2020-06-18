@@ -1,7 +1,7 @@
 // @flow
 import invariant from "invariant";
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans, useTranslation } from "react-i18next";
 import type { Transaction } from "@ledgerhq/live-common/lib/types";
 import {
@@ -17,7 +17,7 @@ import LText from "../../components/LText";
 import Info from "../../icons/Info";
 import colors from "../../colors";
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   infoText: {
     color: colors.live,
     textAlign: "left",
@@ -40,7 +40,7 @@ const Warning = ({ transaction }: { transaction: Transaction }) => {
     case "freeze":
       return (
         <DataRow>
-          <Info size={22} color={colors.live} />
+          <Info size={22} color={EStyleSheet.value(colors.live)} />
           <LText
             semiBold
             style={[styles.text, styles.infoText]}

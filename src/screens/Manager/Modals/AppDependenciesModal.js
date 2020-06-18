@@ -1,6 +1,7 @@
 import React, { memo, useMemo, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 
 import type { Action } from "@ledgerhq/live-common/lib/apps";
@@ -70,7 +71,7 @@ function AppDependenciesModal({
             <AppIcon style={styles.appIcons} icon={app.icon} />
             <View style={styles.separator} />
             <InfoIcon bg={colors.lightLive} size={30}>
-              <LinkIcon color={colors.live} />
+              <LinkIcon color={EStyleSheet.value(colors.live)} />
             </InfoIcon>
             <View style={styles.separator} />
             <AppIcon style={styles.appIcons} icon={dependencies[0].icon} />
@@ -101,7 +102,7 @@ function AppDependenciesModal({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   imageSection: {
     width: "100%",
     flexDirection: "row",

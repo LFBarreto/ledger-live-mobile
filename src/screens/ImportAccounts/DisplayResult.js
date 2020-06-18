@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from "react";
-import { View, StyleSheet, SectionList } from "react-native";
+import { View, SectionList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useNavigation } from "@react-navigation/native";
 import { HeaderBackButton } from "@react-navigation/stack";
@@ -222,7 +223,7 @@ export default connect(
   },
 )(DisplayResult);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     flexGrow: 1,

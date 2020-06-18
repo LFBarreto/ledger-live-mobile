@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans } from "react-i18next";
 import GenericSuccessView from "../GenericSuccessView";
@@ -60,7 +61,7 @@ export const RenderStep = ({
   </SafeAreaView>
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "column",
   },

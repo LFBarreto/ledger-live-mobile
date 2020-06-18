@@ -5,11 +5,11 @@ import { Trans } from "react-i18next";
 import {
   TouchableOpacity,
   View,
-  StyleSheet,
   Platform,
   Dimensions,
   FlatList,
 } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { getAssetsDistribution } from "@ledgerhq/live-common/lib/portfolio";
 import { createSelector } from "reselect";
@@ -155,7 +155,7 @@ export default function Screen({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flex: 1,
   },

@@ -1,7 +1,8 @@
 // @flow
 import invariant from "invariant";
 import React, { useCallback } from "react";
-import { StyleSheet, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import type { Transaction } from "@ledgerhq/live-common/lib/types";
@@ -75,7 +76,7 @@ export default function ConnectDevice({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

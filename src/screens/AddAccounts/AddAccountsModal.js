@@ -21,8 +21,8 @@ type Props = {
 
 const forceInset = { bottom: "always" };
 
-const IconPlus = () => <Icon name="plus" color={colors.live} size={18} />;
-const IconQr = () => <IconFa name="qrcode" color={colors.live} size={18} />;
+const IconPlus = () => <Icon name="plus" color={EStyleSheet.value(colors.live)} size={18} />;
+const IconQr = () => <IconFa name="qrcode" color={EStyleSheet.value(colors.live)} size={18} />;
 
 export default function AddAccountsModal({
   navigation,

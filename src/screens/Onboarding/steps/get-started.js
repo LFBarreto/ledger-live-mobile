@@ -1,6 +1,7 @@
 // @flow
 import React, { Component, PureComponent } from "react";
-import { StyleSheet, View, Linking, Platform } from "react-native";
+import { View, Linking, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { connect } from "react-redux";
 import { Trans } from "react-i18next";
 import Icon from "react-native-vector-icons/dist/Feather";
@@ -23,7 +24,7 @@ import { urls } from "../../../config/urls";
 import UpgradeToNanoXBanner from "../../../components/UpgradeToNanoXBanner";
 import StepLegacyModal from "../../../modals/StepLegacyModal";
 
-const IconPlus = () => <Icon name="plus" color={colors.live} size={16} />;
+const IconPlus = () => <Icon name="plus" color={EStyleSheet.value(colors.live)} size={16} />;
 
 type Props = OnboardingStepProps & {
   hasCompletedOnboarding: boolean,
@@ -145,7 +146,7 @@ class Row extends PureComponent<RowProps> {
         style={styles.row}
       >
         <View style={styles.rowIcon}>
-          {Icon ? <Icon size={16} color={colors.live} /> : null}
+          {Icon ? <Icon size={16} color={EStyleSheet.value(colors.live)} /> : null}
         </View>
         <LText style={styles.label} semiBold>
           {label}
@@ -155,7 +156,7 @@ class Row extends PureComponent<RowProps> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   title: {
     fontSize: 24,
     color: colors.darkBlue,

@@ -50,7 +50,7 @@ class HardResetRow extends PureComponent<Props, State> {
           desc={<Trans i18nKey="settings.help.hardResetDesc" />}
           iconLeft={
             <Circle bg="rgba(234,46,73,0.1)" size={32}>
-              <Trash size={16} color={colors.alert} />
+              <Trash size={16} color={EStyleSheet.value(colors.alert)} />
             </Circle>
           }
           onPress={this.onPress}

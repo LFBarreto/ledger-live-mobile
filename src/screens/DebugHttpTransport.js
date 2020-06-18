@@ -1,12 +1,8 @@
 // @flow
 
 import React, { Component } from "react";
-import {
-  StyleSheet,
-  View,
-  Keyboard,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { View, Keyboard, TouchableWithoutFeedback } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { connect } from "react-redux";
 import SafeAreaView from "react-native-safe-area-view";
 import { ScreenName } from "../const";
@@ -85,7 +81,7 @@ class DebugHttpTransport extends Component<
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

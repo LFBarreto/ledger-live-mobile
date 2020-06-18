@@ -1,7 +1,8 @@
 /* @flow */
 
 import React from "react";
-import { StyleSheet, Image, View } from "react-native";
+import { Image, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 type Props = {
   left: React$Node,
@@ -9,7 +10,7 @@ type Props = {
   undelegation?: boolean,
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   header: {
     flexDirection: "row",
     alignSelf: "center",

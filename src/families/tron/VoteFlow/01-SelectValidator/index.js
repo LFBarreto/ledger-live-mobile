@@ -1,7 +1,8 @@
 /* @flow */
 import invariant from "invariant";
 import React, { useCallback, useState, useMemo } from "react";
-import { StyleSheet, TouchableOpacity, FlatList } from "react-native";
+import { TouchableOpacity, FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -28,12 +29,12 @@ import Item from "./Item";
 
 const infoModalData = [
   {
-    Icon: () => <Trophy size={18} color={colors.live} />,
+    Icon: () => <Trophy size={18} color={EStyleSheet.value(colors.live)} />,
     title: <Trans i18nKey="tron.info.superRepresentative.title" />,
     description: <Trans i18nKey="tron.info.superRepresentative.description" />,
   },
   {
-    Icon: () => <Medal size={18} color={colors.grey} />,
+    Icon: () => <Medal size={18} color={EStyleSheet.value(colors.grey)} />,
     title: <Trans i18nKey="tron.info.candidates.title" />,
     description: <Trans i18nKey="tron.info.candidates.description" />,
   },
@@ -187,7 +188,7 @@ export function SelectValidatorHeaderLeft() {
   return (
     <>
       <TouchableOpacity style={styles.headerButton} onPress={openInfoModal}>
-        <Info size={16} color={colors.grey} />
+        <Info size={16} color={EStyleSheet.value(colors.grey)} />
       </TouchableOpacity>
       <InfoModal
         isOpened={!!infoModalOpen}
@@ -198,7 +199,7 @@ export function SelectValidatorHeaderLeft() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

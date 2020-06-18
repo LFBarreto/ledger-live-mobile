@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 
 import colors from "../../colors";
@@ -18,7 +18,7 @@ const QRCodeTopLayer = () => (
   </>
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   text: {
     fontSize: 16,
     lineHeight: 32,

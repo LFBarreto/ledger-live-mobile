@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import type { Account, AccountLike } from "@ledgerhq/live-common/lib/types";
 import {
@@ -42,7 +43,7 @@ export default class SummaryAmountSection extends PureComponent<Props> {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   amountContainer: {
     flexDirection: "column",
     alignItems: "flex-end",

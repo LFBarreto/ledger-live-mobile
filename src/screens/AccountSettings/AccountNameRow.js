@@ -1,7 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { Account } from "@ledgerhq/live-common/lib/types";
 import { ScreenName } from "../../const";
 import SettingsRow from "../../components/SettingsRow";
@@ -40,7 +40,7 @@ class AccountNameRow extends PureComponent<Props> {
 
 export default AccountNameRow;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   accountName: {
     flexShrink: 1,
     textAlign: "right",

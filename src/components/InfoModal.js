@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent, memo } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 
 import BottomModal from "./BottomModal";
@@ -53,8 +54,12 @@ const InfoModal = ({
     onClose={onClose}
     style={[styles.modal, style || {}]}
   >
-    <Circle bg={rgba(colors.live, 0.1)} size={56}>
-      {Icon ? <Icon /> : <IconHelp size={24} color={colors.live} />}
+    <Circle bg={colors.liveTrans} size={56}>
+      {Icon ? (
+        <Icon />
+      ) : (
+        <IconHelp size={24} color={EStyleSheet.value(colors.live)} />
+      )}
     </Circle>
     {title ? (
       <LText style={styles.modalTitle} semiBold>
@@ -113,7 +118,7 @@ class BulletLine extends PureComponent<{ children: * }> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   modal: {
     paddingHorizontal: 16,
     paddingTop: 24,

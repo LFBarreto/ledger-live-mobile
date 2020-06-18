@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { useAppUninstallNeedsDeps } from "@ledgerhq/live-common/lib/apps/react";
 
@@ -50,7 +50,7 @@ const AppUninstallButton = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   uninstallButton: {
     width: 44,
     height: 44,

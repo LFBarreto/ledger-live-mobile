@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { Trans } from "react-i18next";
 import Icon from "react-native-vector-icons/dist/Feather";
@@ -31,7 +32,7 @@ export default function PairNewDeviceButton({ onPress }: Props) {
 
 // Word of caution, to make the + button align we are not following the
 // normal 8s sizing for margins. This is microadjusted.
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     height: 64,
     padding: 16,

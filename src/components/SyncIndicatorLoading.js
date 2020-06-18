@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from "react";
-import { StyleSheet, View, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 
 import LText from "./LText";
@@ -20,7 +21,7 @@ class SyncIndicatorLoading extends Component<Props> {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
   },

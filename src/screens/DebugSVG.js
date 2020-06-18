@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from "react";
-import { StyleSheet, ScrollView, View } from "react-native";
+import { ScrollView, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import LText from "../components/LText";
 import colors from "../colors";
@@ -201,7 +202,7 @@ class DebugSVG extends Component<{}> {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

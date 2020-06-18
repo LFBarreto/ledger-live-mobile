@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Sentry } from "react-native-sentry";
 
 import Button from "../components/Button";
@@ -63,7 +64,7 @@ const CrashingComponent = () => {
   throw new Error("DEBUG renderCrash");
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
   },

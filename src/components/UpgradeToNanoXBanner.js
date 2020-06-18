@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { getDeviceModel } from "@ledgerhq/devices";
 
 import { Trans } from "react-i18next";
@@ -49,7 +50,7 @@ class UpgradeToNanoXBanner extends PureComponent<Props> {
                 values={getDeviceModel("nanoX")}
               />
             </LText>
-            <IconArrowRight size={16} color={colors.live} />
+            <IconArrowRight size={16} color={EStyleSheet.value(colors.live)} />
           </Touchable>
         </View>
       </View>
@@ -57,7 +58,7 @@ class UpgradeToNanoXBanner extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     padding: 16,
     paddingLeft: 0,

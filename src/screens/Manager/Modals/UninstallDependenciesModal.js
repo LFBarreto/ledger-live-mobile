@@ -1,5 +1,6 @@
 import React, { memo, useMemo, useCallback } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 
 import type { Action } from "@ledgerhq/live-common/lib/apps";
@@ -24,7 +25,7 @@ const LINE_HEIGHT = 46;
 const renderDepLine = ({ item }: *) => (
   <View style={styles.depLine}>
     <View style={styles.depLineTree}>
-      <ListTreeLine color={colors.grey} />
+      <ListTreeLine color={EStyleSheet.value(colors.grey)} />
     </View>
     <AppIcon icon={item.icon} size={22} />
     <LText semiBold style={styles.depLineText}>
@@ -120,7 +121,7 @@ const UninstallDependenciesModal = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   imageSection: {
     width: "100%",
     flexDirection: "row",

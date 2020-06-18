@@ -1,7 +1,7 @@
 // @flow
 
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import colors from "../../colors";
 import TrackScreen from "../../analytics/TrackScreen";
@@ -18,7 +18,7 @@ export default function ExchangeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.lightGrey,

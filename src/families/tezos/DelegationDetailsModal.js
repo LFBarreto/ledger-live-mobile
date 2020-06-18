@@ -2,7 +2,8 @@
 
 import React, { useCallback } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, View, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useNavigation } from "@react-navigation/native";
 import { differenceInCalendarDays } from "date-fns";
@@ -47,7 +48,7 @@ type Props = {
 
 const forceInset = { bottom: "always" };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   modal: {
     position: "relative",
   },
@@ -237,7 +238,7 @@ export default function DelegationDetailsModal({
           onPress={onClose}
         >
           <Circle size={32} bg={colors.lightFog}>
-            <Close size={16} color={colors.grey} />
+            <Close size={16} color={EStyleSheet.value(colors.grey)} />
           </Circle>
         </Touchable>
 
@@ -341,8 +342,14 @@ export default function DelegationDetailsModal({
               event="DelegationDetailsReceive"
               label={<Trans i18nKey="delegation.receive" />}
               icon={
-                <Circle bg={rgba(colors.live, 0.2)} size={48}>
-                  <IconReceive size={16} color={colors.live} />
+                <Circle
+                  bg={rgba(EStyleSheet.value(colors.live), 0.2)}
+                  size={48}
+                >
+                  <IconReceive
+                    size={16}
+                    color={EStyleSheet.value(colors.live)}
+                  />
                 </Circle>
               }
               onPress={onReceive}
@@ -351,8 +358,15 @@ export default function DelegationDetailsModal({
               event="DelegationDetailsChangeValidator"
               label={<Trans i18nKey="delegation.changeValidator" />}
               icon={
-                <Circle bg={rgba(colors.live, 0.2)} size={48}>
-                  <Icon size={16} name="edit-2" color={colors.live} />
+                <Circle
+                  bg={rgba(EStyleSheet.value(colors.live), 0.2)}
+                  size={48}
+                >
+                  <Icon
+                    size={16}
+                    name="edit-2"
+                    color={EStyleSheet.value(colors.live)}
+                  />
                 </Circle>
               }
               onPress={onChangeValidator}

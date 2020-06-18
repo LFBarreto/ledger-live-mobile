@@ -1,6 +1,7 @@
 /* @flow */
 import React from "react";
-import { TouchableWithoutFeedback, View, StyleSheet } from "react-native";
+import { TouchableWithoutFeedback, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useRoute } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 import {
@@ -34,7 +35,7 @@ export default function AccountHeaderTitle() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   title: {
     fontSize: 16,
   },

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, Text } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 export default class SectionTitle extends Component<{
   title?: string,
@@ -16,7 +17,7 @@ export default class SectionTitle extends Component<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   sectionTitle: {
     padding: 15,
   },

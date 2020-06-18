@@ -1,6 +1,7 @@
 /* @flow */
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import LText from "./LText";
 
@@ -28,7 +29,7 @@ export default function TabIcon({ Icon, i18nKey, color, focused }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     alignItems: "center",

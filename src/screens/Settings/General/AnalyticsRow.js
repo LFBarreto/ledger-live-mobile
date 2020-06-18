@@ -30,7 +30,7 @@ const mapDispatchToProps = {
 };
 
 const IconActivity = () => (
-  <FeatherIcon name="activity" size={32} color={colors.live} />
+  <FeatherIcon name="activity" size={32} color={EStyleSheet.value(colors.live)} />
 );
 
 class AnalyticsRow extends PureComponent<Props, State> {

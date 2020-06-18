@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import colors from "../../colors";
 import TrackScreen from "../../analytics/TrackScreen";
@@ -14,7 +15,7 @@ class ReadOnlyWarning extends PureComponent<{ continue: () => void }> {
       <View style={styles.root}>
         <TrackScreen category="Manager" name="ReadOnlyNanoX" />
         <View style={styles.alert}>
-          <AlertTriangle size={32} color={colors.live} />
+          <AlertTriangle size={32} color={EStyleSheet.value(colors.live)} />
         </View>
         <LText secondary semiBold style={styles.title}>
           <Trans i18nKey="transfer.receive.readOnly.text" />
@@ -36,7 +37,7 @@ class ReadOnlyWarning extends PureComponent<{ continue: () => void }> {
 
 export default ReadOnlyWarning;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     margin: 16,

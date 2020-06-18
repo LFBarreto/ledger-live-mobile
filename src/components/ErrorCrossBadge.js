@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import colors from "../colors";
 import Close from "../icons/Close";
@@ -16,14 +17,14 @@ class ErrorCrossBadge extends PureComponent<Props> {
     return (
       <View style={[styles.outer, style]}>
         <View style={styles.inner}>
-          <Close size={14} color={colors.white} />
+          <Close size={14} color={EStyleSheet.value(colors.white)} />
         </View>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   outer: {
     padding: 0,
     borderRadius: 16,

@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useTranslation } from "react-i18next";
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
@@ -24,14 +25,14 @@ export function BuyCryptoBanner() {
   return (
     <View style={styles.banner}>
       <RectButton style={styles.closeButton} onPress={dismiss}>
-        <CloseIcon size={18} color={colors.grey} />
+        <CloseIcon size={18} color={EStyleSheet.value(colors.grey)} />
       </RectButton>
       <RectButton
         style={styles.innerContainer}
         onPress={() => navigation.navigate(NavigatorName.Exchange)}
       >
         <View style={styles.iconContainer}>
-          <ExchangeIcon size={22} color={colors.live} />
+          <ExchangeIcon size={22} color={EStyleSheet.value(colors.live)} />
         </View>
         <View style={styles.contentContainer}>
           <LText style={styles.title} bold>
@@ -46,13 +47,13 @@ export function BuyCryptoBanner() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   banner: {
     margin: 16,
     position: "relative",
     borderRadius: 4,
     overflow: "hidden",
-    backgroundColor: colors.darkBlue,
+    backgroundColor: colors.darkBlueBg,
     marginBottom: 8,
   },
   innerContainer: {

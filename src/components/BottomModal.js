@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet, Platform } from "react-native";
+import { View, Platform } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import ReactNativeModal from "react-native-modal";
 import type { ViewStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
 import TrackScreen from "../analytics/TrackScreen";
@@ -80,7 +81,7 @@ const BottomModal = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     justifyContent: "flex-end",
     margin: 0,

@@ -1,7 +1,8 @@
 // @flow */
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import { findCurrencyByTicker } from "@ledgerhq/live-common/lib/currencies";
 
@@ -23,7 +24,7 @@ const extractFromTo = props => {
   return { from, to };
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     marginTop: 16,
     marginBottom: 48,

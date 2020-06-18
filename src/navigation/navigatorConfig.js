@@ -1,6 +1,7 @@
 // @flow
 
 import React from "react";
+import EStyleSheet from "react-native-extended-stylesheet";
 import HeaderRightClose from "../components/HeaderRightClose";
 import HeaderTitle from "../components/HeaderTitle";
 import HeaderBackImage from "../components/HeaderBackImage";
@@ -35,7 +36,7 @@ export const closableStackNavigatorConfig = {
 export const topTabNavigatorConfig = {
   tabBarOptions: {
     allowFontScaling: false,
-    activeTintColor: colors.live,
+    activeTintColor: EStyleSheet.value(colors.live),
     inactiveTintColor: colors.grey,
     upperCaseLabel: false,
     labelStyle: {
@@ -49,7 +50,7 @@ export const topTabNavigatorConfig = {
       height: 48,
     },
     indicatorStyle: {
-      backgroundColor: colors.live,
+      backgroundColor: EStyleSheet.value(colors.live),
     },
   },
 };

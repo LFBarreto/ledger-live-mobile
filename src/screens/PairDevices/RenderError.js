@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { BleErrorCode } from "react-native-ble-plx";
 import { Trans } from "react-i18next";
 import { PairingFailed, GenuineCheckFailed } from "@ledgerhq/errors";
@@ -83,7 +84,7 @@ class RenderError extends Component<Props> {
               <LText style={styles.linkText} semiBold>
                 <Trans i18nKey="common.skip" />{" "}
               </LText>
-              <IconArrowRight size={16} color={colors.live} />
+              <IconArrowRight size={16} color={EStyleSheet.value(colors.live)} />
             </Touchable>
           ) : (
             <HelpLink url={url} style={styles.linkContainer} />
@@ -101,7 +102,7 @@ class RenderError extends Component<Props> {
 
 export default RenderError;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     flexDirection: "column",

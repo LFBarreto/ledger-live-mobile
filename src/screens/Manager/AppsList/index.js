@@ -1,5 +1,6 @@
 import React, { useCallback, memo } from "react";
-import { View, StyleSheet, VirtualizedList } from "react-native";
+import { View, VirtualizedList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { App } from "@ledgerhq/live-common/lib/types/manager";
 import type { State } from "@ledgerhq/live-common/lib/apps";
 import AppRow from "./AppRow";
@@ -85,7 +86,7 @@ AppsList.defaultProps = {
   renderNoResults: () => null,
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
   },

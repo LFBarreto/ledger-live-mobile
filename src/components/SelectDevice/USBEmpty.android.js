@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { Trans } from "react-i18next";
 import colors from "../../colors";
@@ -19,7 +20,7 @@ export default function USBEmpty() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     height: 64,
     padding: 16,

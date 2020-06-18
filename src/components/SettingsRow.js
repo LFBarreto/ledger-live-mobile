@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Touchable from "./Touchable";
 import LText from "./LText";
 import colors from "../colors";
@@ -57,7 +58,7 @@ export default class SettingsRow extends Component<{
         </LText>
         {!!onHelpPress && (
           <View style={styles.helpIcon}>
-            <IconHelp size={16} color={colors.grey} />
+            <IconHelp size={16} color={EStyleSheet.value(colors.grey)} />
           </View>
         )}
       </View>
@@ -97,11 +98,11 @@ export default class SettingsRow extends Component<{
           {children}
           {arrowRight ? (
             <View style={styles.iconRightContainer}>
-              <ArrowRight size={16} color={colors.grey} />
+              <ArrowRight size={16} color={EStyleSheet.value(colors.grey)} />
             </View>
           ) : selected ? (
             <View style={styles.iconLeftContainer}>
-              <Check size={16} color={colors.live} />
+              <Check size={16} color={EStyleSheet.value(colors.live)} />
             </View>
           ) : null}
         </View>
@@ -110,7 +111,7 @@ export default class SettingsRow extends Component<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     minHeight: 50,
     flexDirection: "row",

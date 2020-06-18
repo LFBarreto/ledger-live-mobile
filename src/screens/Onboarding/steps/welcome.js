@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from "react";
-import { StyleSheet, View, Linking, Image } from "react-native";
+import { View, Linking, Image } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 
 import { TrackScreen } from "../../../analytics";
@@ -69,7 +70,7 @@ class OnboardingStepWelcome extends Component<Props> {
                 values={deviceNames.nanoX}
               />
             </LText>
-            <IconArrowRight size={16} color={colors.live} />
+            <IconArrowRight size={16} color={EStyleSheet.value(colors.live)} />
           </Touchable>
         </View>
       </OnboardingLayout>
@@ -77,7 +78,7 @@ class OnboardingStepWelcome extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   title: {
     color: colors.darkBlue,
     fontSize: 20,

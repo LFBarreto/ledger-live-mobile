@@ -2,7 +2,8 @@
 
 import React, { useMemo } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, View, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import type {
   CryptoCurrency,
@@ -107,7 +108,7 @@ export default function ExchangeSelectCrypto({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

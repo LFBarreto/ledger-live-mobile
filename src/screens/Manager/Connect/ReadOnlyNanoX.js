@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { StyleSheet, View, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import TrackScreen from "../../../analytics/TrackScreen";
 import colors from "../../../colors";
@@ -73,7 +74,7 @@ class ReadOnlyNanoX extends PureComponent<OnboardingStepProps> {
             <LText semiBold style={[styles.subText, styles.buy]}>
               <Trans i18nKey="manager.readOnly.buy" />
             </LText>
-            <IconArrowRight size={16} color={colors.live} />
+            <IconArrowRight size={16} color={EStyleSheet.value(colors.live)} />
           </Touchable>
         </View>
       </View>
@@ -83,7 +84,7 @@ class ReadOnlyNanoX extends PureComponent<OnboardingStepProps> {
 
 export default withOnboardingContext(ReadOnlyNanoX);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     margin: 16,

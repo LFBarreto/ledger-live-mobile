@@ -9,7 +9,8 @@ import type {
 } from "@ledgerhq/live-common/lib/types";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useDispatch, useSelector } from "react-redux";
 import { reduce } from "rxjs/operators";
@@ -201,7 +202,7 @@ export default function Progress({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,
@@ -212,7 +213,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   noAccountsMigrated: {
-    backgroundColor: rgba(colors.live, 0.1),
+    backgroundColor: colors.liveTrans,
     marginHorizontal: 8,
     borderRadius: 4,
     paddingVertical: 8,

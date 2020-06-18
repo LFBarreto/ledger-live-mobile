@@ -1,6 +1,7 @@
 // @flow
 import React, { memo, useCallback } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import { BigNumber } from "bignumber.js";
 
@@ -112,13 +113,13 @@ function Item({
             ) : null}
           </View>
         )}
-        <ArrowRight size={16} color={colors.grey} />
+        <ArrowRight size={16} color={EStyleSheet.value(colors.grey)} />
       </View>
     </TouchableOpacity>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     flexDirection: "row",
     alignItems: "center",

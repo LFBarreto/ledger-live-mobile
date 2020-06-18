@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Icon from "react-native-vector-icons/dist/Feather";
 
 import colors, { lighten } from "../colors";
@@ -38,7 +39,7 @@ class GenericSuccessView extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "column",
     alignItems: "center",

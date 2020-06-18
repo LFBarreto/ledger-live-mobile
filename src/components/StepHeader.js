@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { TouchableWithoutFeedback, View, StyleSheet } from "react-native";
+import { TouchableWithoutFeedback, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../colors";
 import LText from "./LText";
 import { scrollToTop } from "../navigation/utils";
@@ -23,7 +24,7 @@ export default function StepHeader({ title, subtitle }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "column",
     flex: 1,

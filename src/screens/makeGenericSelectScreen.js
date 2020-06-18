@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from "react";
-import { FlatList, StyleSheet } from "react-native";
+import { FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { track } from "../analytics";
 import SettingsRow from "../components/SettingsRow";
 
@@ -45,7 +46,7 @@ function getEntryFromOptions<Item>(opts: Opts<Item>): EntryComponent<Item> {
   };
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingTop: 16,
     paddingBottom: 64,

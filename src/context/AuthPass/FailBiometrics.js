@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from "react";
-import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
+import { View, TouchableWithoutFeedback } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import LText from "../../components/LText";
 import type { Privacy } from "../../reducers/settings";
@@ -22,7 +23,7 @@ class FailBiometrics extends Component<Props> {
             <BiometricsIcon
               biometricsType={privacy.biometricsType}
               failed={true}
-              color={colors.alert}
+              color={EStyleSheet.value(colors.alert)}
               size={80}
             />
           </View>
@@ -48,7 +49,7 @@ class FailBiometrics extends Component<Props> {
 
 export default FailBiometrics;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     color: colors.darkBlue,
     fontSize: 16,

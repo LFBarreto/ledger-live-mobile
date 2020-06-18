@@ -1,7 +1,8 @@
 // @flow
 
 import React, { useCallback } from "react";
-import { StyleSheet, Linking } from "react-native";
+import { Linking } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans, useTranslation } from "react-i18next";
 import { BigNumber } from "bignumber.js";
 import { formatCurrencyUnit } from "@ledgerhq/live-common/lib/currencies";
@@ -211,7 +212,7 @@ const VoteAmountCell = ({ operation }: Props) => {
   ) : null;
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   amountText: {
     color: colors.grey,
     fontSize: 14,

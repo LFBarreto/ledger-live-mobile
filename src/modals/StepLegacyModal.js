@@ -2,7 +2,8 @@
 
 import React from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import BottomModal from "../components/BottomModal";
 import Button from "../components/Button";
 import colors, { rgba } from "../colors";
@@ -23,8 +24,8 @@ export default function StepLegacyModal({ isOpened, onClose }: Props) {
       isOpened={isOpened}
       onClose={onClose}
     >
-      <Circle bg={rgba(colors.live, 0.1)} size={56}>
-        <IconInfo size={24} color={colors.live} />
+      <Circle bg={rgba(EStyleSheet.value(colors.live), 0.1)} size={56}>
+        <IconInfo size={24} color={EStyleSheet.value(colors.live)} />
       </Circle>
       <LText style={styles.description}>
         <Trans i18nKey="StepLegacyModal.description" />
@@ -42,7 +43,7 @@ export default function StepLegacyModal({ isOpened, onClose }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
     justifyContent: "flex-start",

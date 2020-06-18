@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useCallback, useRef } from "react";
-import { View, StyleSheet, Platform, VirtualizedList } from "react-native";
+import { View, Platform, VirtualizedList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import ReactNativeModal from "react-native-modal";
 import { Trans, useTranslation } from "react-i18next";
 import type { Action, State } from "@ledgerhq/live-common/lib/apps";
@@ -367,7 +368,7 @@ export default ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   modal: {
     height,
     justifyContent: "flex-start",

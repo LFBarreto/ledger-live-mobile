@@ -2,7 +2,8 @@
 import React, { useCallback, useState } from "react";
 import { Trans } from "react-i18next";
 import { differenceInCalendarDays } from "date-fns";
-import { StyleSheet, Platform, View } from "react-native";
+import { Platform, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { AccountLike, Account } from "@ledgerhq/live-common/lib/types";
 import {
   shortAddressPreview,
@@ -18,7 +19,7 @@ import CounterValue from "../../components/CounterValue";
 import DelegationDetailsModal from "./DelegationDetailsModal";
 import BakerImage from "./BakerImage";
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
     alignItems: "stretch",

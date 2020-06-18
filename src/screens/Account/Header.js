@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useSelector } from "react-redux";
 import { useGlobalSyncState } from "@ledgerhq/live-common/lib/bridge/react";
 import { networkErrorSelector } from "../../reducers/appstate";
@@ -21,7 +22,7 @@ const Header = () => {
 
 export default React.memo<Props>(Header);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingTop: 16,
   },

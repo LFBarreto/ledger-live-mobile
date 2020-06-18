@@ -1,7 +1,8 @@
 /* @flow */
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { Account } from "@ledgerhq/live-common/lib/types";
 import Circle from "../../components/Circle";
 import Trash from "../../icons/Trash";
@@ -25,7 +26,7 @@ class DeleteAccountModal extends PureComponent<Props> {
         title={<Trans i18nKey="account.settings.delete.confirmationTitle" />}
         icon={
           <Circle bg={colors.lightAlert} size={56}>
-            <Trash size={24} color={colors.alert} />
+            <Trash size={24} color={EStyleSheet.value(colors.alert)} />
           </Circle>
         }
         description={
@@ -56,7 +57,7 @@ class DeleteAccountModal extends PureComponent<Props> {
 
 export default DeleteAccountModal;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   accountName: {
     color: colors.darkBlue,
   },

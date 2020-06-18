@@ -2,11 +2,12 @@
 
 import React, { PureComponent } from "react";
 import {
+  StyleSheet,
   View,
   TextInput as ReactNativeTextInput,
-  StyleSheet,
   PixelRatio,
 } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/Ionicons";
 import colors from "../colors";
 import Touchable from "./Touchable";
@@ -129,7 +130,7 @@ class TextInput extends PureComponent<*, State> {
             event="TextInputClearValue"
             onPress={this.clearInput}
           >
-            <Icon name="ios-close-circle" color={colors.grey} size={20} />
+            <Icon name="ios-close-circle" color={EStyleSheet.value(colors.grey)} size={20} />
           </Touchable>
         )}
       </View>
@@ -137,7 +138,7 @@ class TextInput extends PureComponent<*, State> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flexDirection: "row",
   },

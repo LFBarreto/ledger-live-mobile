@@ -1,6 +1,7 @@
 // @flow
 import React, { useCallback, useState } from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Animated, { Easing } from "react-native-reanimated";
 
 import LText from "./LText";
@@ -134,7 +135,7 @@ const ToggleButton = ({ value, options, onChange }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   mainContainer: {
     width: "auto",
     height: 38,

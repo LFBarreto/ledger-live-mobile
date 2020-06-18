@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { TouchableOpacity, StyleSheet, View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 import IconCheck from "../icons/Check";
 
@@ -33,7 +34,7 @@ export default class CheckBox extends PureComponent<Props> {
     const body = (
       <IconCheck
         size={20}
-        color={colors.white}
+        color={EStyleSheet.value(colors.white)}
         style={[!isChecked && styles.invisible]}
       />
     );
@@ -58,7 +59,7 @@ export default class CheckBox extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     width: 32,
     height: 32,

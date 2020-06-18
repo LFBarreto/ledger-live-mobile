@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { StyleSheet, View, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { connect } from "react-redux";
 import { Trans } from "react-i18next";
 import { createStructuredSelector } from "reselect";
@@ -114,7 +115,7 @@ class CurrenciesList extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     marginTop: 16,
     backgroundColor: colors.white,

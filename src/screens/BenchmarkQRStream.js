@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { RNCamera } from "react-native-camera";
 import LText from "../components/LText";
 import colors, { rgba } from "../colors";
@@ -152,7 +153,7 @@ export default class BenchmarkQRStream extends PureComponent<
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: "black",
@@ -189,7 +190,7 @@ const styles = StyleSheet.create({
     paddingTop: 64,
   },
   darken: {
-    backgroundColor: rgba(colors.darkBlue, 0.4),
+    backgroundColor: rgba(EStyleSheet.value(colors.darkBlue), 0.4),
     flexGrow: 1,
   },
   text: {

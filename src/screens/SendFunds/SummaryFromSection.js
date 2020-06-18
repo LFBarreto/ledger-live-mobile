@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import type { Account, AccountLike } from "@ledgerhq/live-common/lib/types";
 import {
@@ -28,7 +29,7 @@ export default class SummaryFromSection extends PureComponent<Props> {
         label={<Trans i18nKey="send.summary.from" />}
         iconLeft={
           <Circle bg={colors.lightLive} size={34}>
-            <Wallet size={16} color={colors.live} />
+            <Wallet size={16} color={EStyleSheet.value(colors.live)} />
           </Circle>
         }
         data={
@@ -45,7 +46,7 @@ export default class SummaryFromSection extends PureComponent<Props> {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   summaryRowText: {
     fontSize: 16,
     textAlign: "right",

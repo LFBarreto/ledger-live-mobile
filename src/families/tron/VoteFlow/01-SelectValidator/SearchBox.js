@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { View, StyleSheet, Platform } from "react-native";
+import { View, Platform } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useTranslation } from "react-i18next";
 import colors from "../../../../colors";
 import TextInput from "../../../../components/TextInput";
@@ -39,7 +40,7 @@ export default function SelectValidatorSearchBox({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     marginHorizontal: 16,
     marginTop: 8,

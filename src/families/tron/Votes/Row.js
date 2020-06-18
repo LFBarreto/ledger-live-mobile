@@ -1,7 +1,8 @@
 // @flow
 
 import React, { useCallback } from "react";
-import { View, Linking, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Linking, TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 import { getAddressExplorer } from "@ledgerhq/live-common/lib/explorers";
 
@@ -41,9 +42,9 @@ const Row = ({
       <View style={styles.row}>
         <View style={[styles.icon, !isSR ? styles.iconCandidate : {}]}>
           {isSR ? (
-            <Trophy size={16} color={colors.live} />
+            <Trophy size={16} color={EStyleSheet.value(colors.live)} />
           ) : (
-            <Medal size={16} color={colors.grey} />
+            <Medal size={16} color={EStyleSheet.value(colors.grey)} />
           )}
         </View>
         <View style={styles.labelContainer}>
@@ -53,7 +54,7 @@ const Row = ({
             </LText>
           </TouchableOpacity>
           <View style={styles.durationContainer}>
-            <Clock size={12} color={colors.grey} />
+            <Clock size={12} color={EStyleSheet.value(colors.grey)} />
             <LText style={styles.label}>{duration}</LText>
           </View>
         </View>
@@ -68,7 +69,7 @@ const Row = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "column",
     alignItems: "center",

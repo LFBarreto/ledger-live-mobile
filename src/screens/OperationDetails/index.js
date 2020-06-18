@@ -1,6 +1,7 @@
 /* @flow */
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import type { Operation } from "@ledgerhq/live-common/lib/types";
@@ -33,7 +34,7 @@ type Props = {
 
 export const BackButton = ({ navigation }: { navigation: Navigation }) => (
   <TouchableOpacity style={styles.buttons} onPress={() => navigation.goBack()}>
-    <ArrowLeft size={18} color={colors.grey} />
+    <ArrowLeft size={18} color={EStyleSheet.value(colors.grey)} />
   </TouchableOpacity>
 );
 
@@ -43,7 +44,7 @@ export const CloseButton = ({ navigation }: { navigation: Navigation }) => (
     onPress={() => navigation.popToTop()}
     style={styles.buttons}
   >
-    <Close size={18} color={colors.grey} />
+    <Close size={18} color={EStyleSheet.value(colors.grey)} />
   </TouchableOpacity>
 );
 
@@ -79,7 +80,7 @@ export default function OperationDetails({ route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,

@@ -1,7 +1,7 @@
 // @flow
 import invariant from "invariant";
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useTranslation } from "react-i18next";
 import { getAccountUnit } from "@ledgerhq/live-common/lib/account";
 import type { Account } from "@ledgerhq/live-common/lib/types";
@@ -100,7 +100,7 @@ function Warning({ transaction }: FieldProps) {
     case "undelegate":
       return (
         <DataRow>
-          <Info size={22} color={colors.live} />
+          <Info size={22} color={EStyleSheet.value(colors.live)} />
           <LText
             semiBold
             style={[styles.text, styles.infoText]}
@@ -126,7 +126,7 @@ export default {
   warning: Warning,
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   text: {
     color: colors.darkBlue,
     textAlign: "right",

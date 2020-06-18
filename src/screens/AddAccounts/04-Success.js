@@ -2,7 +2,8 @@
 
 import React, { useCallback } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { CryptoCurrency } from "@ledgerhq/live-common/lib/types";
 
 import Icon from "react-native-vector-icons/dist/Feather";
@@ -24,7 +25,7 @@ type RouteParams = {
   deviceId: string,
 };
 
-const IconPlus = () => <Icon name="plus" color={colors.live} size={16} />;
+const IconPlus = () => <Icon name="plus" color={EStyleSheet.value(colors.live)} size={16} />;
 
 export default function AddAccountsSuccess({ navigation, route }: Props) {
   const primaryCTA = useCallback(() => {
@@ -82,14 +83,14 @@ function CurrencySuccess({ currency }: CurrencySuccessProps) {
       ]}
     >
       <View style={styles.successBadge}>
-        <IconCheck size={16} color={colors.white} />
+        <IconCheck size={16} color={EStyleSheet.value(colors.white)} />
       </View>
       <CurrencyIcon currency={currency} size={32} />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     paddingHorizontal: 20,

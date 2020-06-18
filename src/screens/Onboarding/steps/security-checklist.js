@@ -2,7 +2,8 @@
 
 import React, { Component, createRef } from "react";
 import { Trans } from "react-i18next";
-import { StyleSheet, View, Linking, ScrollView } from "react-native";
+import { View, Linking, ScrollView } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 import { TrackScreen } from "../../../analytics";
 import LText from "../../../components/LText";
@@ -159,7 +160,7 @@ class OnboardingStepSecurityChecklist extends Component<
         >
           <View style={styles.modalIconContainer}>
             <Circle bg={rgba(colors.alert, 0.1)} size={56}>
-              <IconWarning size={24} color={colors.alert} />
+              <IconWarning size={24} color={EStyleSheet.value(colors.alert)} />
             </Circle>
           </View>
           <LText style={styles.modalText}>
@@ -189,7 +190,7 @@ class OnboardingStepSecurityChecklist extends Component<
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   title: {
     marginVertical: 16,
     fontSize: 16,

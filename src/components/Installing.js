@@ -1,6 +1,7 @@
 // @flow
 
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -45,7 +46,7 @@ export default function Installing({ progress, installing }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     justifyContent: "center",

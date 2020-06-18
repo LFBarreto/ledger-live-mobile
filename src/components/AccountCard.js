@@ -1,7 +1,8 @@
 // @flow
 import { getAccountName } from "@ledgerhq/live-common/lib/account";
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { AccountLike } from "@ledgerhq/live-common/lib/types";
 import {
   getAccountCurrency,
@@ -31,7 +32,7 @@ class AccountCard extends PureComponent<Props> {
         style={[styles.card, style]}
       >
         <CurrencyIcon
-          color={disabled ? colors.grey : undefined}
+          color={disabled ? EStyleSheet.value(colors.grey) : undefined}
           size={20}
           currency={currency}
         />
@@ -41,7 +42,11 @@ class AccountCard extends PureComponent<Props> {
             numberOfLines={1}
             style={[
               styles.accountNameText,
-              { color: disabled ? colors.grey : colors.darkBlue },
+              {
+                color: EStyleSheet.value(
+                  disabled ? colors.grey : colors.darkBlue,
+                ),
+              },
             ]}
           >
             {getAccountName(account)}
@@ -57,7 +62,7 @@ class AccountCard extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   card: {
     flex: 1,
     flexDirection: "row",

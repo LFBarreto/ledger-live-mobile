@@ -1,6 +1,7 @@
 // @flow
 import type { OperationType } from "@ledgerhq/live-common/lib/types";
 import React from "react";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Svg, { Circle, G, Rect, Path } from "react-native-svg";
 import colors from "../../colors";
 
@@ -9,7 +10,7 @@ function inferColor(type: OperationType) {
     case "IN":
       return colors.success;
     case "FREEZE":
-      return colors.live;
+      return EStyleSheet.value(colors.live);
     case "REWARD":
       return colors.yellow;
     default:

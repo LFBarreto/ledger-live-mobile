@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback, useEffect, useState } from "react";
-import { View, StyleSheet, Animated } from "react-native";
+import { View, Animated } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -63,8 +64,12 @@ const AccountBalanceTag = ({ account }: { account: AccountLike }) => {
 };
 
 const ChangeDelegator = () => (
-  <Circle style={styles.changeDelegator} bg={colors.live} size={26}>
-    <Icon size={13} name="edit-2" color={colors.white} />
+  <Circle
+    style={styles.changeDelegator}
+    bg={EStyleSheet.value(colors.live)}
+    size={26}
+  >
+    <Icon size={13} name="edit-2" color={EStyleSheet.value(colors.white)} />
   </Circle>
 );
 
@@ -108,7 +113,7 @@ const BakerSelection = ({
     </LText>
     {readOnly ? null : (
       <View style={styles.bakerSelectionIcon}>
-        <Icon size={16} name="edit-2" color={colors.white} />
+        <Icon size={16} name="edit-2" color={EStyleSheet.value(colors.white)} />
       </View>
     )}
   </View>
@@ -356,7 +361,7 @@ export default function DelegationSummary({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,
@@ -416,7 +421,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderRadius: 4,
-    backgroundColor: rgba(colors.live, 0.2),
+    backgroundColor: colors.liveTrans,
     height: 40,
   },
   bakerSelectionText: {

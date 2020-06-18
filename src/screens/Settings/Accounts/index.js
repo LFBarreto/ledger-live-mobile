@@ -4,7 +4,8 @@ import { Trans } from "react-i18next";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { TouchableOpacity, View, StyleSheet, SectionList } from "react-native";
+import { TouchableOpacity, View, SectionList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { findTokenById } from "@ledgerhq/live-common/lib/data/tokens";
 import i18next from "i18next";
 import type {
@@ -137,16 +138,16 @@ AccountsSettings.navigationOptions = {
   title: i18next.t("settings.accounts.title"),
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingHorizontal: 16,
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     marginBottom: 2,
     flex: 1,
   },
   section: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.white,
   },
   sectionTitle: {
     backgroundColor: colors.lightGrey,

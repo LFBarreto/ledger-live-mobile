@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import colors from "../colors";
 import LText from "./LText";
 import FormatDay from "./FormatDay";
@@ -22,7 +22,7 @@ export default class SectionHeader extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   sectionHeader: {
     fontSize: 14,
     color: "#999",

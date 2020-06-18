@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet, TextInput } from "react-native";
+import { View, TextInput } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/Feather";
 import Touchable from "./Touchable";
 import { getFontStyle } from "./LText";
@@ -116,7 +117,7 @@ class PasswordInput extends PureComponent<Props, { isFocused: boolean }> {
 }
 
 export default PasswordInput;
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flexDirection: "row",
     borderRadius: 4,

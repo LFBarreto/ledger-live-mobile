@@ -1,6 +1,6 @@
 /* @flow */
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -30,7 +30,7 @@ export default function CountervalueSettingsRow() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   tickerText: {
     color: colors.grey,
   },

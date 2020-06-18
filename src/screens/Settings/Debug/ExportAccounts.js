@@ -2,7 +2,8 @@
 
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import { StyleSheet, Dimensions } from "react-native";
+import { Dimensions } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import QRCode from "react-native-qrcode-svg";
 import VersionNumber from "react-native-version-number";
 import { createStructuredSelector } from "reselect";
@@ -92,7 +93,7 @@ export default connect(
   }),
 )(ExportAccounts);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     padding: 16,
     alignItems: "center",

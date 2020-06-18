@@ -1,7 +1,8 @@
 // @flow
 
 import React, { useCallback } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import last from "lodash/last";
 import { Trans, useTranslation } from "react-i18next";
 import { from, of } from "rxjs";
@@ -139,7 +140,7 @@ export const genuineCheck: Step = {
       <RenderStep
         icon={
           <Spinning>
-            <LiveLogo size={32} color={colors.grey} />
+            <LiveLogo size={32} color={EStyleSheet.value(colors.grey)} />
           </Spinning>
         }
         title={<Trans i18nKey="SelectDevice.steps.genuineCheckPending.title" />}
@@ -187,7 +188,7 @@ export const listApps: Step = {
       <RenderStep
         icon={
           <Spinning>
-            <LiveLogo size={32} color={colors.grey} />
+            <LiveLogo size={32} color={EStyleSheet.value(colors.grey)} />
           </Spinning>
         }
         title={<Trans i18nKey="SelectDevice.steps.listApps.title" />}
@@ -285,7 +286,7 @@ export const currencyApp: CryptoCurrency => Step = currency => ({
     ),
 });
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   footer: {
     borderTopWidth: 1,
     borderColor: colors.lightFog,

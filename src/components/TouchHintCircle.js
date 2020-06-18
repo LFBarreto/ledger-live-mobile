@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from "react";
-import { Animated, View, StyleSheet, Easing } from "react-native";
+import { Animated, View, Easing } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../colors";
 
 class TouchHintCircle extends Component<{ stopAnimation: boolean, style: * }> {
@@ -80,7 +81,7 @@ class TouchHintCircle extends Component<{ stopAnimation: boolean, style: * }> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrap: {
     alignItems: "center",
     justifyContent: "center",

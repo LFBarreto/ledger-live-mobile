@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import ProgressCircle from "react-native-progress/Circle";
 
 import { getFontStyle } from "./LText";
@@ -18,7 +18,7 @@ class FirmwareProgress extends PureComponent<Props> {
       <ProgressCircle
         showsText={!!progress}
         progress={progress}
-        color={colors.live}
+        color={EStyleSheet.value(colors.live)}
         borderWidth={0}
         thickness={progress ? 4 : 0}
         size={size}
@@ -32,7 +32,7 @@ class FirmwareProgress extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   progressText: {
     color: colors.live,
     fontSize: 16,

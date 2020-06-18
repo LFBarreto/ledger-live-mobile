@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { useTranslation } from "react-i18next";
 import { useNavigation } from "@react-navigation/native";
@@ -27,7 +28,7 @@ export default function ExchangeScreen() {
       <TrackScreen category="Buy Crypto" />
       <View style={styles.body}>
         <View style={styles.iconContainer}>
-          <ExchangeIcon size={22} color={colors.live} />
+          <ExchangeIcon size={22} color={EStyleSheet.value(colors.live)} />
         </View>
         <LText style={styles.title}>{t("exchange.buy.title")}</LText>
         <LText style={styles.description}>
@@ -47,7 +48,7 @@ export default function ExchangeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.lightGrey,

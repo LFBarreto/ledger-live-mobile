@@ -1,7 +1,8 @@
 /* @flow */
 
 import React, { Component } from "react";
-import { View, StyleSheet, PixelRatio } from "react-native";
+import { View, PixelRatio } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../colors";
 import LText from "./LText";
 
@@ -35,7 +36,7 @@ export default class SectionSeparator extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",

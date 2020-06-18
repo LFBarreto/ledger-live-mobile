@@ -1,7 +1,8 @@
 /* @flow */
 import React from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useNavigation } from "@react-navigation/native";
 import colors from "../../colors";
 import { NavigatorName } from "../../const";
@@ -40,7 +41,7 @@ export default function NoOpStatePortfolio() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     margin: 16,
     alignSelf: "center",

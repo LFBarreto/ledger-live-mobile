@@ -1,6 +1,6 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import { SyncOneAccountOnMount } from "@ledgerhq/live-common/lib/bridge/react";
 import colors from "../../colors";
@@ -35,7 +35,7 @@ class NotSyncedWarning extends PureComponent<{
 
 export default NotSyncedWarning;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   title: {
     marginTop: 32,
     fontSize: 18,

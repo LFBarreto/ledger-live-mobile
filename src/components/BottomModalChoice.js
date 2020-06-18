@@ -1,13 +1,14 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Touchable from "./Touchable";
 
 import colors, { rgba } from "../colors";
 import LText from "./LText";
 
-const iconWrapperBg = rgba(colors.live, 0.1);
+const iconWrapperBg = rgba(EStyleSheet.value(colors.live), 0.1);
 
 const hitSlop = {
   top: 0,
@@ -62,13 +63,13 @@ class IconWrapper extends PureComponent<{ Icon: React$ComponentType<*> }> {
     const { Icon } = this.props;
     return (
       <View style={styles.iconWrapper}>
-        <Icon size={16} color={colors.live} />
+        <Icon size={16} color={EStyleSheet.value(colors.live)} />
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     paddingVertical: 20,

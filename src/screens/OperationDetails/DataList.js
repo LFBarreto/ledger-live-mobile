@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import LText from "../../components/LText";
 import Touchable from "../../components/Touchable";
@@ -69,7 +70,7 @@ export default class DataList extends PureComponent<Props, State> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   sectionTitle: {
     fontSize: 14,
     color: colors.grey,

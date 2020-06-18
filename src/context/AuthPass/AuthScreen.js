@@ -4,11 +4,11 @@ import { withTranslation, Trans } from "react-i18next";
 import {
   TouchableWithoutFeedback,
   View,
-  StyleSheet,
   Image,
   Vibration,
   Platform,
 } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import * as Keychain from "react-native-keychain";
 import { PasswordIncorrectError } from "@ledgerhq/errors";
@@ -257,7 +257,7 @@ class AuthScreen extends PureComponent<Props, State> {
 
 export default withTranslation()(withReboot(AuthScreen));
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.lightGrey,

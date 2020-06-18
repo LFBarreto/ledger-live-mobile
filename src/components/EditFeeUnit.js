@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useState } from "react";
-import { FlatList, View, StyleSheet, Keyboard } from "react-native";
+import { FlatList, View, Keyboard } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/dist/FontAwesome";
 import type { Account } from "@ledgerhq/live-common/lib/types";
@@ -122,7 +123,7 @@ export default function EditFreeUnit({ account, field }: Props) {
             style={{ position: "absolute", top: 2, right: 16 }}
             onPress={onRequestClose}
           >
-            <CloseIcon size={16} color={colors.grey} />
+            <CloseIcon size={16} color={EStyleSheet.value(colors.grey)} />
           </Touchable>
         </View>
         <FlatList
@@ -151,7 +152,7 @@ export default function EditFreeUnit({ account, field }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   buttonContainer: {
     flex: 1,
     padding: 16,

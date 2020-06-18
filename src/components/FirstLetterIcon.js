@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { ViewStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
 import LText from "./LText";
 import colors from "../colors";
@@ -44,7 +45,7 @@ const FirstLetterIcon = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     borderRadius: 4,
     backgroundColor: colors.lightLive,

@@ -2,7 +2,8 @@
 
 import React, { Component } from "react";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 import { TrackScreen } from "../../../analytics";
 import Button from "../../../components/Button";
@@ -87,7 +88,10 @@ class OnboardingStepSetupPin extends Component<
                 }
               >
                 {"text"}
-                <LText style={{ color: colors.darkBlue }} semiBold>
+                <LText
+                  style={{ color: EStyleSheet.value(colors.darkBlue) }}
+                  semiBold
+                >
                   bold text
                 </LText>
                 {"text"}
@@ -126,7 +130,7 @@ class OnboardingStepSetupPin extends Component<
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   hero: {
     paddingTop: 15,
     paddingBottom: 60,

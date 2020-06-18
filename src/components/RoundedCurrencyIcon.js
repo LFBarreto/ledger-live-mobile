@@ -2,7 +2,8 @@
 
 import type { CryptoCurrency } from "@ledgerhq/live-common/lib/types";
 import React, { PureComponent } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/Feather";
 import colors, { rgba } from "../colors";
 import Alert from "../icons/Alert";
@@ -25,19 +26,23 @@ export default class RoundedCurrencyIcon extends PureComponent<{
           <View style={styles.statusWrapper}>
             {extra === "pending" ? (
               <Spinning>
-                <LiveLogo color={colors.grey} size={16} />
+                <LiveLogo color={EStyleSheet.value(colors.grey)} size={16} />
               </Spinning>
             ) : extra === "done" ? (
               <Circle bg={colors.green} size={24}>
-                <Icon name="check" size={16} color={colors.white} />
+                <Icon
+                  name="check"
+                  size={16}
+                  color={EStyleSheet.value(colors.white)}
+                />
               </Circle>
             ) : extra === "notice" ? (
-              <Circle bg={colors.live} size={24}>
-                <Alert size={16} color={colors.white} />
+              <Circle bg={EStyleSheet.value(colors.live)} size={24}>
+                <Alert size={16} color={EStyleSheet.value(colors.white)} />
               </Circle>
             ) : (
               <Circle bg={colors.alert} size={24}>
-                <Alert size={16} color={colors.white} />
+                <Alert size={16} color={EStyleSheet.value(colors.white)} />
               </Circle>
             )}
           </View>
@@ -48,7 +53,7 @@ export default class RoundedCurrencyIcon extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   statusWrapper: {
     height: 32,
     width: 32,

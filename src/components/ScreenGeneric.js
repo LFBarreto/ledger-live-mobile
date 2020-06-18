@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import { View, TouchableWithoutFeedback } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../colors";
 
 export default class ScreenGeneric<T> extends Component<{
@@ -24,7 +25,7 @@ export default class ScreenGeneric<T> extends Component<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
   },

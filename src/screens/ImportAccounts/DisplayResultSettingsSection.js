@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import Icon from "react-native-vector-icons/dist/Feather";
 import LText from "../../components/LText";
@@ -18,7 +19,7 @@ class DisplayResultSettingsSection extends PureComponent<{
       <View style={styles.root}>
         <ResultSection mode="settings" />
         <View style={styles.row}>
-          <Icon name="settings" size={20} color={colors.grey} />
+          <Icon name="settings" size={20} color={EStyleSheet.value(colors.grey)} />
           <LText style={styles.label} semiBold>
             <Trans i18nKey="account.import.result.includeGeneralSettings" />
           </LText>
@@ -29,7 +30,7 @@ class DisplayResultSettingsSection extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {},
   row: {
     backgroundColor: colors.lightGrey,

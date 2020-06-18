@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { StatusBar, StyleSheet, View, ScrollView } from "react-native";
+import { StatusBar, View, ScrollView } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import colors from "../../colors";
 import OnboardingHeader from "./OnboardingHeader";
@@ -131,7 +132,7 @@ export class OnboardingInner extends PureComponent<Container> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     paddingTop: StatusBar.currentHeight,

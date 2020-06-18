@@ -1,7 +1,8 @@
 /* @flow */
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { View, Linking, StyleSheet } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import colors from "../../../colors";
 import { urls } from "../../../config/urls";
 import SettingsRow from "../../../components/SettingsRow";
@@ -18,14 +19,14 @@ class LedgerSupportRow extends PureComponent<*> {
         alignedTop
       >
         <View style={styles.externalLinkContainer}>
-          <ExternalLink size={16} color={colors.grey} />
+          <ExternalLink size={16} color={EStyleSheet.value(colors.grey)} />
         </View>
       </SettingsRow>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   externalLinkContainer: { marginRight: 10 },
 });
 

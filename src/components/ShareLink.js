@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { StyleSheet, Share } from "react-native";
+import { Share } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/Feather";
 import Touchable from "./Touchable";
 import LText from "./LText";
@@ -29,7 +30,7 @@ class ShareLink extends PureComponent<Props> {
         style={styles.linkContainer}
         onPress={this.onPress}
       >
-        <Icon name="share" size={16} color={colors.live} />
+        <Icon name="share" size={16} color={EStyleSheet.value(colors.live)} />
         <LText style={[styles.linkText]} semiBold>
           {children}
         </LText>
@@ -40,7 +41,7 @@ class ShareLink extends PureComponent<Props> {
 
 export default ShareLink;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   linkContainer: {
     alignItems: "center",
     justifyContent: "center",

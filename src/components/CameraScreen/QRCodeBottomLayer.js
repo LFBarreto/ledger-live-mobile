@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 
 import colors, { rgba } from "../../colors";
@@ -40,9 +41,9 @@ class QrCodeBottomLayer extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   darken: {
-    backgroundColor: rgba(colors.darkBlue, 0.4),
+    backgroundColor: rgba(EStyleSheet.value(colors.darkBlue), 0.4),
     flexGrow: 1,
     paddingBottom: softMenuBarHeight(),
   },

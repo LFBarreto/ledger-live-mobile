@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { BigNumber } from "bignumber.js";
 import { shortAddressPreview } from "@ledgerhq/live-common/lib/account";
 import type { Unit } from "@ledgerhq/live-common/lib/types";
@@ -8,7 +9,7 @@ import colors from "../colors";
 import LText from "./LText";
 import CurrencyUnitValue from "./CurrencyUnitValue";
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   dataRow: {
     padding: 12,
     borderRadius: 4,

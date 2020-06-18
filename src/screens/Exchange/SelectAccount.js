@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback } from "react";
-import { View, StyleSheet, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 // $FlowFixMe
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans, useTranslation } from "react-i18next";
@@ -97,7 +98,7 @@ export default function SelectAccount({ navigation, route }: Props) {
     return (
       <View style={styles.emptyStateBody}>
         <View style={styles.iconContainer}>
-          <InfoIcon size={22} color={colors.live} />
+          <InfoIcon size={22} color={EStyleSheet.value(colors.live)} />
         </View>
         <LText style={styles.title}>
           {t("exchange.buy.emptyState.title", { currency: currency.name })}
@@ -148,7 +149,7 @@ export default function SelectAccount({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   addAccountButton: {
     flex: 1,
     flexDirection: "row",

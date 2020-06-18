@@ -21,6 +21,8 @@ import Config from "react-native-config";
 import type { State } from ".";
 import { currencySettingsDefaults } from "../helpers/CurrencySettingsDefaults";
 
+import type { ThemeSetting } from "../actions/settings";
+
 const bitcoin = getCryptoCurrencyById("bitcoin");
 const ethereum = getCryptoCurrencyById("ethereum");
 export const possibleIntermediaries = [bitcoin, ethereum];
@@ -74,6 +76,7 @@ export type SettingsState = {
   hideEmptyTokenAccounts: boolean,
   blacklistedTokenIds: string[],
   dismissedBanners: string[],
+  theme: ThemeSetting,
 };
 
 export const INITIAL_STATE: SettingsState = {
@@ -94,6 +97,7 @@ export const INITIAL_STATE: SettingsState = {
   hideEmptyTokenAccounts: false,
   blacklistedTokenIds: [],
   dismissedBanners: [],
+  theme: "light",
 };
 
 const pairHash = (from, to) => `${from.ticker}_${to.ticker}`;
@@ -244,6 +248,10 @@ const handlers: Object = {
     ...state,
     dismissedBanners: [...state.dismissedBanners, payload],
   }),
+  SETTINGS_SWITCH_THEME: (state, { payload }) => ({
+    ...state,
+    theme: payload,
+  }),
 };
 
 const storeSelector = (state: *): SettingsState => state.settings;
@@ -373,5 +381,7 @@ export const hideEmptyTokenAccountsEnabledSelector = (state: State) =>
 
 export const dismissedBannersSelector = (state: State) =>
   state.settings.dismissedBanners;
+
+export const themeSelector = (state: State) => state.settings.theme;
 
 export default handleActions(handlers, INITIAL_STATE);

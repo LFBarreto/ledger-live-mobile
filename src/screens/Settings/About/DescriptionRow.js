@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, Image } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import colors from "../../../colors";
 import LText from "../../../components/LText";
@@ -24,7 +25,7 @@ class DescriptionRow extends PureComponent<*> {
 
 export default DescriptionRow;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   descriptionContainer: {
     marginHorizontal: 16,
     marginVertical: 24,

@@ -1,7 +1,8 @@
 /* @flow */
 import React, { PureComponent } from "react";
 import { Trans } from "react-i18next";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { Account, AccountLike } from "@ledgerhq/live-common/lib/types";
 import {
   getAccountCurrency,
@@ -132,7 +133,7 @@ class EmptyStateAccount extends PureComponent<{
 
 export default EmptyStateAccount;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     margin: 16,

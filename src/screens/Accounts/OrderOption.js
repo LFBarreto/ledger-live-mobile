@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import { refreshAccountsOrdering } from "../../actions/general";
 import { setOrderAccounts } from "../../actions/settings";
@@ -13,7 +13,7 @@ import LText from "../../components/LText";
 import Touchable from "../../components/Touchable";
 import colors from "../../colors";
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     borderRadius: 4,
     marginVertical: 4,
@@ -64,7 +64,7 @@ class OrderOption extends Component<{
         <LText semiBold style={styles.label}>
           <Trans i18nKey={`orderOption.choices.${id}`} />
         </LText>
-        {selected ? <Check color={colors.live} size={16} /> : null}
+        {selected ? <Check color={EStyleSheet.value(colors.live)} size={16} /> : null}
       </Touchable>
     );
   }

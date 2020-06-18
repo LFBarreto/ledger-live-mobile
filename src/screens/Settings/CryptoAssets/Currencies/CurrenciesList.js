@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { StyleSheet, FlatList } from "react-native";
+import { FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import type { CryptoCurrency } from "@ledgerhq/live-common/lib/types";
@@ -51,7 +52,7 @@ class CurrenciesList extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   containerStyle: { paddingTop: 16, paddingBottom: 64 },
 });
 

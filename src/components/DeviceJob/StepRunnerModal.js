@@ -1,7 +1,7 @@
 // @flow
 
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { Device } from "@ledgerhq/live-common/lib/hw/actions/types";
 import BottomModal from "../BottomModal";
 import Close from "../../icons/Close";
@@ -57,7 +57,7 @@ export default function SelectDeviceConnectModal({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   close: {
     position: "absolute",
     right: 16,

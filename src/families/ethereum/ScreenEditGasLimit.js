@@ -4,7 +4,8 @@ import type { Transaction } from "@ledgerhq/live-common/lib/families/ethereum/ty
 import { BigNumber } from "bignumber.js";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Keyboard, StyleSheet, TextInput, View } from "react-native";
+import { Keyboard, TextInput, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { i18n } from "../../context/Locale";
@@ -85,7 +86,7 @@ function EthereumEditGasLimit({ navigation, route }: Props) {
 
 export { options, EthereumEditGasLimit as component };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
   },

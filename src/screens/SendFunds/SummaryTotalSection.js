@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import type { Account, AccountLike } from "@ledgerhq/live-common/lib/types";
 import {
   getAccountUnit,
@@ -54,7 +55,7 @@ class SummaryTotalSection extends PureComponent<Props, State> {
           title={<Trans i18nKey="send.summary.total" />}
           additionalInfo={
             <Touchable onPress={this.onPress} event="SummaryTotalInfo">
-              <Info size={12} color={colors.grey} />
+              <Info size={12} color={EStyleSheet.value(colors.grey)} />
             </Touchable>
           }
           titleProps={{ semiBold: true, style: styles.title }}
@@ -82,7 +83,7 @@ class SummaryTotalSection extends PureComponent<Props, State> {
             title={<Trans i18nKey="send.summary.infoTotalTitle" />}
             icon={
               <Circle bg={colors.lightLive} size={56}>
-                <Info size={16} color={colors.live} />
+                <Info size={16} color={EStyleSheet.value(colors.live)} />
               </Circle>
             }
             description={<Trans i18nKey="send.summary.infoTotalDesc" />}
@@ -102,7 +103,7 @@ class SummaryTotalSection extends PureComponent<Props, State> {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   summary: {
     flex: 1,
     flexDirection: "column",

@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet, Animated } from "react-native";
+import { View, Animated } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import Icon from "react-native-vector-icons/dist/Feather";
 import LText from "./LText";
@@ -91,7 +92,7 @@ export class BulletChevron extends PureComponent<{}> {
   render() {
     return (
       <View style={styles.chevron}>
-        <Icon size={16} name="chevron-right" color={colors.grey} />
+        <Icon size={16} name="chevron-right" color={EStyleSheet.value(colors.grey)} />
       </View>
     );
   }
@@ -101,7 +102,7 @@ export class BulletGreenCheck extends PureComponent<{}> {
   render() {
     return (
       <Circle size={24} bg={colors.ledgerGreen}>
-        <Icon size={16} name="check" color={colors.white} />
+        <Icon size={16} name="check" color={EStyleSheet.value(colors.white)} />
       </Circle>
     );
   }
@@ -145,7 +146,7 @@ class BulletList extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   item: {
     paddingVertical: 8,
     flexDirection: "row",

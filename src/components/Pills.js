@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent, Component } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import colors from "../colors";
 
@@ -90,7 +91,7 @@ class Pill extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
   },

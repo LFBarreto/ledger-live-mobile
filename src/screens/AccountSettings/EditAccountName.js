@@ -1,7 +1,8 @@
 /* @flow */
 import React, { PureComponent } from "react";
 import i18next from "i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import type { Account } from "@ledgerhq/live-common/lib/types";
 import { connect } from "react-redux";
@@ -125,7 +126,7 @@ class EditAccountName extends PureComponent<Props, State> {
 // $FlowFixMe
 export default connect(mapStateToProps, mapDispatchToProps)(EditAccountName);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
   },

@@ -1,7 +1,8 @@
 // @flow
 
 import React, { useCallback, useRef, useState } from "react";
-import { StyleSheet, FlatList } from "react-native";
+import { FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useSelector } from "react-redux";
 import type { Account } from "@ledgerhq/live-common/lib/types";
 import { accountsSelector } from "../../reducers/accounts";
@@ -70,7 +71,7 @@ export default function Accounts({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   list: {
     flex: 1,
   },

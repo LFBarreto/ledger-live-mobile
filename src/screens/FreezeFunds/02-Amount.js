@@ -4,11 +4,11 @@ import useBridgeTransaction from "@ledgerhq/live-common/lib/bridge/useBridgeTran
 import React, { useCallback, useMemo, useState } from "react";
 import {
   View,
-  StyleSheet,
   TouchableWithoutFeedback,
   Keyboard,
   TouchableOpacity,
 } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { Trans } from "react-i18next";
@@ -221,7 +221,7 @@ export default function FreezeAmount({ navigation, route }: Props) {
                 <LText semiBold style={styles.infoLabel}>
                   <Trans i18nKey="freeze.amount.infoLabel" />
                 </LText>
-                <Info size={16} color={colors.grey} />
+                <Info size={16} color={EStyleSheet.value(colors.grey)} />
               </TouchableOpacity>
               <View style={styles.wrapper}>
                 <CurrencyInput
@@ -328,7 +328,7 @@ export default function FreezeAmount({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

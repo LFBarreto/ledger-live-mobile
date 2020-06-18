@@ -1,6 +1,7 @@
 /* @flow */
 import React from "react";
-import { TouchableWithoutFeedback, StyleSheet } from "react-native";
+import { TouchableWithoutFeedback } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import LText from "./LText";
 import colors from "../colors";
 import { scrollToTop } from "../navigation/utils";
@@ -18,7 +19,7 @@ export default function HeaderTitle({ style, ...newProps }: *) {
   );
 }
 
-const styleSheet = StyleSheet.create({
+const styleSheet = EStyleSheet.create({
   root: {
     color: colors.darkBlue,
     fontSize: 16,

@@ -1,5 +1,6 @@
 import React, { memo, useMemo, useCallback } from "react";
-import { StyleSheet, View, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { State, App } from "@ledgerhq/live-common/lib/types/manager";
 import type { InstalledItem } from "@ledgerhq/live-common/lib/apps";
 
@@ -108,7 +109,7 @@ const UpdateAllModal = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   title: {
     fontSize: 16,
     color: colors.darkBlue,

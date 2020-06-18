@@ -1,7 +1,7 @@
 // @flow
 
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { UserRefusedAddress } from "@ledgerhq/errors";
 import colors from "../colors";
@@ -55,7 +55,7 @@ export default function DebugIcons() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

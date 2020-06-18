@@ -2,7 +2,8 @@
 
 import React, { PureComponent } from "react";
 import invariant from "invariant";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/Feather";
 import type { Device } from "@ledgerhq/live-common/lib/hw/actions/types";
 import Touchable from "./Touchable";
@@ -28,10 +29,10 @@ const iconByFamily = {
       style={styles.specialIcon}
       name="terminal"
       size={16}
-      color={colors.darkBlue}
+      color={EStyleSheet.value(colors.darkBlue)}
     />
   ),
-  usb: () => <USB color={colors.darkBlue} />,
+  usb: () => <USB color={EStyleSheet.value(colors.darkBlue)} />,
 };
 
 export default class DeviceItem extends PureComponent<Props> {
@@ -65,7 +66,7 @@ export default class DeviceItem extends PureComponent<Props> {
                   <CustomIcon />
                 ) : (
                   <IconNanoX
-                    color={colors.darkBlue}
+                    color={EStyleSheet.value(colors.darkBlue)}
                     height={36}
                     width={8}
                     style={disabled ? styles.deviceIconDisabled : undefined}
@@ -104,7 +105,10 @@ export default class DeviceItem extends PureComponent<Props> {
                 </Touchable>
               )}
               {withArrow && !disabled ? (
-                <IconArrowRight size={16} color={colors.grey} />
+                <IconArrowRight
+                  size={16}
+                  color={EStyleSheet.value(colors.grey)}
+                />
               ) : null}
             </View>
           </Touchable>
@@ -114,7 +118,7 @@ export default class DeviceItem extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   outer: {
     marginBottom: 16,
     flexDirection: "row",

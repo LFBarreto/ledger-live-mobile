@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import type { Transaction } from "@ledgerhq/live-common/lib/families/ethereum/types";
@@ -47,7 +47,7 @@ function EthereumEditFee({ route }: Props) {
 
 export { options, EthereumEditFee as component };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

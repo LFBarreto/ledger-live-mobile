@@ -1,6 +1,7 @@
 /* @flow */
 import React, { PureComponent } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import LText from "./LText";
 
 export default class MenuTitle extends PureComponent<{ children: any }> {
@@ -16,7 +17,7 @@ export default class MenuTitle extends PureComponent<{ children: any }> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     alignItems: "center",
     justifyContent: "center",

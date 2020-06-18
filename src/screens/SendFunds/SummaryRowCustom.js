@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import LText from "../../components/LText/index";
 import colors from "../../colors";
 
@@ -23,7 +24,7 @@ export default class SummaryRowCustom extends PureComponent<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     paddingVertical: 16,

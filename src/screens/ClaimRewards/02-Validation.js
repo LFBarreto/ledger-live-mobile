@@ -1,7 +1,8 @@
 /* @flow */
 import invariant from "invariant";
 import React from "react";
-import { View, StyleSheet, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { useDispatch, useSelector } from "react-redux";
 import SafeAreaView from "react-native-safe-area-view";
 import type {
@@ -77,7 +78,7 @@ export default function Validation({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

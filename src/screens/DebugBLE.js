@@ -1,14 +1,8 @@
 // @flow
 
 import React, { Component, PureComponent } from "react";
-import {
-  FlatList,
-  StyleSheet,
-  TextInput,
-  View,
-  ToastAndroid,
-  Switch,
-} from "react-native";
+import { FlatList, TextInput, View, ToastAndroid, Switch } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { v4 as uuid } from "uuid";
 import { from, Observable } from "rxjs";
 import { listen } from "@ledgerhq/logs";
@@ -27,7 +21,7 @@ const logsObservable = Observable.create(o => listen(log => o.next(log))).pipe(
 
 logsObservable.subscribe();
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     paddingTop: 16,
     paddingBottom: 64,
@@ -37,7 +31,7 @@ const styles = StyleSheet.create({
 const mapLogToColor = (log: Log) => {
   if (log.type.includes("error")) return colors.alert;
   if (log.type === "verbose") return colors.grey;
-  if (log.type.includes("frame")) return colors.live;
+  if (log.type.includes("frame")) return EStyleSheet.value(colors.live);
   if (log.type.includes("apdu")) return colors.success;
   return colors.darkBlue;
 };

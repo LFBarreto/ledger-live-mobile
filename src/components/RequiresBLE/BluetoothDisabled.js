@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans } from "react-i18next";
 import Icon from "react-native-vector-icons/dist/Feather";
@@ -21,10 +22,10 @@ export default class BluetoothDisabled extends PureComponent<{}> {
       <SafeAreaView style={styles.container} forceInset={forceInset}>
         <InfoIcon
           bg={colors.pillActiveBackground}
-          floatingIcon={<Alert size={20} color={colors.white} />}
+          floatingIcon={<Alert size={20} color={EStyleSheet.value(colors.white)} />}
           floatingBg={colors.alert}
         >
-          <Icon name="bluetooth" size={40} color={colors.live} />
+          <Icon name="bluetooth" size={40} color={EStyleSheet.value(colors.live)} />
         </InfoIcon>
         <View>
           <LText semiBold secondary style={styles.titleFont}>
@@ -44,7 +45,7 @@ export default class BluetoothDisabled extends PureComponent<{}> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",

@@ -4,7 +4,8 @@
 cat <<EOF
 // @flow
 import React, { Component } from "react";
-import { StyleSheet, ScrollView, View } from "react-native";
+import { ScrollView, View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import SafeAreaView from "react-native-safe-area-view";
 import LText from "../components/LText";
 import colors from "../colors";
@@ -66,7 +67,7 @@ cat << EOF
     );
   }
 }
- const styles = StyleSheet.create({
+ const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,
@@ -89,7 +90,7 @@ cat << EOF
     borderLeftColor:colors.alert,
   },
   notsquare: {
-    borderColor:colors.live
+    borderColor: colors.live
   },
   text: {
     padding: 4,

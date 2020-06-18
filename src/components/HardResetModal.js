@@ -18,7 +18,7 @@ class HardResetModal extends PureComponent<Props> {
         title={null}
         icon={
           <Circle bg={colors.lightAlert} size={56}>
-            <Trash size={24} color={colors.alert} />
+            <Trash size={24} color={EStyleSheet.value(colors.alert)} />
           </Circle>
         }
         description={<Trans i18nKey="reset.description" />}

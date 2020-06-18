@@ -1,6 +1,7 @@
 /* @flow */
 import React, { useCallback, useState } from "react";
-import { View, StyleSheet, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans, useTranslation } from "react-i18next";
 import type { Account, AccountLike } from "@ledgerhq/live-common/lib/types";
 import type { Transaction } from "@ledgerhq/live-common/lib/families/ethereum/types";
@@ -84,7 +85,7 @@ export default function EthereumFeeRow({
         title={<Trans i18nKey="send.fees.title" />}
         additionalInfo={
           <View>
-            <InfoIcon size={12} color={colors.grey} />
+            <InfoIcon size={12} color={EStyleSheet.value(colors.grey)} />
           </View>
         }
       >
@@ -123,7 +124,7 @@ export default function EthereumFeeRow({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   accountContainer: {
     flex: 1,
     flexDirection: "row",

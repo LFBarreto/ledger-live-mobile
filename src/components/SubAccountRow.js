@@ -5,7 +5,8 @@ import {
   getAccountUnit,
 } from "@ledgerhq/live-common/lib/account";
 import React, { PureComponent } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import {
   RectButton,
   LongPressGestureHandler,
@@ -111,7 +112,7 @@ const mapStateToProps = createStructuredSelector({
 
 export default connect(mapStateToProps)(SubAccountRow);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     borderRadius: 4,
   },

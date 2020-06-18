@@ -1,6 +1,7 @@
 // @flow
 import React, { memo } from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, Image } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 
 import shieldWarning from "../../../images/shield-warning.png";
@@ -19,7 +20,7 @@ const Disclaimer = () => (
   </View>
 );
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   wrapper: {
     paddingHorizontal: 12,
     paddingVertical: 16,

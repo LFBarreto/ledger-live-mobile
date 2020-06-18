@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from "react";
-import { TouchableOpacity, StyleSheet } from "react-native";
+import { TouchableOpacity } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type { Account } from "@ledgerhq/live-common/lib/types";
 import AccountCard from "../../components/AccountCard";
 import CheckBox from "../../components/CheckBox";
@@ -41,7 +42,7 @@ export default class DisplayResultItem extends Component<{
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",

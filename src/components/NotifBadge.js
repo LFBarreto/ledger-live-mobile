@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import colors from "../colors";
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     position: "absolute",
     top: -5,

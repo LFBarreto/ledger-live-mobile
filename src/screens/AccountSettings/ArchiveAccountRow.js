@@ -17,7 +17,7 @@ class ArchiveAccountRow extends PureComponent<Props> {
         desc={<Trans i18nKey="account.settings.archive.desc" />}
         iconLeft={
           <Circle bg="rgba(153,153,153,0.1)" size={32}>
-            <Archive size={16} color={colors.grey} />
+            <Archive size={16} color={EStyleSheet.value(colors.grey)} />
           </Circle>
         }
         onPress={() => null}

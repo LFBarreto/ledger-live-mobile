@@ -1,7 +1,8 @@
 // @flow
 import invariant from "invariant";
 import React, { useCallback, useState } from "react";
-import { View, StyleSheet, TextInput, ScrollView } from "react-native";
+import { View, TextInput, ScrollView } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
@@ -93,7 +94,7 @@ const options = {
 
 export { StellarEditMemoValue as component, options };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
   },

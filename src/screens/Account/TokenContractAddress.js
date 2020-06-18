@@ -1,6 +1,7 @@
 // @flow
 import React, { useCallback } from "react";
-import { StyleSheet, Linking, View } from "react-native";
+import { Linking, View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import SafeAreaView from "react-native-safe-area-view";
 import Icon from "react-native-vector-icons/dist/Feather";
@@ -40,7 +41,7 @@ const TokenContractAddress = ({ account, onClose, url, token }: Props) => {
   return (
     <SafeAreaView forceInset={forceInset} style={styles.root}>
       <View style={styles.iconWrapper}>
-        <Icon name="file-text" size={24} color={colors.live} />
+        <Icon name="file-text" size={24} color={EStyleSheet.value(colors.live)} />
       </View>
       <View style={styles.textWrapper}>
         <LText secondary bold style={styles.textTitle}>
@@ -70,7 +71,7 @@ const TokenContractAddress = ({ account, onClose, url, token }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "column",
     alignItems: "center",

@@ -1,7 +1,8 @@
 /* @flow */
 
 import React, { Component } from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 export default class HeaderRightText extends Component<{ children: * }> {
   render() {
@@ -10,7 +11,7 @@ export default class HeaderRightText extends Component<{ children: * }> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   text: {
     color: "white",
     paddingHorizontal: 10,

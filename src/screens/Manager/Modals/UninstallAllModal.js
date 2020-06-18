@@ -1,5 +1,6 @@
 import React, { memo, useMemo } from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import colors from "../../../colors";
 import LText from "../../../components/LText";
@@ -38,7 +39,7 @@ const UninstallAllModal = ({ isOpened, onClose, onConfirm }: Props) => {
     <ActionModal isOpened={!!isOpened} onClose={onClose} actions={modalActions}>
       <View style={styles.image}>
         <InfoIcon bg={colors.lightLive}>
-          <Trash size={30} color={colors.live} />
+          <Trash size={30} color={EStyleSheet.value(colors.live)} />
         </InfoIcon>
       </View>
       <View style={styles.infoRow}>
@@ -53,7 +54,7 @@ const UninstallAllModal = ({ isOpened, onClose, onConfirm }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   image: {
     width: 80,
     marginVertical: 24,

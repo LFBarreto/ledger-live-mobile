@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { RectButton } from "react-native-gesture-handler";
 import LText from "../../components/LText";
 import colors from "../../colors";
@@ -54,7 +55,7 @@ function SectionWrapper({ onPress, children, style }: FieldWrapperProps) {
   );
 }
 
-export const styles = StyleSheet.create({
+export const styles = EStyleSheet.create({
   wrapper: {
     padding: 16,
     color: colors.darkBlue,

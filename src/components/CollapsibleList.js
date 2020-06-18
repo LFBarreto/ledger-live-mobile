@@ -1,10 +1,6 @@
 import React, { memo, useState, useCallback } from "react";
-import {
-  StyleSheet,
-  View,
-  TouchableWithoutFeedback,
-  FlatList,
-} from "react-native";
+import { View, TouchableWithoutFeedback, FlatList } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Animated, { Easing } from "react-native-reanimated";
 import LText from "./LText";
 import Chevron from "../icons/Chevron";
@@ -133,7 +129,7 @@ const CollapsibleList = ({
           <Animated.View
             style={[styles.chevronIcon, { transform: [{ rotateZ }] }]}
           >
-            <Chevron size={10} color={colors.live} />
+            <Chevron size={10} color={EStyleSheet.value(colors.live)} />
           </Animated.View>
           <LText style={styles.toggleButtonText}>{title}</LText>
         </View>
@@ -155,7 +151,7 @@ CollapsibleList.defaultProps = {
   renderItem: renderListItem,
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     backgroundColor: colors.lightGrey,
     borderRadius: 3,

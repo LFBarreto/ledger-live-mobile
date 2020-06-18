@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
-import { StyleSheet, Animated } from "react-native";
+import { Animated } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { useNavigation } from "@react-navigation/native";
 import { Trans } from "react-i18next";
@@ -111,7 +112,7 @@ class RemoveDeviceButton extends PureComponent<RemoveDeviceButtonProps> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     position: "absolute",
     left: 0,

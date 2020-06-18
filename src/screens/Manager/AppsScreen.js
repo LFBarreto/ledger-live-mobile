@@ -2,11 +2,11 @@
 import React, { useState, useCallback, useMemo, useRef, memo } from "react";
 import {
   View,
-  StyleSheet,
   Dimensions,
   FlatList,
   SafeAreaView,
 } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { distribute } from "@ledgerhq/live-common/lib/apps";
 import type { Action, State } from "@ledgerhq/live-common/lib/apps";
 import type { App } from "@ledgerhq/live-common/lib/types/manager";
@@ -357,7 +357,7 @@ const AppsScreen = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     flexDirection: "column",

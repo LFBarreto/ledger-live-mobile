@@ -1,6 +1,6 @@
 // @flow
 
-import { StyleSheet } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import React, { PureComponent } from "react";
 import { RectButton } from "react-native-gesture-handler";
 import type {
@@ -35,7 +35,7 @@ class CurrencyRow extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",

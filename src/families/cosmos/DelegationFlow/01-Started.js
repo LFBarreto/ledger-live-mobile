@@ -1,6 +1,7 @@
 // @flow
 import React, { useCallback } from "react";
-import { View, StyleSheet, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans, useTranslation } from "react-i18next";
 import colors from "../../../colors";
@@ -123,7 +124,7 @@ export default function DelegationStarted({ navigation, route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,

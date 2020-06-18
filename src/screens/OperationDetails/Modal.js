@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { StyleSheet, View, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import SafeAreaView from "react-native-safe-area-view";
 
@@ -35,8 +36,8 @@ class Modal extends PureComponent<Props> {
         onClose={this.props.onClose}
       >
         <SafeAreaView forceInset={forceInset} style={styles.modal}>
-          <Circle bg={rgba(colors.live, 0.1)} size={56}>
-            <IconInfo size={24} color={colors.live} />
+          <Circle bg={rgba(EStyleSheet.value(colors.live), 0.1)} size={56}>
+            <IconInfo size={24} color={EStyleSheet.value(colors.live)} />
           </Circle>
           <LText style={styles.modalDesc}>
             <Trans i18nKey="operationDetails.tokenModal.desc" />
@@ -65,7 +66,7 @@ class Modal extends PureComponent<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   modal: {
     paddingHorizontal: 16,
     paddingTop: 24,

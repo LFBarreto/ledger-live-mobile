@@ -1,7 +1,8 @@
 // @flow
 import invariant from "invariant";
 import React, { useCallback } from "react";
-import { Linking, StyleSheet } from "react-native";
+import { Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import type {
   AccountLike,
   Account,
@@ -20,7 +21,7 @@ import { DataRow } from "../../components/ValidateOnDeviceDataRow";
 import LText from "../../components/LText";
 import colors from "../../colors";
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   text: {
     color: colors.darkBlue,
     fontSize: 14,

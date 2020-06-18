@@ -1,7 +1,8 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import { StyleSheet, Clipboard } from "react-native";
+import { Clipboard } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Icon from "react-native-vector-icons/dist/Feather";
 import Touchable from "./Touchable";
 import LText from "./LText";
@@ -49,7 +50,7 @@ class CopyLink extends PureComponent<Props, State> {
         <Icon
           name="copy"
           size={16}
-          color={copied ? colors.grey : colors.live}
+          color={EStyleSheet.value(copied ? colors.grey : colors.live)}
         />
         <LText
           style={[styles.linkText, copied ? styles.copied : undefined]}
@@ -70,7 +71,7 @@ class CopyLink extends PureComponent<Props, State> {
 
 export default CopyLink;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   linkContainer: {
     alignItems: "center",
     justifyContent: "center",

@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from "react";
-import { StyleSheet, View, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Trans } from "react-i18next";
 import { getDeviceModel } from "@ledgerhq/devices";
 import colors from "../../colors";
@@ -26,7 +27,7 @@ class ScanningTimeout extends Component<Props> {
         <TrackScreen category="PairDevices" name="ScanningTimeout" />
         <View style={styles.body}>
           <Circle bg={colors.lightAlert} size={80}>
-            <NanoX color={colors.alert} width={11} height={48} />
+            <NanoX color={EStyleSheet.value(colors.alert)} width={11} height={48} />
           </Circle>
           <LText secondary semiBold style={styles.titleText}>
             <Trans i18nKey="PairDevices.ScanningTimeout.title" />
@@ -52,7 +53,7 @@ class ScanningTimeout extends Component<Props> {
             style={styles.helpContainer}
             onPress={() => Linking.openURL(urls.faq)}
           >
-            <Help size={16} color={colors.live} />
+            <Help size={16} color={EStyleSheet.value(colors.live)} />
             <LText style={styles.helpText} semiBold>
               <Trans i18nKey="common.needHelp" />
             </LText>
@@ -65,7 +66,7 @@ class ScanningTimeout extends Component<Props> {
 
 export default ScanningTimeout;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     padding: 20,

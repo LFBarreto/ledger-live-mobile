@@ -1,7 +1,8 @@
 /* @flow */
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { useSelector } from "react-redux";
 import { accountScreenSelector } from "../../reducers/accounts";
 import LText from "../../components/LText";
@@ -52,7 +53,7 @@ export default function AdvancedLogs({ route }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     padding: 16,

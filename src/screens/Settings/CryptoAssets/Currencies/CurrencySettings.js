@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { Trans, withTranslation, useTranslation } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import Slider from "react-native-slider";
 import type { CryptoCurrency } from "@ledgerhq/live-common/lib/types";
 import { getCryptoCurrencyById } from "@ledgerhq/live-common/lib/currencies";
@@ -89,7 +90,7 @@ class EachCurrencySettings extends Component<Props, LocalState> {
                 tertiary
                 style={[
                   styles.confirmationNbValue,
-                  { color: colors.live, marginLeft: 8 },
+                  { color: EStyleSheet.value(colors.live), marginLeft: 8 },
                 ]}
               >
                 {value}
@@ -101,8 +102,8 @@ class EachCurrencySettings extends Component<Props, LocalState> {
                 minimumValue={defaults.confirmationsNb.min}
                 maximumValue={defaults.confirmationsNb.max}
                 value={value}
-                thumbTintColor={colors.live}
-                minimumTrackTintColor={colors.live}
+                thumbTintColor={EStyleSheet.value(colors.live)}
+                minimumTrackTintColor={EStyleSheet.value(colors.live)}
                 onValueChange={val => this.setState({ value: val })}
                 onSlidingComplete={this.updateSettings}
               />
@@ -139,7 +140,7 @@ export default compose(
   withTranslation(),
 )(EachCurrencySettings);
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     paddingTop: 16,

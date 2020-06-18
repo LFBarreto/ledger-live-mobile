@@ -1,7 +1,8 @@
 /* @flow */
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Trans } from "react-i18next";
 import SafeAreaView from "react-native-safe-area-view";
 import MenuTitle from "../../components/MenuTitle";
@@ -41,6 +42,6 @@ export default function AccountOrderModal({ onClose, isOpened }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   buttonContainer: { paddingHorizontal: 16, marginTop: 16 },
 });

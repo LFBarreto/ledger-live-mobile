@@ -2,7 +2,8 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import { Trans } from "react-i18next";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { cleanCache } from "../../../actions/general";
 import colors from "../../../colors";
 import SettingsRow from "../../../components/SettingsRow";
@@ -56,7 +57,7 @@ class ClearCacheRow extends PureComponent<Props, State> {
           desc={<Trans i18nKey="settings.help.clearCacheDesc" />}
           iconLeft={
             <Circle bg="rgba(153,153,153,0.1)" size={32}>
-              <Archive size={16} color={colors.grey} />
+              <Archive size={16} color={EStyleSheet.value(colors.grey)} />
             </Circle>
           }
           onPress={this.onPress}
@@ -70,7 +71,7 @@ class ClearCacheRow extends PureComponent<Props, State> {
             title={null}
             icon={
               <Circle bg={colors.lightLive} size={56}>
-                <Warning size={24} color={colors.live} />
+                <Warning size={24} color={EStyleSheet.value(colors.live)} />
               </Circle>
             }
             description={<Trans i18nKey="settings.help.clearCacheModalDesc" />}
@@ -104,7 +105,7 @@ class ClearCacheRow extends PureComponent<Props, State> {
 
 export default connect(null, mapDispatchToProps)(withReboot(ClearCacheRow));
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   footerContainer: {
     flexDirection: "row",
   },

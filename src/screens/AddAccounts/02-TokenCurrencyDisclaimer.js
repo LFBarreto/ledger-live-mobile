@@ -2,7 +2,8 @@
 
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { StyleSheet, View, Linking } from "react-native";
+import { View, Linking } from "react-native";
+import EStyleSheet from "react-native-extended-stylesheet";
 import SafeAreaView from "react-native-safe-area-view";
 
 import type { TokenCurrency } from "@ledgerhq/live-common/lib/types";
@@ -25,7 +26,7 @@ const Disclaimer = ({
   tokenType: string,
 }) => (
   <View style={styles.disclaimer}>
-    <Info size={18} color={colors.live} />
+    <Info size={18} color={EStyleSheet.value(colors.live)} />
     <View style={styles.disclaimerTextWrapper}>
       <LText style={styles.disclaimerText}>
         <Trans
@@ -35,7 +36,7 @@ const Disclaimer = ({
       </LText>
       <ExternalLink
         event="AddAccountsTokenDisclaimerLearnMore"
-        color={colors.live}
+        color={EStyleSheet.value(colors.live)}
         text={<Trans i18nKey={`addAccounts.tokens.${tokenType}.learnMore`} />}
         onPress={() => Linking.openURL(urls.supportLinkByTokenType[tokenType])}
       />
@@ -103,7 +104,7 @@ export default function AddAccountsTokenCurrencyDisclaimer({
   );
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.white,
