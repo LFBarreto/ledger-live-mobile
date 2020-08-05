@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     color: colors.grey,
   },
   titleSelected: {
-    color: colors.darkBlue,
+     
   },
   iconContainer: {
     width: 24,
@@ -182,11 +182,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.live,
   },
   text: {
-    color: colors.darkBlue,
+     
   },
   textInput: {
     fontSize: 14,
-    color: colors.darkBlue,
+     
     textAlign: "right",
     ...Platform.select({
       ios: {

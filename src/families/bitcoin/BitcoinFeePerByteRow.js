@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   summaryRowText: {
     fontSize: 16,
     textAlign: "right",
-    color: colors.darkBlue,
+     
   },
   valueText: {
     fontSize: 16,

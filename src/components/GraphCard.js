@@ -77,7 +77,7 @@ class GraphCard extends PureComponent<Props, State> {
         : undefined;
 
     return (
-      <Card style={styles.root}>
+      <Card bg="card" style={styles.root}>
         <GraphCardHeader
           valueChange={countervalueChange}
           isLoading={!isAvailable}
@@ -177,7 +177,6 @@ class GraphCardHeader extends PureComponent<{
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: colors.white,
     paddingVertical: 16,
     margin: 16,
     ...Platform.select({
@@ -200,7 +199,6 @@ const styles = StyleSheet.create({
   },
   balanceText: {
     fontSize: 22,
-    color: colors.darkBlue,
   },
   subtitleContainer: {
     flexDirection: "row",

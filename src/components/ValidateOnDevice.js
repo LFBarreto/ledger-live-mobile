@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    color: colors.darkBlue,
+     
     textAlign: "center",
   },
 });

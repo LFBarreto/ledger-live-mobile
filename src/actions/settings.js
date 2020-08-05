@@ -20,6 +20,8 @@ type SetExchangePairs = (
   }>,
 ) => *;
 
+export type Theme = "light" | "dark" | "dusk";
+
 export const setExchangePairsAction: SetExchangePairs = pairs => ({
   type: "SETTINGS_SET_PAIRS",
   pairs,
@@ -128,4 +130,9 @@ export const dismissBanner = (bannerId: string) => ({
 export const setAvailableUpdate = (enabled: boolean) => ({
   type: "SETTINGS_SET_AVAILABLE_UPDATE",
   enabled,
+});
+
+export const setTheme = (payload: Theme) => ({
+  type: "SETTINGS_SET_THEME",
+  payload,
 });

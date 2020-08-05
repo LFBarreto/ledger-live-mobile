@@ -462,7 +462,7 @@ const styles = StyleSheet.create({
   noAppInstalledText: {
     fontSize: 17,
     lineHeight: 21,
-    color: colors.darkBlue,
+     
     marginVertical: 8,
   },
   noAppInstalledDescription: {

@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 32,
     fontSize: 18,
-    color: colors.darkBlue,
+     
   },
   desc: {
     marginTop: 16,

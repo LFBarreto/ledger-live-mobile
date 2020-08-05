@@ -17,6 +17,138 @@ export const lighten = (c: string, a: number) =>
     .lighten(a)
     .toString();
 
+export const lightTheme = {
+  dark: false,
+  colors: {
+    primary: "rgb(255, 45, 85)",
+    background: "rgb(242, 242, 242)",
+    card: "rgb(255, 255, 255)",
+    text: "rgb(28, 28, 30)",
+    border: "rgb(199, 199, 204)",
+    notification: "rgb(255, 69, 58)",
+    contrastBackground: "#142533",
+    /* MAIN */
+    live: "#6490f1",
+    alert: "#ea2e49",
+    success: "#66BE54",
+    darkBlue: "#142533",
+    smoke: "#666666",
+    grey: "#999999",
+    fog: "#D8D8D8",
+    white: "#ffffff",
+    green: "rgb(102, 190, 84)",
+    ledgerGreen: "#41ccb4",
+    black: "#000000",
+    orange: "#ff7701",
+    yellow: "#ffd24a",
+
+    /* DERIVATIVES */
+    lightLive: "#4b84ff19",
+    lightAlert: "#ea2e490c",
+    lightFog: "#EEEEEE",
+    lightGrey: "#F9F9F9",
+    lightOrange: "#FF984F",
+    translucentGreen: "rgba(102, 190, 84, 0.2)",
+    translucentGrey: "rgba(153, 153, 153, 0.2)",
+
+    errorBg: "#ff0042",
+
+    /* PILLS */
+    pillForeground: "#999999",
+    pillActiveBackground: rgba("#6490f1", 0.1),
+    pillActiveForeground: "#6490f1",
+    pillActiveDisabledForeground: "#999999",
+  },
+};
+
+export const duskTheme = {
+  dark: true,
+  colors: {
+    primary: "#6490F1",
+    card: "#182532",
+    background: "#131E28",
+    text: "#FFFFFF",
+    border: "rgba(255, 255, 255, 0.1)",
+    notification: "#6490F1",
+    contrastBackground: "#223544",
+    /* MAIN */
+    live: "#6490f1",
+    alert: "#ea2e49",
+    success: "#66BE54",
+    darkBlue: "#fafafa",
+    smoke: "#666666",
+    grey: "rgba(255,255,255, 0.4)",
+    fog: "#131E28",
+    white: "#182532",
+    green: "rgb(102, 190, 84)",
+    ledgerGreen: "#41ccb4",
+    black: "#ffffff",
+    orange: "#ff7701",
+    yellow: "#ffd24a",
+
+    /* DERIVATIVES */
+    lightLive: "#4b84ff19",
+    lightAlert: "#ea2e490c",
+    lightFog: "rgba(100,144,241, 0.1)",
+    lightGrey: "rgba(255,255,255, 0.05)",
+    lightOrange: "#FF984F",
+    translucentGreen: "rgba(102, 190, 84, 0.2)",
+    translucentGrey: "rgba(153, 153, 153, 0.2)",
+
+    errorBg: "#ff0042",
+
+    /* PILLS */
+    pillForeground: "#999999",
+    pillActiveBackground: rgba("#6490f1", 0.1),
+    pillActiveForeground: "#6490f1",
+    pillActiveDisabledForeground: "#999999",
+  },
+};
+
+export const darkTheme = {
+  dark: true,
+  colors: {
+    primary: "rgb(255, 45, 85)",
+    card: "#1C1D1F",
+    background: "#131415",
+    text: "#FFFFFF",
+    border: "rgba(255, 255, 255, 0.1)",
+    notification: "rgb(255, 69, 58)",
+    contrastBackground: "#223544",
+    /* MAIN */
+    live: "#6490f1",
+    alert: "#ea2e49",
+    success: "#66BE54",
+    darkBlue: "#FAFAFA",
+    smoke: "#666666",
+    grey: "rgba(255,255,255, 0.4)",
+    fog: "#D8D8D8",
+    white: "#000000",
+    green: "rgb(102, 190, 84)",
+    ledgerGreen: "#41ccb4",
+    black: "#FFFFFF",
+    orange: "#ff7701",
+    yellow: "#ffd24a",
+
+    /* DERIVATIVES */
+    lightLive: "#4b84ff19",
+    lightAlert: "#ea2e490c",
+    lightFog: "rgba(100,144,241, 0.1)",
+    lightGrey: "rgba(255,255,255, 0.05)",
+    lightOrange: "#FF984F",
+    translucentGreen: "rgba(102, 190, 84, 0.2)",
+    translucentGrey: "rgba(153, 153, 153, 0.2)",
+
+    errorBg: "#ff0042",
+
+    /* PILLS */
+    pillForeground: "#999999",
+    pillActiveBackground: rgba("#6490f1", 0.1),
+    pillActiveForeground: "#6490f1",
+    pillActiveDisabledForeground: "#999999",
+  },
+};
+
 export default {
   /* MAIN */
   live: "#6490f1",

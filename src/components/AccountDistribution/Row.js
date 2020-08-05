@@ -142,7 +142,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.lightFog,
   },
   darkBlue: {
-    color: colors.darkBlue,
     fontSize: 14,
     lineHeight: 21,
   },

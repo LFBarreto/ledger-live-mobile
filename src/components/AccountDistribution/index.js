@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
   distributionTitle: {
     fontSize: 16,
     lineHeight: 24,
-    color: colors.darkBlue,
     marginLeft: 16,
     marginTop: 8,
     marginBottom: 8,

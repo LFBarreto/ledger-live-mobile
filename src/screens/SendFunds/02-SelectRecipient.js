@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
   },
   addressInput: {
     flex: 1,
-    color: colors.darkBlue,
+     
     ...getFontStyle({ semiBold: true }),
     fontSize: 20,
     paddingVertical: 16,

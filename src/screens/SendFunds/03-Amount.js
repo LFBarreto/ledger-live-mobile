@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   availableAmount: {
-    color: colors.darkBlue,
+     
   },
   availableRight: {
     alignItems: "center",

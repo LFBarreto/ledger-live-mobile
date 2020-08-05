@@ -162,14 +162,14 @@ const styles = StyleSheet.create({
   },
   deviceNameText: {
     fontSize: 16,
-    color: colors.darkBlue,
+     
   },
   deviceNameTextDisabled: {
     color: colors.grey,
   },
   descriptionText: {
     fontSize: 14,
-    color: colors.darkBlue,
+     
   },
   descriptionTextDisabled: {
     color: colors.grey,

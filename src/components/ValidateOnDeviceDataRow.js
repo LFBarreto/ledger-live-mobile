@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
     flex: 0.5,
   },
   dataRowValue: {
-    color: colors.darkBlue,
+     
     fontSize: 14,
     flex: 1,
     textAlign: "right",
   },
   text: {
-    color: colors.darkBlue,
+     
     fontSize: 14,
     flex: 1,
     textAlign: "right",

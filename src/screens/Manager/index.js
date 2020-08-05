@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     lineHeight: 27,
     fontSize: 18,
     marginVertical: 24,
-    color: colors.darkBlue,
+     
   },
   section: {
     fontSize: 14,

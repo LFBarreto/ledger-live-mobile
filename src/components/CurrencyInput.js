@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontFamily: "Rubik",
     paddingRight: 8,
-    color: colors.darkBlue,
+     
   },
   readOnly: {
     color: colors.grey,

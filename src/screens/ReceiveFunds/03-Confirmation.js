@@ -415,7 +415,7 @@ const styles = StyleSheet.create({
   addressTitleBold: {
     paddingLeft: 8,
     fontSize: 16,
-    color: colors.darkBlue,
+     
   },
   addressWrapper: {
     paddingTop: 8,
@@ -447,7 +447,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     paddingTop: 40,
     fontSize: 16,
-    color: colors.darkBlue,
+     
     textAlign: "center",
   },
   modalDescription: {

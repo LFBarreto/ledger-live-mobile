@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     marginVertical: 4,
     paddingHorizontal: 4,
     paddingVertical: 2,
-    color: colors.darkBlue,
+     
     backgroundColor: colors.white,
     flex: 1,
   },

@@ -118,7 +118,7 @@ export default function SubAccountsList({
   const renderHeader = useCallback(
     () => (
       <View style={styles.header}>
-        <LText semiBold style={{ color: colors.darkBlue, fontSize: 16 }}>
+        <LText semiBold style={{   fontSize: 16 }}>
           <Trans
             i18nKey={isToken ? "common.token" : "common.subaccount"}
             count={subAccounts.length}

@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
   },
   balanceText: {
     fontSize: 22,
-    color: colors.darkBlue,
+     
   },
   balanceSubText: {
     fontSize: 16,

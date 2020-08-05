@@ -454,7 +454,7 @@ const styles = StyleSheet.create({
   noResultText: {
     fontSize: 17,
     lineHeight: 21,
-    color: colors.darkBlue,
+     
     marginBottom: 16,
     textAlign: "center",
   },

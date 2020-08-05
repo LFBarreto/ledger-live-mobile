@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
   },
   labelText: {
     fontSize: 18,
-    color: colors.darkBlue,
     marginRight: 6,
   },
   rightWrapper: {

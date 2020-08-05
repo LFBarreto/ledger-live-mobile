@@ -1,7 +1,7 @@
 // @flow
 /* eslint import/no-cycle: 0 */
 import { handleActions } from "redux-actions";
-import { Platform } from "react-native";
+import { Platform, Appearance } from "react-native";
 import merge from "lodash/merge";
 import {
   findCurrencyByTicker,
@@ -52,6 +52,8 @@ export type Privacy = {
   biometricsEnabled: boolean,
 };
 
+export type Theme = "light" | "dark" | "dusk";
+
 export type SettingsState = {
   counterValue: string,
   counterValueExchange: ?string,
@@ -75,6 +77,7 @@ export type SettingsState = {
   blacklistedTokenIds: string[],
   dismissedBanners: string[],
   hasAvailableUpdate: boolean,
+  theme: Theme,
 };
 
 export const INITIAL_STATE: SettingsState = {
@@ -96,6 +99,7 @@ export const INITIAL_STATE: SettingsState = {
   blacklistedTokenIds: [],
   dismissedBanners: [],
   hasAvailableUpdate: false,
+  theme: Appearance.getColorScheme() === "light" ? "light" : "dark",
 };
 
 const pairHash = (from, to) => `${from.ticker}_${to.ticker}`;
@@ -250,6 +254,10 @@ const handlers: Object = {
     ...state,
     hasAvailableUpdate: action.enabled,
   }),
+  SETTINGS_SET_THEME: (state, { payload: theme }) => ({
+    ...state,
+    theme,
+  }),
 };
 
 const storeSelector = (state: *): SettingsState => state.settings;
@@ -384,3 +392,5 @@ export const hasAvailableUpdateSelector = (state: State) =>
   state.settings.hasAvailableUpdate;
 
 export default handleActions(handlers, INITIAL_STATE);
+
+export const themeSelector = (state: State) => state.settings.theme;

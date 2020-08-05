@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   distributionTitle: {
     fontSize: 16,
     lineHeight: 24,
-    color: colors.darkBlue,
+     
     marginLeft: 16,
     marginTop: 8,
     marginBottom: 8,
@@ -210,11 +210,11 @@ const styles = StyleSheet.create({
   },
   assetCount: {
     fontSize: 27,
-    color: colors.darkBlue,
+     
   },
 
   assets: {
-    color: colors.darkBlue,
+     
   },
 
   label: {
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
 
   amount: {
     fontSize: 22,
-    color: colors.darkBlue,
+     
   },
 
   total: {

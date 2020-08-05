@@ -219,7 +219,6 @@ const styles = StyleSheet.create({
   },
   balanceText: {
     fontSize: 22,
-    color: colors.darkBlue,
   },
   subtitleContainer: {
     flexDirection: "row",

@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   buttonLabel: {
-    color: colors.darkBlue,
+     
     fontSize: 18,
     lineHeight: 22,
   },

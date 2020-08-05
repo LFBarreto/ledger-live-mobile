@@ -2,6 +2,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "@react-navigation/native";
 import { ScreenName, NavigatorName } from "../../const";
 import * as families from "../../families";
 import OperationDetails, {
@@ -31,11 +32,11 @@ import PasswordModifyFlowNavigator from "./PasswordModifyFlowNavigator";
 import MigrateAccountsFlowNavigator from "./MigrateAccountsFlowNavigator";
 import { closableStackNavigatorConfig } from "../../navigation/navigatorConfig";
 import TransparentHeaderNavigationOptions from "../../navigation/TransparentHeaderNavigationOptions";
-import colors from "../../colors";
 import HeaderRightClose from "../HeaderRightClose";
 
 export default function BaseNavigator() {
   const { t } = useTranslation();
+  const { colors } = useTheme();
   return (
     <Stack.Navigator mode="modal" screenOptions={closableStackNavigatorConfig}>
       <Stack.Screen

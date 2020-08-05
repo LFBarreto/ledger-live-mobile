@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   },
   placeholderText: {
     fontSize: 16,
-    color: colors.darkBlue,
+     
   },
   confirmationNbValue: {
     fontSize: 16,

@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   textInputAS: {
     padding: 16,
     fontSize: 20,
-    color: colors.darkBlue,
+     
     ...getFontStyle({ semiBold: true }),
   },
   buttonContainer: {

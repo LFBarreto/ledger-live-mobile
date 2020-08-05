@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   tagText: {
     flex: 1,
     fontSize: 14,
-    color: colors.darkBlue,
+     
     textAlign: "right",
   },
   link: {

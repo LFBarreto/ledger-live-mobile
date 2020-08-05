@@ -16,12 +16,12 @@ import type {
   TokenAccount,
 } from "@ledgerhq/live-common/lib/types";
 import Icon from "react-native-vector-icons/dist/FontAwesome";
+import { useTheme } from "@react-navigation/native";
 import { ScreenName } from "../../const";
 import LText from "../../components/LText";
 import CurrencyUnitValue from "../../components/CurrencyUnitValue";
 import CounterValue from "../../components/CounterValue";
 import CurrencyIcon from "../../components/CurrencyIcon";
-import colors from "../../colors";
 import AccountSyncStatus from "./AccountSyncStatus";
 import Button from "../../components/Button";
 import SubAccountRow from "../../components/SubAccountRow";
@@ -50,6 +50,7 @@ const AccountRow = ({
 }: Props) => {
   // makes it refresh if this changes
   useEnv("HIDE_EMPTY_TOKEN_ACCOUNTS");
+  const { colors } = useTheme();
 
   const syncState = useAccountSyncState({ accountId });
 
@@ -93,6 +94,13 @@ const AccountRow = ({
           styles.accountRowCard,
           {
             elevation: subAccounts && collapsed ? 2 : 1,
+            backgroundColor: colors.card,
+            ...Platform.select({
+              android: {},
+              ios: {
+                shadowColor: colors.black,
+              },
+            }),
           },
         ]}
       >
@@ -109,10 +117,11 @@ const AccountRow = ({
                   semiBold
                   numberOfLines={1}
                   style={styles.accountNameText}
+                  color="darkBlue"
                 >
                   {account.name}
                 </LText>
-                <LText tertiary style={styles.balanceNumText}>
+                <LText tertiary color="darkBlue" style={styles.balanceNumText}>
                   <CurrencyUnitValue
                     showCode
                     unit={account.unit}
@@ -144,7 +153,10 @@ const AccountRow = ({
             <View
               style={[
                 styles.subAccountList,
-                { display: collapsed ? "none" : "flex" },
+                {
+                  display: collapsed ? "none" : "flex",
+                  borderLeftColor: colors.fog,
+                },
               ]}
             >
               {subAccounts.map((tkn, i) => (
@@ -157,7 +169,12 @@ const AccountRow = ({
                 />
               ))}
             </View>
-            <View style={styles.subAccountButton}>
+            <View
+              style={[
+                styles.subAccountButton,
+                { borderTopColor: colors.lightFog },
+              ]}
+            >
               <Button
                 type="lightSecondary"
                 event="expandSubAccountList"
@@ -195,14 +212,28 @@ const AccountRow = ({
         ) : null}
       </View>
       {!!collapsed && subAccounts.length ? (
-        <View style={styles.subAccountIndicator} />
+        <View
+          style={[
+            styles.subAccountIndicator,
+            {
+              backgroundColor: colors.card,
+              borderTopColor: colors.lightGrey,
+              ...Platform.select({
+                android: {},
+                ios: {
+                  shadowColor: colors.black,
+                },
+              }),
+            },
+          ]}
+        />
       ) : null}
     </View>
   );
 };
 
 const AccountCv = ({ children }: { children: * }) => (
-  <LText tertiary style={styles.balanceCounterText}>
+  <LText tertiary color="grey" style={styles.balanceCounterText}>
     {children}
   </LText>
 );
@@ -221,14 +252,13 @@ const styles = StyleSheet.create({
   },
   accountRowCard: {
     zIndex: 2,
-    backgroundColor: colors.white,
+
     borderRadius: 4,
     ...Platform.select({
       android: {
         elevation: 1,
       },
       ios: {
-        shadowColor: colors.black,
         shadowOpacity: 0.03,
         shadowRadius: 8,
         shadowOffset: {
@@ -255,15 +285,12 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     borderBottomLeftRadius: 4,
     borderBottomRightRadius: 4,
-    backgroundColor: colors.white,
     borderTopWidth: 1,
-    borderTopColor: colors.lightGrey,
     ...Platform.select({
       android: {
         elevation: 1,
       },
       ios: {
-        shadowColor: colors.black,
         shadowOpacity: 0.03,
         shadowRadius: 4,
         shadowOffset: {
@@ -277,12 +304,11 @@ const styles = StyleSheet.create({
     paddingLeft: 12,
     paddingRight: 12,
     borderLeftWidth: 1,
-    borderLeftColor: colors.fog,
+
     marginBottom: 20,
   },
   subAccountButton: {
     borderTopWidth: 1,
-    borderTopColor: colors.lightFog,
   },
   topRow: {
     marginLeft: 16,
@@ -292,14 +318,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   accountNameText: {
-    color: colors.darkBlue,
     fontSize: 16,
     marginBottom: 4,
     flex: 1,
   },
   balanceNumText: {
     fontSize: 16,
-    color: colors.darkBlue,
+
     flex: 0,
     marginLeft: 16,
   },
@@ -314,13 +339,6 @@ const styles = StyleSheet.create({
   },
   balanceCounterText: {
     fontSize: 14,
-    color: colors.grey,
-  },
-  tickError: {
-    backgroundColor: colors.alert,
-  },
-  tickPending: {
-    backgroundColor: colors.fog,
   },
   tick: {
     position: "absolute",

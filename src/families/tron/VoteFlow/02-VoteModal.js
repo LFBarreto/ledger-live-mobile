@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
   },
   topTitle: {
     fontSize: 15,
-    color: colors.darkBlue,
+     
   },
   bottomWrapper: {
     alignSelf: "stretch",
@@ -320,7 +320,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontFamily: "Rubik",
     textAlign: "center",
-    color: colors.darkBlue,
+     
     fontSize: 32,
   },
   error: { color: colors.alert },

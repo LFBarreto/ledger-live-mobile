@@ -13,6 +13,7 @@ import AccountRow from "./AccountRow";
 import MigrateAccountsBanner from "../MigrateAccounts/Banner";
 import { useScrollToTop } from "../../navigation/utils";
 import TokenContextualModal from "../Settings/Accounts/TokenContextualModal";
+import { useTheme } from "@react-navigation/native";
 
 const List = globalSyncRefreshControl(FlatList);
 
@@ -24,6 +25,7 @@ export default function Accounts({ navigation }: Props) {
   const accounts = useSelector(accountsSelector);
   const ref = useRef();
   useScrollToTop(ref);
+  const { colors } = useTheme();
 
   const [account, setAccount] = useState(undefined);
 
@@ -57,7 +59,7 @@ export default function Accounts({ navigation }: Props) {
         data={accounts}
         renderItem={renderItem}
         keyExtractor={item => item.id}
-        style={styles.list}
+        style={[styles.list, { backgroundColor: colors.background }]}
         contentContainerStyle={styles.contentContainer}
       />
       <MigrateAccountsBanner />

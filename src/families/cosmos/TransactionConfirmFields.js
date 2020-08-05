@@ -128,7 +128,7 @@ export default {
 
 const styles = StyleSheet.create({
   text: {
-    color: colors.darkBlue,
+     
     textAlign: "right",
     flex: 1,
   },

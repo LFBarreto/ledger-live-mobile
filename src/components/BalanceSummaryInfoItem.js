@@ -52,6 +52,6 @@ const styles = StyleSheet.create({
   balance: {
     fontSize: 18,
     lineHeight: 22,
-    color: colors.darkBlue,
+     
   },
 });

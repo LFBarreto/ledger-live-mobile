@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   darkBlue: {
-    color: colors.darkBlue,
+     
     fontSize: 14,
     lineHeight: 21,
   },

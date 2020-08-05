@@ -2,7 +2,7 @@
 import React, { useCallback } from "react";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { Trans } from "react-i18next";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useTheme } from "@react-navigation/native";
 import { getOperationAmountNumber } from "@ledgerhq/live-common/lib/operation";
 import {
   getMainAccount,
@@ -23,7 +23,6 @@ import CurrencyUnitValue from "./CurrencyUnitValue";
 import CounterValue from "./CounterValue";
 
 import OperationIcon from "./OperationIcon";
-import colors from "../colors";
 import { ScreenName } from "../const";
 import OperationRowDate from "./OperationRowDate";
 import LiveLogo from "../icons/LiveLogoIcon";
@@ -54,6 +53,7 @@ export default function OperationRow({
   isLast,
 }: Props) {
   const navigation = useNavigation();
+  const { colors } = useTheme();
 
   const goToOperationDetails = debounce(() => {
     const params = [
@@ -91,7 +91,7 @@ export default function OperationRow({
   }, [account, parentAccount, operation]);
 
   const amount = getOperationAmountNumber(operation);
-  const valueColor = amount.isNegative() ? colors.darkBlue : colors.green;
+  const valueColor = amount.isNegative() ? "darkBlue" : "green";
   const currency = getAccountCurrency(account);
   const unit = getAccountUnit(account);
 
@@ -106,7 +106,16 @@ export default function OperationRow({
   );
 
   return (
-    <View style={[styles.root, isLast ? styles.last : null]}>
+    <View
+      style={[
+        styles.root,
+        {
+          backgroundColor: colors.card,
+          borderBottomColor: colors.lightGrey,
+        },
+        isLast ? styles.last : null,
+      ]}
+    >
       <TouchableOpacity onPress={goToOperationDetails} style={styles.button}>
         <View style={isOptimistic ? styles.optimistic : null}>
           <OperationIcon
@@ -144,7 +153,7 @@ export default function OperationRow({
                 </LText>
               </View>
             ) : (
-              <LText numberOfLines={1} style={[styles.bottomRow]}>
+              <LText numberOfLines={1} color="grey" style={[styles.bottomRow]}>
                 {text} <OperationRowDate date={operation.date} />
               </LText>
             )}
@@ -157,7 +166,8 @@ export default function OperationRow({
               <LText
                 tertiary
                 numberOfLines={1}
-                style={[styles.bodyRight, styles.topRow, { color: valueColor }]}
+                color={valueColor}
+                style={[styles.bodyRight, styles.topRow]}
               >
                 <CurrencyUnitValue
                   showCode
@@ -192,11 +202,9 @@ const OpCounterValue = ({ children }: { children: React$Node }) => (
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: colors.white,
     alignItems: "center",
     flexDirection: "row",
     borderBottomWidth: 2,
-    borderBottomColor: colors.lightGrey,
   },
   last: {
     borderBottomWidth: 0,
@@ -222,12 +230,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   topRow: {
-    color: colors.darkBlue,
     fontSize: 14,
     flex: 1,
   },
   bottomRow: {
-    color: colors.grey,
     fontSize: 14,
     flex: 1,
   },

@@ -10,7 +10,9 @@ import colors from "../colors";
 
 export const defaultNavigationOptions = {
   headerStyle: styles.header,
-  headerTitle: (props: *) => <HeaderTitle {...props} />,
+  headerTitle: (props: *) => {
+    return <HeaderTitle {...props} />;
+  },
   headerBackTitleVisible: false,
   headerBackImage: () => <HeaderBackImage />,
   headerTitleAllowFontScaling: false,
@@ -18,9 +20,18 @@ export const defaultNavigationOptions = {
 
 export const stackNavigatorConfig = {
   ...defaultNavigationOptions,
-  cardStyle: styles.card,
+  cardStyle: { backgroundColor: colors.lightGrey },
   headerTitleAlign: "center",
 };
+
+export const getStackNavigatorConfig = c => ({
+  ...defaultNavigationOptions,
+  cardStyle: { backgroundColor: c.lightGrey },
+  headerTitleAlign: "center",
+  headerTitleStyle: {
+    color: c.darkBlue,
+  },
+});
 
 export const closableNavigationOptions = {
   ...defaultNavigationOptions,

@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
-    color: colors.darkBlue,
+     
   },
   warnText: {
     textAlign: "center",
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   },
   depLineText: {
     fontSize: 12,
-    color: colors.darkBlue,
+     
     paddingLeft: 12,
     flex: 1,
     textAlign: "left",

@@ -304,7 +304,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   availableAmount: {
-    color: colors.darkBlue,
+     
     marginHorizontal: 3,
   },
   addMoreVotesContainer: { paddingHorizontal: 16 },

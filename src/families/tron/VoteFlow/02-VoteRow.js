@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
   rowTitle: {
     fontSize: 14,
     lineHeight: 16,
-    color: colors.darkBlue,
+     
     paddingBottom: 4,
   },
   rowLabelContainer: {
