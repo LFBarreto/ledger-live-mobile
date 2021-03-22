@@ -81,9 +81,7 @@ The Ledger Services allow Users to:
 - Update the firmware of their Ledger Device
 - Install and uninstall Device Applications with the Ledger Live Manager
 - View their portfolio of Crypto Assets
-- Access the means to perform operations on various blockchain networks in accordance with their respective protocol rules, such as but not limited to:
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Send and receive Crypto Assets to and from Users of a dedicated blockchain network;
+- Access the means to perform operations on various blockchain networks in accordance with their respective protocol rules, such as but not limited to: Send and receive Crypto Assets to and from Users of a dedicated blockchain network;
 
 - Connect with Third Party Services, to access services such as the delegation of staking rights on supported proof-of-stake blockchains or buying crypto.
 
